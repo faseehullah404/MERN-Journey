@@ -31,12 +31,38 @@
                 
                 </div>
             </div>
-            <div class="mt-4 p-4 roun">
+            <div class="mt-4 p-4 bg-gray-100 rounded-3xl rounded-lg shadow-inner border border-gray-300">
+                <h2 class="font-semibold text-xl mb-2 text-gray-800">Today progress:</h2>
+                <p class="text-gray-600">Today I learned about Tailwind CSS and how to use it to style my web pages. I also learned about JavaScript and how to add interactivity to my web pages.</p>
+                <p id="progressStatus" class="mt-2 text-red-600">NOT COMPLETED YET</p>
 
+            
+                <button id="completeButton" class="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">Mark as Completed</button>
             </div>
-
 
         </section>
     </main>
+    <script>
+        const mess=document.getElementById('progressStatus');
+        const moreInfo=document.getElementById('moreInfo');
+        const completeButton=document.getElementById('completeButton');
+        const togglebutton=document.getElementById('toggleButton');
+        togglebutton.addEventListener('click',function(){
+            moreInfo.classList.toggle('hidden');
+            if(moreInfo.classList.contains('hidden')){
+                togglebutton.textContent="Show More";
+            }
+            else{
+                togglebutton.textContent="Show Less";
+            }
+        })
+        completeButton.addEventListener('click', function(){
+            mess.textContent="Completed";
+            mess.classList.remove('text-red-600');
+            mess.classList.add('text-green-600');
+            completeButton.textContent="DONE";
+        })
+
+    </script>
 </body>
 </html>
