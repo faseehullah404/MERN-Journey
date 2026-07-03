@@ -1,0 +1,111 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: rgb(182, 197, 192);
+    line-height: 1.6;
+}
+header{
+    background-color: #353535;
+    color: rgb(182, 197, 192);
+    padding: 40px 20px;
+    
+    text-align: center;
+}
+header h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    margin-top: 20px;
+}
+nav li{
+    display: inline-block;
+    
+}
+
+nav a{
+    color: rgb(182, 197, 192);
+    text-decoration: underline;
+    font-weight: bold;
+    
+    
+}
+nav a:hover{
+    color: rgb(182, 197, 192);
+    text-decoration: overline;
+}
+
+main{
+    padding: 10px;
+    max-width: 80%;
+    margin: 30px auto;
+}
+
+section{
+    background-color: rgb(58, 58, 225);
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+section h2{
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+article{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid rgb(182, 197, 192);
+    border-radius: 8px;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 20px;
+}
+label{
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+input, textarea{
+    padding: 10px;
+    border: 1px solid rgb(182, 197, 192);
+    border-radius: 4px;
+    background-color: #000000;
+    color: rgb(182, 197, 192);
+}
+input[type="submit"]{
+    background-color: rgb(83, 83, 231);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    background-color: rgb(107, 107, 226);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+footer{
+    background-color: #353535;
+    color: rgb(182, 197, 192);
+    padding: 20px;
+    text-align: center;
+}
