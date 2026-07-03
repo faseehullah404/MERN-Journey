@@ -6,7 +6,37 @@
     <title>DAY 2 | Tailwind CSS + JS</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gray-100" text-grey-900> 
+<body class="bg-blue-100 text-gray-900">
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <section class="bg-white p-8 max-w-3xl w-full rounded-3xl shadow-lg p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold mb-2 text-gray-800">Faseeh Ullah</h1>
+                <p class="text-lg text-gray-600 mt-4">My name is Faseeh Ullah. I am a student of Software engineering, learning MERN.</p>
+                <button id="toggleButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Show More:)</button>
+            </div>
+            <div id="moreInfo" class="hidden mt-6 bg-gray-100 p-6 rounded-lg shadow-inner border border-gray-300">
+                <h2 class="text-xl font-semibold mb-4 text-gray-800">More Information</h2>
+                <p class="mt-2 text-gray-600">Here you can add more details about yourself, your skills, or your projects.</p>
+            </div>    
+            <div class ="bg-white mt-6 max-w-3xl w-full rounded-3xl shadow-lg p-8 border border-gray-300">
+                <h2 class="font-semibold text-xl mb-4 text-gray-800">Skills:</h2>
+                <div class="grid grid-cols-2 gap-4 ">
+                    <div class="bg-gray-200 p-4 rounded-lg text-center">C++</div>
+                    <div class="bg-gray-200 p-4 rounded-lg text-center">Data Structures</div>
+                    <div class="bg-gray-200 p-4 rounded-lg text-center">Oracle SQL</div>
+                    <div class="bg-gray-200 p-4 rounded-lg text-center">OOP Concepts</div>
+                    <div class="bg-gray-200 p-4 rounded-lg text-center">Software Architecture</div>
+                    <div class="bg-gray-200 p-4 rounded-lg text-center">HTML5</div>
+                    <div class="bg-gray-200 p-4 rounded-lg text-center">CSS</div>
+                
+                </div>
+            </div>
+            <div class="mt-4 p-4 roun">
 
+            </div>
+
+
+        </section>
+    </main>
 </body>
 </html>
