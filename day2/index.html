@@ -57,10 +57,19 @@
             }
         })
         completeButton.addEventListener('click', function(){
+            if(completeButton.textContent==="DONE"){
+                mess.textContent="NOT COMPLETED YET";
+                mess.classList.remove('text-green-600');
+                mess.classList.add('text-red-600');
+                completeButton.textContent="Mark as Completed";
+                return;
+            }
+            else{
             mess.textContent="Completed";
             mess.classList.remove('text-red-600');
             mess.classList.add('text-green-600');
             completeButton.textContent="DONE";
+            }
         })
 
     </script>
