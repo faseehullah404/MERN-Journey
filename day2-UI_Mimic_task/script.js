@@ -16,3 +16,22 @@ setInterval(function () {
 
   moveSlider();
 }, 4000);
+
+const secondSliderTrack = document.getElementById("secondSliderTrack");
+
+let secondCurrentSlide = 0;
+const secondTotalSlides = 3;
+
+function moveSecondSlider() {
+  secondSliderTrack.style.transform = `translateX(-${secondCurrentSlide * 100}%)`;
+}
+
+setInterval(function () {
+  secondCurrentSlide++;
+
+  if (secondCurrentSlide === secondTotalSlides) {
+    secondCurrentSlide = 0;
+  }
+
+  moveSecondSlider();
+}, 4000);
