@@ -11,10 +11,10 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
 </head>
-<body>
-    <header class="bg-white border-b border-gray-200 text-xs ">    
-        <div class="max-w-6xl mx-auto px-12 py-2 flex items-center justify-between gap-8">
-            <div class="flex items-center gap-8 ">
+<body class="bg-white overflow-x-hidden">
+    <header class="bg-white border-b border-gray-200 text-xs">    
+        <div class="max-w-6xl mx-auto px-4 sm:px-12 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 left-0">
                 
             <a href="abc@gmail.com" target="_blank" class="flex items-center gap-2 text-gray-600">
             <i class="fa-solid fa-envelope text-orange-500 text-10px border border-orange-500 rounded-full p-2"></i>
@@ -27,41 +27,44 @@
             </a>
             </div>
 
-        <div class="flex items-center gap-3">
-        <a href="www.instagram.com" target="_blank" class=" w-6 h-6 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-orange-500 transition "
-      >
-        <i class="fa-brands fa-instagram text-[10px]"></i>
-      </a>
-        <a href="www.facebook.com" target="_blank"class="w-6 h-6 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-orange-500 transition" >
-            <i class="fa-brands fa-facebook text-[10px]"></i>
-        </a>
-        <a href="www.twitter.com" target="_blank" class="w-6 h-6 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-orange-500 transition" >
-            <i class="fa-brands fa-twitter text-[10px]"></i>
-        </a>
+            <div class="flex flex-row sm:flex-row sm:items-center  gap-3 left-0 py-2">
+            <a href="www.instagram.com" target="_blank" class=" w-6 h-6 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-orange-500 transition "
+            >
+            <i class="fa-brands fa-instagram text-[10px]"></i>
+            </a>
+            <a href="www.facebook.com" target="_blank"class="w-6 h-6 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-orange-500 transition" >
+                <i class="fa-brands fa-facebook text-[10px]"></i>
+            </a>
+            <a href="www.twitter.com" target="_blank" class="w-6 h-6 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-orange-500 transition" >
+                <i class="fa-brands fa-twitter text-[10px]"></i>
+            </a>
+            </div>
         </div>
     </header>
     <nav class="bg-white shadow-sm">
-            <div class="max-w-6xl mx-auto px-12 py-2 flex items-center justify-between gap-21">
+             <div class="max-w-6xl mx-auto px-4 md:px-12 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
                 <!--logo-->
-                <p class="text-2xl font-bold text-gray-800 ">VILLA</p>
+                <p class="text-2xl font-bold text-gray-800 md:text-left text-center">VILLA</p>
 
                 <!--nav links-->
-                <div class="flex items-center gap-6 text-xs text-gray-600">
+                <div class="flex items-center gap-6 text-xs text-gray-600 justify-center">
                     <a href="#" class="hover:text-orange-500 transition">Home</a>
                     <a href="#" class="hover:text-orange-500 transition">About</a>
                     <a href="#" class="hover:text-orange-500 transition">Services</a>
                     <a href="#" class="hover:text-orange-500 transition">Contact</a>
-                    <a href="#" class="bg-black text-white px-4 py-2 rounded-sm hover:bg-orange-500 transition">Schedule a visit</a>
+                    <a href="#" class="bg-black text-white px-6 sm:px-4 py-2 rounded-sm hover:bg-orange-500 transition hidden md:block">Schedule a visit</a>
+                    <a href="#" class="bg-black text-white px-6 sm:px-4 py-2 rounded-sm hover:bg-orange-500 transition block md:hidden">Schedule</a>
                 </div>
             </div>
         </nav>
-    <main class="p-1 ">
+    <main class="w-full overflow-hidden bg-white">
         
-        <section class="relative h-[420px] overflow-hidden">
+        <section class="relative h-[320px] overflow-hidden w-full md:h-[420px]">
              <!-- Slider Track -->
-            <div id="sliderTrack" class="flex h-full transition-transform duration-1000 ease-in-out">
+            <div id="sliderTrack" class="flex w-full h-full transition-transform duration-1000 ease-in-out ">
                 <!-- Slide 1 -->
-                <div class="relative min-w-full h-full">
+                <div class="relative min-w-full h-full w-full">
                     <img 
                     src="assets/hero1.jfif" 
                     alt="Luxury villa"
@@ -75,7 +78,7 @@
                             Toronto Canada
                         </span>
 
-                        <h1 class="mt-4 text-xl font-bold leading-tight">
+                        <h1 class="mt-4 text-lg md:text-4xl font-bold leading-tight">
                             HURRY! <br>
                             GET THE BEST <br>
                             VILLA FOR YOU
@@ -83,7 +86,7 @@
                     </div>
                 </div>
                 <!-- Slide 2 -->
-                <div class="relative min-w-full h-full">
+                <div class="relative min-w-full h-full w-full">
                     <img 
                     src="assets/hero2.jfif" 
                     alt="Modern apartment"
@@ -97,7 +100,7 @@
                         Miami USA
                         </span>
 
-                        <h1 class="mt-4 text-4xl font-bold leading-tight">
+                        <h1 class="mt-4 text-lg md:text-4xl font-bold leading-tight">
                         FIND YOUR <br>
                         DREAM HOME <br>
                         TODAY
@@ -105,7 +108,7 @@
                     </div>
                 </div>
             <!-- Slide 3 -->
-                <div class="relative min-w-full h-full">
+                <div class="relative min-w-full h-full w-full">
                     <img 
                     src="assets/hero3.jfif" 
                     alt="Beautiful house"
@@ -119,7 +122,7 @@
                         Lahore Pakistan
                     </span>
 
-                    <h1 class="mt-4 text-4xl font-bold leading-tight">
+                    <h1 class="mt-4 text-lgmd:text-4xl font-bold leading-tight">
                         LUXURY LIVING <br>
                         STARTS FROM <br>
                         HERE
