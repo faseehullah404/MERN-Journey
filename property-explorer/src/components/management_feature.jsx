@@ -1,8 +1,26 @@
 function Feature(){
     return(
-        <div className="mt-4 bg-white py-4 text-center">
-            <h1 className="text-2xl text-black font-bold ">CRM Property Management Features Overview</h1>
-            <p className="text-gray-50 text-sm">Streamline your property business and increase your sales with the power of CRM software</p>
+        <div className="mt-4 bg-white pt-6 text-center">
+            <h1 className="text-4xl text-black font-bold ">CRM Property Management Features Overview</h1>
+            <p className="text-black text-sm font-medium pt-8">Streamline your property business and increase your sales with the power of CRM software</p>
+            <div className="flex flex row justify-center gap-4 pt-14 font-semibold">
+                <button id="generate" className="border border-gray-200 bg-gray-100 shadow-2xl pt-2 pb-4 px-2 text-green-700 hover:text-black">
+                    GENERATE MORE SALES
+                </button>
+                
+                <button id="sale" className="border border-gray-200 bg-gray-100 shadow-2xl pt-2 pb-4 px-2 text-green-700 hover:text-black">
+                    ORGANIZE SALE ACTIVITIES
+                </button>
+                <button id="track" className="border border-gray-200 bg-gray-100 shadow-2xl pt-2 pb-4 px-2 text-green-700 hover:text-black">
+                    TRACK SALE CAMPAIGNS
+                </button>
+                <button id="property" className="border border-gray-200 bg-gray-100 shadow-2xl pt-2 pb-4 px-2 text-green-700 hover:text-black">
+                    PROPERTY LISTING
+                </button>
+                <button id="manage" className="border border bg-green-700 shadow-2xl pt-2 pb-4 px-2 text-white hover:text-black">
+                    MANAGE SALES
+                </button>
+            </div>
         </div>
 
     )
