@@ -16,11 +16,23 @@ function Feature(){
             <h1 className="text-4xl text-black font-bold ">CRM Property Management Features Overview</h1>
             <p className="text-black text-sm font-medium pt-8">Streamline your property business and increase your sales with the power of CRM software</p>
             <div className="flex flex-row justify-center gap-4 pt-14 font-semibold">
-                {featureTabs.map((tab,index)=>(
-                    <button key={tab} className="border border-gray-200 bg-gray-100 shadow-2xl pt-2 pb-4 px-2 text-green-700 hover:text-black">
+                {featureTabs.map((tab,index)=>{
+                    let buttonClasses =
+                    "border border-gray-200 shadow-2xl pt-2 pb-4 px-2 transition"
+
+                    if (activeTab === index) {
+                        buttonClasses += " bg-green-700 text-white"
+                        } else {
+                        buttonClasses += " bg-gray-100 text-green-700 hover:text-black"
+                        }
+
+                    return(
+                    <button key={tab} className={buttonClasses}
+                    onClick={()=>setActiveTab(index)}>
                         {tab}
                     </button>
-                ))}
+                    )
+                })}
                 
             </div>
         </div>
