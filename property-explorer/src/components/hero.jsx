@@ -32,7 +32,7 @@ function hero(){
                         <input className="mt-4 border w-full border-gray-100 rounded-4xl p-4" placeholder="Phone Number" />
                         <input className="mt-4 border w-full border-gray-100 rounded-4xl p-4" placeholder="Email" />
                         <input className="mt-4 border w-full border-gray-100 rounded-4xl p-4" placeholder="Describe Your Requirement" />
-                        <a href="#" className="mt-6 mb-16 inline-flex rounded-2xl bg-green-700 text-white hover:bg-white hover:text-black py-3 px-5 shadow-[0_0_30px_rgba(56,189,248,0.25)] text-center ">
+                        <a href="#" className="mt-6 mb-16 inline-flex rounded-2xl bg-green-700 text-white hover:bg-yellow-400 hover:text-black py-3 px-8 shadow-[0_0_30px_rgba(56,189,248,0.25)] text-center ">
                         Submit
                     </a>
                     </div>
