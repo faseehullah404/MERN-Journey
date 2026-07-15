@@ -37,6 +37,7 @@ const featureData = [
     "Simplify your marketing campaigns with CRM by automating email, text, and social media outreach.",
   image: track,
   imageLeft: true,
+  variant: "campaign",
 },
   {
     id: 4,
@@ -48,6 +49,7 @@ const featureData = [
       "Input all of your real estate assets into Property CRM system, including property information.",
     image: property,
     imageLeft: false,
+    variant:"listing"
   },
    {
     id: 5,
@@ -58,6 +60,7 @@ const featureData = [
     description: "",
     image: manage,
     imageLeft: true,
+    variant:"team",
   },
 ]
 

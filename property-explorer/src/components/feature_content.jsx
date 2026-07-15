@@ -1,11 +1,22 @@
 function content_feature({feature}){
     let layoutClasses = "mt-16 flex items-center gap-16 text-left w-[1100px] mx-auto"
-
+    let imageClasses = "w-full object-contain"
+    let headingClasses = "mt-8 text-4xl font-bold text-blue-950"
   if (feature.imageLeft === true) {
     layoutClasses += " flex-row"
   } else {
     layoutClasses += " flex-row-reverse"
   }
+
+
+  if (feature.variant === "campaign") {
+    imageClasses += " max-h-[500px]"
+  } else if (feature.variant === "listing") {
+    imageClasses += " max-h-[450px]"
+  } else if (feature.variant === "teams") {
+    imageClasses += " max-h-[520px]"
+  }
+
   return(
   <div className={layoutClasses}>
       <div className="w-1/2">
