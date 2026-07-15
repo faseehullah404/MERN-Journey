@@ -9,6 +9,7 @@ import Organize from "../assets/organize.png"
 const featureData = [
   {
   id:1,
+  variant:"sale",
   buttonText:"GENERATE MORE SALES",
   label:"faster than ever",
   heading: "Generating More Sales",
@@ -20,6 +21,7 @@ const featureData = [
   {
     id: 2,
     buttonText: "ORGANIZE SALE ACTIVITIES",
+    variant:"activities",
     label: "TASKS & ACTIVITIES",
     heading: "Organize Your Activities & Tasks",
     description:
@@ -42,7 +44,7 @@ const featureData = [
   {
     id: 4,
     buttonText: "PROPERTY LISTING",
-    label: "",
+    
     heading: "Manage property",
     highlightedHeading: "Listing",
     description:
@@ -54,7 +56,7 @@ const featureData = [
    {
     id: 5,
     buttonText: "MANAGE TEAMS",
-    label: "",
+    
     heading: "Smoothly Manage",
     highlightedHeading: "Teams",
     description: "",
