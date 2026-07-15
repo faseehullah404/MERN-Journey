@@ -9,7 +9,7 @@ function content_feature({feature}){
     "w-1/2"
 
   let headingClasses =
-    "font-bold text-blue-950"
+    "font-bold text-blue-950 text-2xl"
 
   let descriptionClasses =
     "mt-5 text-lg leading-9 text-blue-950"
@@ -21,7 +21,7 @@ function content_feature({feature}){
     layoutClasses += " flex-row-reverse"
   }
 
-if (feature.variant === "sales") {
+if (feature.variant === "sale") {
     imageClasses += " max-h-[480px]"
     headingClasses += " mt-8 text-4xl"
     textContainerClasses += " pr-8"
@@ -59,7 +59,7 @@ if (feature.variant === "sales") {
     textContainerClasses += " pl-10"
 
     labelElement = null
-  } else if (feature.variant === "teams") {
+  } else if (feature.variant === "team") {
     imageClasses += " max-h-[540px]"
     headingClasses += " mt-0 text-5xl leading-tight"
     descriptionClasses += " max-w-lg"
@@ -90,6 +90,34 @@ if (feature.variant === "sales") {
         <p className={descriptionClasses}>
           {feature.description}
         </p>
+        <div className="mt-6 space-y-4">
+            {feature.items.map((item) => {
+                const Icon = item.icon
+
+                return (
+                <div
+                    key={item.id}
+                    className="flex items-start gap-4"
+                >
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-green-700 text-white">
+                    <Icon size={20} />
+                    </div>
+
+                    <div>
+                    <h3 className="text-xl font-semibold pt-2 text-blue-950">
+                        {item.title}
+                    </h3>
+
+                    {item.text && (
+                        <p className="mt-1 text-base leading-7 text-blue-950">
+                        {item.text}
+                        </p>
+                    )}
+                    </div>
+                </div>
+                )
+            })}
+            </div>
       </div>
     </div>
   )
