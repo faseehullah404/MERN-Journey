@@ -1,3 +1,4 @@
+import content from "./feature_content"
 import { useState } from "react"
 import Generate from "../assets/generate.png"
 import Organize from "../assets/organize.png"
@@ -26,6 +27,7 @@ const featureData = [
 ]
 
 function Feature(){
+    
     const [activeTab, setActiveTab] = useState(0)
     const selectedFeature=featureData[activeTab]
     return(
