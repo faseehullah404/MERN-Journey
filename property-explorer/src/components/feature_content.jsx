@@ -1,5 +1,5 @@
 function content_feature({feature}){
-    let layoutClasses = "mt-16 flex items-center gap-16 text-left"
+    let layoutClasses = "mt-16 flex items-center gap-16 text-left w-[1100px] mx-auto"
 
   if (feature.imageLeft === true) {
     layoutClasses += " flex-row"
@@ -33,5 +33,5 @@ function content_feature({feature}){
   )
 }
 
-export default FeatureContent
+export default content_feature
 

@@ -1,4 +1,7 @@
-import content from "./feature_content"
+import track from "../assets/track.png"
+import property from "../assets/property.png"
+import manage from "../assets/manage.png"
+import Content from "./feature_content"
 import { useState } from "react"
 import Generate from "../assets/generate.png"
 import Organize from "../assets/organize.png"
@@ -23,6 +26,38 @@ const featureData = [
       "Increase efficiency with task automation, saving time and effort while maintaining a complete customer interaction record.",
     image: Organize,
     imageLeft: false,
+  },
+  {
+  id: 3,
+  buttonText: "TRACK SALE CAMPAIGNS",
+  label: "EFFORTS LESS WORK",
+  heading: "Tracking of your Campaigns",
+  highlightedHeading: "& Sales Queries",
+  description:
+    "Simplify your marketing campaigns with CRM by automating email, text, and social media outreach.",
+  image: track,
+  imageLeft: true,
+},
+  {
+    id: 4,
+    buttonText: "PROPERTY LISTING",
+    label: "",
+    heading: "Manage property",
+    highlightedHeading: "Listing",
+    description:
+      "Input all of your real estate assets into Property CRM system, including property information.",
+    image: property,
+    imageLeft: false,
+  },
+   {
+    id: 5,
+    buttonText: "MANAGE TEAMS",
+    label: "",
+    heading: "Smoothly Manage",
+    highlightedHeading: "Teams",
+    description: "",
+    image: manage,
+    imageLeft: true,
   },
 ]
 
@@ -55,26 +90,7 @@ function Feature(){
 
                 
             </div>
-            <div className="mt-16 flex items-center gap-16 text-left">
-                <div className="w-1/2">
-                    <img src={selectedFeature.image}
-                    alt={selectedFeature.heading}
-                    className="w-full object-contain"/>
-                </div>
-                <div className="w-1/2">
-                    <span className="inline-block rounded-full bg-slate-100 px-8 py-3 text-green-700 tracking-widest">
-                    {selectedFeature.label}
-                    </span>
-                    <h2 className="mt-8 text-4xl font-bold text-blue-950">
-                      {selectedFeature.heading}
-                    </h2>
-
-                    <p className="mt-5 text-lg leading-9 text-blue-950">
-                        {selectedFeature.description}
-                    </p>
-                </div>
-
-            </div>
+            <Content feature={selectedFeature} />
         </div>
 
     )
