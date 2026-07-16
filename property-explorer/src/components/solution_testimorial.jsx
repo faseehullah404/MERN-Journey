@@ -5,6 +5,7 @@ import {
   Building2
 } from "lucide-react"
 import Sol from "../assets/Solution.png"
+import test from "../assets/testimorial.png"
 const solutionItems = [
   {
     id: 1,
@@ -29,6 +30,7 @@ const solutionItems = [
 ]
 function Solution(){
     return(
+        <>
         <div className="max-w-[1100px] mx-auto ">
             <div className="border border-gray-50 rounded-2xl w-fit px-4 bg-gray-50 text-green-700 font-sans mt-6">
                 <i>Property CRM</i>
@@ -65,9 +67,49 @@ function Solution(){
                 <div>
                     <img src={Sol} />
                 </div>
-
+                
             </div>
         </div>
+            <div className="max-w-[1200px] mx-auto mt-8 grid grid-cols-[600px_600px] gap-6">
+                <div className="w-125">
+                    <img src={test} />
+
+                </div>
+                <div className="mt-25">
+                    <h1 className="font-meduim text-green-700 translate-x-4">
+                        <i>   Our Testimorial</i>
+                    </h1>
+                    <h1 className="text-black text-4xl font-bold leading-13">
+                        What Our  
+                        <span className="text-green-700"> Customer Said </span>
+                        <br />About Us
+                    </h1>
+
+                </div>
+            </div>
+            <div className="mt-6 max-w-[1000px] gap-4 mx-auto grid grid-cols-2 text-gray-400 font-meduim text-sm leading-7">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa illum commodi, earum libero accusantium ratione laboriosam aperiam, eius expedita non architecto minima natus, quasi tenetur.</p>
+                    <p className="mt-4 font-bold text-black text-meduim translate-x-16">
+                        Alex Andreson <br/> 
+                        <span className="text-gray-400 font-meduim text-sm">
+                            CEO Digital Startup
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, tempore incidunt. Ea voluptates maxime sed quibusdam totam placeat nobis, nihil, ratione sequi sapiente non dolor.</p>
+                    <p className="mt-4 font-bold text-black text-meduim translate-x-16">
+                        Ali <br/> 
+                        <span className="text-gray-400 font-meduim text-sm">
+                            CEO Digital Startup
+                        </span>
+                    </p>
+
+                </div>
+            </div>
+
+        </>
     )
 }
 export default Solution
