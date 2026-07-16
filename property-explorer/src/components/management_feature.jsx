@@ -248,6 +248,9 @@ function Feature(){
                 
             </div>
             <Content feature={selectedFeature} />
+            <a href="#" className="inline-flex rounded-xl bg-green-700 text-white text-center text-bold px-10 py-3 mt-12 shadow-green-600 shadow-4xl hover:bg-white hover:text-black">
+              More Features+
+            </a>
         </div>
 
     )
