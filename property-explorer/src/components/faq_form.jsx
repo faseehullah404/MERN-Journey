@@ -45,7 +45,7 @@ function FaqForm() {
     }
   }
     return (
-    <section className="bg-white py-20">
+    <section className="bg-white pt-20">
       <div className="mx-auto max-w-[1100px] px-8">
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.2fr_0.9fr]">
           
@@ -94,8 +94,8 @@ function FaqForm() {
               <span className="text-green-700"> Touch</span>
             </h2>
 
-            <div className="relative mt-7 bg-white py-8 px-8 w-[500px]">
-              <div className="absolute inset-y-0 right-0 w-7 bg-green-700"></div>
+            <div className="relative mt-7 bg-white pt-8 px-8 w-[500px] ">
+              <div className="absolute inset-y-8 right-3 w-5 bg-green-700 transition-x-111"></div>
 
               <form className="shadow-xl p-6 ">
                     <div >
