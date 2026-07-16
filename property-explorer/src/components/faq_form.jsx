@@ -46,21 +46,21 @@ function FaqForm() {
   }
     return (
     <section className="bg-white py-20">
-      <div className="mx-auto max-w-[1500px] px-8">
+      <div className="mx-auto max-w-[1100px] px-8">
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.2fr_0.9fr]">
           
           <div>
             <div className="flex items-center gap-5">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-700 text-white">
-                <CircleHelp size={36} />
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-700 text-white">
+                <CircleHelp size={25} />
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-blue-950">
+                <h2 className="text-xl font-bold text-blue-950">
                   F.A.Qs
                 </h2>
 
-                <p className="mt-1 text-lg text-blue-950">
+                <p className="mt-1 text-meduim text-blue-950">
                   Frequently asked questions
                 </p>
               </div>
@@ -89,12 +89,12 @@ function FaqForm() {
           </div>
 
           <div>
-            <h2 className="text-4xl font-bold text-blue-950">
+            <h2 className="text-2xl font-bold text-blue-950 translate-x-8">
               Get In
               <span className="text-green-700"> Touch</span>
             </h2>
 
-            <div className="relative mt-7 bg-white p-8 pr-14 shadow-2xl">
+            <div className="relative mt-7 bg-white py-8 px-8 w-[500px]">
               <div className="absolute inset-y-0 right-0 w-7 bg-green-700"></div>
 
               <form className="shadow-xl p-6 ">
