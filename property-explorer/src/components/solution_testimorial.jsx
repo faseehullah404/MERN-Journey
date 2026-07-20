@@ -31,14 +31,14 @@ const solutionItems = [
 function Solution(){
     return(
         <>
-        <div className="max-w-[1100px] mx-auto ">
-            <div className="border border-gray-50 rounded-2xl w-fit px-4 bg-gray-50 text-green-700 font-sans mt-6">
+        <div className="md:max-w-[1100px] w-[90%] mx-auto flex flex-col items-center md:items-start">
+            <div className="border border-gray-50 rounded-2xl w-fit px-4 bg-gray-50 text-green-700 font-sans mt-6 ">
                 <i>Property CRM</i>
             </div>
-            <div className="grid grid-cols-[600px_500px] gap-10 mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-[600px_500px] gap-10 mt-6">
                 <div>
-                    <h1 className="font-bold text-black text-4xl">One Window 
-                        <span className=" text-green-700 text-4xl"> Solution</span>
+                    <h1 className="font-bold text-black text-2xl text-center md:text-left md:text-4xl">One Window 
+                        <span className=" text-green-700 text-2xl md:text-4xl"> Solution</span>
                     </h1>
                     <p className="text-gray-600 font-light mt-6">
                         Property CRM a cloud enabled solution will manage Sales Team, Leads Conversion, assign leads to the team, stages of leads, Activity log, Contact List with detail, Dashboard and reports.
@@ -70,16 +70,16 @@ function Solution(){
                 
             </div>
         </div>
-            <div className="max-w-[1200px] mx-auto mt-8 grid grid-cols-[600px_600px] gap-6">
+            <div className="md:max-w-[1200px] w-[90%] mx-auto mt-8 grid grid-cols-1 md:grid-cols-[600px_600px] gap-6">
                 <div className="w-125">
                     <img src={test} />
 
                 </div>
-                <div className="mt-25">
+                <div className="md:mt-25 mt-10">
                     <h1 className="font-meduim text-green-700 translate-x-4">
                         <i>   Our Testimorial</i>
                     </h1>
-                    <h1 className="text-black text-4xl font-bold leading-13">
+                    <h1 className="text-black text-2xl md:text-4xl font-bold leading-relaxed md:leading-13">
                         What Our  
                         <span className="text-green-700"> Customer Said </span>
                         <br />About Us
@@ -87,10 +87,10 @@ function Solution(){
 
                 </div>
             </div>
-            <div className="mt-6 max-w-[1000px] gap-4 mx-auto grid grid-cols-2 text-gray-400 font-meduim text-sm leading-7">
+            <div className="mt-6 md:max-w-[1000px] w-[90%] gap-4 mx-auto grid grid-cols-1 md:grid-cols-2 text-gray-400 font-meduim text-sm leading-7">
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa illum commodi, earum libero accusantium ratione laboriosam aperiam, eius expedita non architecto minima natus, quasi tenetur.</p>
-                    <p className="mt-4 font-bold text-black text-meduim translate-x-16">
+                    <p className="mt-4 font-bold text-black text-meduim md:translate-x-16 translate-x-0">
                         Alex Andreson <br/> 
                         <span className="text-gray-400 font-meduim text-sm">
                             CEO Digital Startup
@@ -99,7 +99,7 @@ function Solution(){
                 </div>
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, tempore incidunt. Ea voluptates maxime sed quibusdam totam placeat nobis, nihil, ratione sequi sapiente non dolor.</p>
-                    <p className="mt-4 font-bold text-black text-meduim translate-x-16">
+                    <p className="mt-4 font-bold text-black text-meduim md:translate-x-16 translate-x-0">
                         Ali <br/> 
                         <span className="text-gray-400 font-meduim text-sm">
                             CEO Digital Startup
