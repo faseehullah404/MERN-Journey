@@ -226,10 +226,11 @@ function Feature(){
         <div className="mt-4 bg-white pt-6 text-center">
             <h1 className="text-4xl text-black font-bold ">CRM Property Management Features Overview</h1>
             <p className="text-black text-sm font-medium pt-8">Streamline your property business and increase your sales with the power of CRM software</p>
-            <div className="flex flex-row justify-center gap-4 pt-14 font-semibold">
+            <div className="w-[92%] max-w-[1100px] mx-auto overflow-x-auto pt-14">
+              <div className="flex w-max md:w-full justify-start md:justify-center gap-4 font-semibold px-1">
                 {featureData.map((tab,index)=>{
                     let buttonClasses =
-                    "border border-gray-200 shadow-2xl pt-2 pb-4 px-2 transition"
+                    "border border-gray-100 shadow-sm py-2 px-3 rounded-md text-xs whitespace-nowrap transition"
 
                     if (activeTab === index) {
                         buttonClasses += " bg-green-700 text-white"
@@ -245,7 +246,7 @@ function Feature(){
                     )
                 })}
 
-                
+              </div>  
             </div>
             <Content feature={selectedFeature} />
             <a href="#" className="inline-flex rounded-xl bg-green-700 text-white text-center text-bold px-10 py-3 mt-12 shadow-green-600 shadow-4xl hover:bg-white hover:text-black">

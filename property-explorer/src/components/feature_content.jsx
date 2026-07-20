@@ -1,6 +1,6 @@
 function content_feature({feature}){
   let layoutClasses =
-    "mx-auto mt-16 flex max-w-7xl items-center gap-16 px-8 text-left"
+    "mx-auto mt-16 flex md:flex-row flex-col max-w-7xl items-center gap-16 px-8 text-left"
 
   let imageClasses =
     "w-full object-contain"
