@@ -176,7 +176,7 @@ function Nav(){
           <a
             key={menu.id}
             href={menu.href}
-            className="whitespace-nowrap font-['Inter'] text-[16px] font-[300] leading-[22px] text-[#1B223A]"
+            className="whitespace-nowrap font-['Inter'] text-[16px] font-[500] leading-[22px] text-[#1B223A]"
           >
             {menu.label}
           </a>
@@ -188,7 +188,7 @@ function Nav(){
           key={menu.id}
           type="button"
           onClick={() => handleMenuClick(menu.id)}
-          className="m-0 whitespace-nowrap border-0 bg-transparent p-0 font-['Inter'] text-[16px] font-[300] leading-[22px] text-[#1B223A]"
+          className="m-0 whitespace-nowrap border-0 bg-transparent p-0 font-['Inter'] text-[16px] font-[500] leading-[22px] text-[#1B223A]"
         >
           {menu.label}
         </button>
