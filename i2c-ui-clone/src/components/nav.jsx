@@ -1,6 +1,6 @@
 import i2c_logo from "../assets/i2c-logo.svg"
 import { useEffect, useState } from "react"
-import MegaMenu from "./MegaMenu"
+import MegaMenu from "./Megamenu.jsx"
 import { VolumeX, Menu, Search, ArrowRight } from "lucide-react"
 const navMenus = [
   {
@@ -236,7 +236,7 @@ function Nav(){
 
         
     return(
-  <header className="w-full bg-white">
+  <header className="relative z-50 w-full bg-white">
     <nav className="mx-auto grid h-[84px] w-[1230px] grid-cols-[1fr_auto] items-center gap-[70px]">
 
   {/* Left column */}
