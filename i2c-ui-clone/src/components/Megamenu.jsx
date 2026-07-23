@@ -1,15 +1,19 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 function Megamenu({menu}){
     return (
-    <div className="absolute left-0 top-full z-40 w-full rounded-b-[28px] bg-white">
-      <div className="mx-auto min-h-[430px] w-[1230px] py-[48px]">
+    <div className="absolute left-0 top-full z-40 h-[448px] w-full overflow-hidden rounded-b-[28px] border-t border-[#D9DEE8] bg-white shadow-[0_10px_24px_rgba(27,34,58,0.10)]">
+      <div className="mx-auto h-full w-[1230px] pt-[42px]">
         <a
         href="#"
-        className="mb-[46px] flex w-fit items-center gap-[10px] font-['Inter'] text-[28px] font-[300] leading-[34px] text-[#1B223A]">
+        className="mb-[42px]
+            flex w-fit items-center gap-[9px]
+            font-['Inter']
+            text-[24px] font-[400] leading-[29px]
+            text-[#1434CB]">
         {menu.heading}
 
         <ArrowUpRight
-            className="h-[21px] w-[21px]"
+            className="h-[18px] w-[18px]"
             strokeWidth={1.5}
           />
         </a>
