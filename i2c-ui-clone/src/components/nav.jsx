@@ -141,7 +141,7 @@ const navMenus = [
     linkText: "Reimagine what's possible",
     image: null,
   },
-}
+},
 {
   id: "who-we-are",
   label: "Who We Are",
@@ -169,7 +169,7 @@ const navMenus = [
     linkText: "Read Now",
     image: null,
   },
-}
+},
 {
   id: "in-the-know",
   label: "In The Know",
@@ -207,7 +207,7 @@ const navMenus = [
         },
       ],
     },
-},
+
   ],
 
   promo: {
