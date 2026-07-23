@@ -1,5 +1,13 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 function Megamenu({menu}){
+    let columnsLayout = "grid-cols-[240px]"
+
+    if (menu.columns.length === 2) {
+    columnsLayout = "grid-cols-[160px_220px] gap-x-[44px]"
+    } else if (menu.columns.length >= 3) {
+    columnsLayout = "grid-cols-[160px_240px_180px] gap-x-[34px]"
+    }
+
     return (
     <div className="absolute left-0 top-full z-40 h-[448px] w-full overflow-hidden rounded-b-[28px] border-t border-[#D9DEE8] bg-white shadow-[0_10px_24px_rgba(27,34,58,0.10)]">
       <div className="mx-auto h-full w-[1230px] pt-[42px]">
@@ -17,14 +25,14 @@ function Megamenu({menu}){
             strokeWidth={1.5}
           />
         </a>
-        <div className="grid grid-cols-[1fr_525px] gap-[80px]">
+        <div className="grid grid-cols-[minmax(0,1fr)_466px] items-start gap-x-[52px]">
             <div>
-                <div className="flex gap-[72px]">
+                <div className={`grid ${columnsLayout}`}>
                     {menu.columns.map((column, columnIndex) => {
                         return (
                         <div
                             key={columnIndex}
-                            className="min-w-[160px]"
+                            className="space-y-[20px]"
                         >
                             {column.sections.map((section, sectionIndex) => {
                             return (
@@ -35,7 +43,12 @@ function Megamenu({menu}){
                                     {section.title && (
                                     <a
                                         href="#"
-                                        className="mb-[12px] block whitespace-nowrap font-['Inter'] text-[23px] font-[300] leading-[28px] text-[#1B223A]"
+                                        className="block w-fit
+                                        font-['Inter']
+                                        text-[18px] font-[300] leading-[22px]
+                                        text-[#1B223A]
+                                        transition-colors duration-200
+                                        hover:text-[#1434CB]"
                                     >
                                         {section.title}
                                     </a>
