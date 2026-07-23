@@ -109,37 +109,114 @@ const navMenus = [
 
     promo: {
       description:
-        "Learn about the gap fast-growing companies are navigating.",
+        "Learn about the gap fast-growing companies are navigating and the opportunity it creates for those willing to rethink financial infrastructure for growth.",
       linkText: "Download Now",
       image: null,
     },
   },
 
-  {
-    id: "how-were-different",
-    label: "How We're Different",
-    heading: "How We're Different",
-    columns: [
-      // iska data baad mein add karenge
-    ],
-    promo: null,
-  },
+{
+  id: "how-were-different",
+  label: "How We're Different",
+  heading: "How We're Different",
 
-  {
-    id: "who-we-are",
-    label: "Who We Are",
-    href: "#",
-  },
+  columns: [
+    {
+      sections: [
+        {
+          title: null,
+          links: [
+            "All-in-One Platform",
+            "Composable Solutions",
+            "Trusted Experience",
+          ],
+        },
+      ],
+    },
+  ],
 
-  {
-    id: "in-the-know",
-    label: "In The Know",
-    heading: "In The Know",
-    columns: [
-      // iska data baad mein add karenge
-    ],
-    promo: null,
+  promo: {
+    description:
+      "With i2c’s composable platform, choose what you need and launch at full speed.",
+    linkText: "Reimagine what's possible",
+    image: null,
   },
+}
+{
+  id: "who-we-are",
+  label: "Who We Are",
+  heading: "Who We Are",
+
+  columns: [
+    {
+      sections: [
+        {
+          title: null,
+          links: [
+            "Our Story",
+            "Meet Our Leaders",
+            "Our Global Footprint",
+            "Supercharge Your Career",
+          ],
+        },
+      ],
+    },
+  ],
+
+  promo: {
+    description:
+      "i2c actively positioning its leadership at the forefront of the conversation as Agentic AI rapidly moves from concept to tangible implementation.",
+    linkText: "Read Now",
+    image: null,
+  },
+}
+{
+  id: "in-the-know",
+  label: "In The Know",
+  heading: "In The Know",
+
+  columns: [
+    {
+      sections: [
+        {
+          title: "Newsroom",
+          links: ["News", "Awards"],
+        },
+      ],
+    },
+
+    {
+      sections: [
+        {
+          title: "Insights",
+          links: [
+            "Blogs & Podcasts",
+            "Research Reports",
+            "Playbooks",
+            "Newsletters",
+          ],
+        },
+      ],
+    },
+
+    {
+      sections: [
+        {
+          title: "Events",
+          links: ["In-Person", "Virtual"],
+        },
+      ],
+    },
+},
+  ],
+
+  promo: {
+    description:
+      'i2c Named “Overall FinTech Company of the Year” in 2026 FinTech Breakthrough Awards',
+    linkText: "Outperform industry standards",
+    image: null,
+  },
+}
 ]
 
 
@@ -171,17 +248,7 @@ function Nav(){
     />
 
     {navMenus.map((menu) => {
-      if (menu.id === "who-we-are") {
-        return (
-          <a
-            key={menu.id}
-            href={menu.href}
-            className="whitespace-nowrap font-['Inter'] text-[16px] font-[500] leading-[22px] text-[#1B223A]"
-          >
-            {menu.label}
-          </a>
-        )
-      }
+      
 
       return (
         <button
