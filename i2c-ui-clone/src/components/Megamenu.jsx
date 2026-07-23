@@ -13,11 +13,11 @@ function Megamenu({menu}){
       <div className="mx-auto h-full w-[1230px] pt-[42px]">
         <a
         href="#"
-        className="mb-[42px]
+        className="mb-[20px]
             flex w-fit items-center gap-[9px]
             font-['Inter']
             text-[24px] font-[400] leading-[29px]
-            text-[#1434CB]">
+            hover:text-[#1434CB]">
         {menu.heading}
 
         <ArrowUpRight
@@ -32,20 +32,20 @@ function Megamenu({menu}){
                         return (
                         <div
                             key={columnIndex}
-                            className="space-y-[20px]"
+                            className="space-y-[0px]"
                         >
                             {column.sections.map((section, sectionIndex) => {
                             return (
                                 <div
                                 key={sectionIndex}
-                                className="mb-[22px]"
+                                className="mb-[10px]"
                                 >
                                     {section.title && (
                                     <a
                                         href="#"
                                         className="block w-fit
                                         font-['Inter']
-                                        text-[18px] font-[300] leading-[22px]
+                                        text-[18px] font-[400] leading-[22px]
                                         text-[#1B223A]
                                         transition-colors duration-200
                                         hover:text-[#1434CB]"
@@ -53,7 +53,7 @@ function Megamenu({menu}){
                                         {section.title}
                                     </a>
                                     )}
-                                    <div className="flex flex-col gap-[12px]">
+                                    <div className="mt-[10px] flex flex-col gap-[10px]">
                                         {section.links.map((link) => {
                                             return (
                                                 <a
@@ -61,8 +61,8 @@ function Megamenu({menu}){
                                                     href="#"
                                                     className={
                                                     section.title === null
-                                                    ? "whitespace-nowrap font-['Inter'] text-[23px] font-[300] leading-[32px] text-[#1B223A]"
-                                                    : "whitespace-nowrap font-['Inter'] text-[17px] font-[300] leading-[22px] text-[#1B223A]"
+                                                    ? "whitespace-nowrap font-['Inter'] text-[23px] font-[400] leading-[32px] text-[#1B223A]"
+                                                    : "whitespace-nowrap font-['Inter'] text-[17px] font-[400] leading-[22px] text-[#1B223A]"
                                                     }
                                                     >
                                                     {link}
