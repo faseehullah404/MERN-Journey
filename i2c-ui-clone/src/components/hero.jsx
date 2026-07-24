@@ -119,7 +119,20 @@ function Hero(){
 
                 {/* Right column */}
                 <div className="pt-[65px]">
-                    Right slider
+                   <div className="relative h-[553px] w-[665px] overflow-hidden bg-white">
+
+                        {heroSlides.map((slide, index) => {
+                        let slideVisibility =
+                            "pointer-events-none opacity-0"
+
+                        if (activeSlide === index) {
+                            slideVisibility =
+                            "pointer-events-auto opacity-100"
+                        }
+                        return(
+                            
+                        )
+                    </div>
                 </div>
 
                 </div>
