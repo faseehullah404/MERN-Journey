@@ -130,8 +130,26 @@ function Hero(){
                             "pointer-events-auto opacity-100"
                         }
                         return(
-                            
+                            <div
+                                key={slide.id}
+                                className={`
+                                    absolute inset-0
+                                    transition-opacity duration-700 ease-in-out
+                                    ${slideVisibility}
+                                `}
+                                >
+                                <img
+                                    src={slide.image}
+                                    alt={slide.title}
+                                    className="h-full w-full object-contain"
+                                />
+
+                                <h2 className="absolute bottom-[28px] left-1/2 -translate-x-1/2 whitespace-nowrap font-['Inter'] text-[28px] font-[400] leading-[34px] text-white">
+                                    {slide.title}
+                                </h2>
+                            </div>
                         )
+                    })}
                     </div>
                 </div>
 
