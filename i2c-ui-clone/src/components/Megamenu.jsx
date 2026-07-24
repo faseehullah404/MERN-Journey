@@ -1,3 +1,4 @@
+
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 function Megamenu({menu}){
     let columnsLayout = "grid-cols-[240px]"
@@ -9,7 +10,7 @@ function Megamenu({menu}){
     }
 
     return (
-    <div className="absolute left-0 top-full z-40 h-[448px] w-full overflow-hidden rounded-b-[28px] border-t border-[#D9DEE8] bg-white shadow-[0_10px_24px_rgba(27,34,58,0.10)]">
+    <div className="absolute left-0 top-full z-40 pb-18 w-full overflow-hidden rounded-b-[28px] border-t border-[#D9DEE8] bg-white shadow-[0_10px_24px_rgba(27,34,58,0.10)]">
       <div className="mx-auto h-full w-[1230px] pt-[42px]">
         <a
         href="#"
@@ -82,7 +83,7 @@ function Megamenu({menu}){
             <div>
                 {menu.promo && (
                 <div className="mt-[-6px]
-                    grid h-[143px]
+                    grid h-min-[143px]
                     grid-cols-[minmax(0,1fr)_194px]
                     gap-[24px]
                     rounded-[15px]
@@ -115,7 +116,7 @@ function Megamenu({menu}){
                     </a>
                     </div>
 
-                    <div className="h-full overflow-hidden rounded-[10px] bg-white">
+                    <div className=" h-full overflow-hidden rounded-[10px] bg-white">
                     {menu.promo.image && (
                         <img
                         src={menu.promo.image}

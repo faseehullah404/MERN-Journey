@@ -138,7 +138,7 @@ const navMenus = [
   promo: {
     description:
       "With i2c’s composable platform, choose what you need and launch at full speed.",
-    linkText: "Reimagine what's possible",
+    linkText: "What's possible",
     image: null,
   },
 },
@@ -329,8 +329,21 @@ function Nav(){
     
 
     {selectedMenu && (
-      <MegaMenu menu={selectedMenu} />
-    )}
+  <>
+    <button
+      type="button"
+      aria-label="Close navigation menu"
+      onClick={() => setOpenMenu(null)}
+      className="
+        fixed inset-x-0 bottom-0 top-[84px] z-30
+        cursor-default
+        border-0 bg-[#CCCED3]/20 p-0
+      "
+    />
+
+    <MegaMenu menu={selectedMenu} />
+  </>
+)}
   </header>
     )
 }
