@@ -116,12 +116,12 @@ function Megamenu({menu}){
                     </a>
                     </div>
 
-                    <div className=" h-full overflow-hidden rounded-[10px] bg-white">
+                    <div className=" h-fit w-fit overflow-hidden rounded-[10px] bg-white">
                     {menu.promo.image && (
                         <img
                         src={menu.promo.image}
                         alt=""
-                        className="h-full w-full object-cover"
+                        className="h-full w-fit object-cover"
                         />
                     )}
                     </div>

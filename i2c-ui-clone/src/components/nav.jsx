@@ -1,3 +1,8 @@
+import megamenu1 from "../assets/configurable-building-blocks.webp"
+import megamenu2 from "../assets/Virtual-Event_PYMNTS_Emerging-Middle-Market.jpg"
+import megamenu3 from "../assets/supercharge-banking-and-payments.png"
+import megamenu4 from "../assets/Group-1171278021.png"
+import megamenu5 from "../assets/image-8.png"
 import i2c_logo from "../assets/i2c-logo.svg"
 import { useEffect, useState } from "react"
 import MegaMenu from "./Megamenu.jsx"
@@ -33,13 +38,12 @@ const navMenus = [
               "Client Testimonials",
               "Case Studies",
               "Client Login",
+              "Developers",
+              "API Library"
             ],
           },
 
-          {
-            title: "Developers",
-            links: ["API Library"],
-          },
+          
         ],
       },
     ],
@@ -48,7 +52,7 @@ const navMenus = [
       description:
         "We help financial leaders move fast and stay ahead.",
       linkText: "Fuel your future",
-      image: null,
+      image: megamenu1,
     },
   },
 
@@ -111,7 +115,7 @@ const navMenus = [
       description:
         "Learn about the gap fast-growing companies are navigating and the opportunity it creates for those willing to rethink financial infrastructure for growth.",
       linkText: "Download Now",
-      image: null,
+      image: megamenu2,
     },
   },
 
@@ -139,7 +143,7 @@ const navMenus = [
     description:
       "With i2c’s composable platform, choose what you need and launch at full speed.",
     linkText: "What's possible",
-    image: null,
+    image: megamenu3,
   },
 },
 {
@@ -167,7 +171,7 @@ const navMenus = [
     description:
       "i2c actively positioning its leadership at the forefront of the conversation as Agentic AI rapidly moves from concept to tangible implementation.",
     linkText: "Read Now",
-    image: null,
+    image: megamenu4,
   },
 },
 {
@@ -214,7 +218,7 @@ const navMenus = [
     description:
       'i2c Named “Overall FinTech Company of the Year” in 2026 FinTech Breakthrough Awards',
     linkText: "Outperform industry standards",
-    image: null,
+    image: megamenu5,
   },
 }
 ]
