@@ -61,8 +61,8 @@ function Megamenu({menu}){
                                                     href="#"
                                                     className={
                                                     section.title === null
-                                                    ? "whitespace-nowrap font-['Inter'] text-[23px] font-[400] leading-[32px] text-[#1B223A]"
-                                                    : "whitespace-nowrap font-['Inter'] text-[17px] font-[400] leading-[22px] text-[#1B223A]"
+                                                    ? "w-fit whitespace-nowrap font-['Inter'] text-[20px] font-[500] leading-[28px] text-[#1B223A] transition-colors duration-200  hover:text-[#1434CB]" 
+                                                    : "w-fit whitespace-nowrap font-['Inter'] text-[16px] font-[400] leading-[22px] text-[#1B223A] transition-colors duration-200 hover:text-[#1434CB]"
                                                     }
                                                     >
                                                     {link}
@@ -81,21 +81,35 @@ function Megamenu({menu}){
 
             <div>
                 {menu.promo && (
-                <div className="grid h-[162px] grid-cols-[1fr_180px] gap-[18px] rounded-[16px] bg-[#E4F3FF] p-[28px]">
+                <div className="mt-[-6px]
+                    grid h-[143px]
+                    grid-cols-[minmax(0,1fr)_194px]
+                    gap-[24px]
+                    rounded-[15px]
+                    bg-[#E2F2FF]
+                    px-[26px] py-[22px]">
 
                     <div className="flex flex-col justify-between">
-                    <p className="font-['Inter'] text-[16px] font-[300] leading-[24px] text-[#1B223A]">
+                    <p className="  font-['Inter']
+                        text-[16px] font-[400] leading-[22px]
+                        text-[#1B223A]">
                         {menu.promo.description}
                     </p>
 
                     <a
                         href="#"
-                        className="flex items-center gap-[8px] font-['Inter'] text-[16px] font-[400] leading-[20px] text-[#003BFF]"
+                        className="flex w-fit items-center gap-[7px]
+                            whitespace-nowrap
+                            font-['Inter']
+                            text-[16px] font-[400] leading-[22px]
+                            text-[#1434CB]
+                            transition-opacity duration-200
+                            hover:opacity-75"
                     >
                         {menu.promo.linkText}
 
                         <ArrowRight
-                        className="h-[17px] w-[17px]"
+                        className="h-[16px] w-[16px]"
                         strokeWidth={1.5}
                         />
                     </a>
