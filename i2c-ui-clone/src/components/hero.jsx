@@ -39,12 +39,12 @@ function Hero(){
     }, [])
     return (
         <section className="w-full overflow-hidden bg-white">
-                <div className="mx-auto grid min-h-[760px] w-[1230px] grid-cols-[642px_665px] gap-[32px]">
+                <div className="mx-auto grid min-h-[760px] w-[1230px] grid-cols-[642px_665px] gap-[10px]">
 
                 {/* Left column */}
                     <div className="pt-[150px] relative z-10">
                        <div className="flex items-end">
-                            <h1 className="whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-3px] text-[#1B223A]">
+                            <h1 className="whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-7px] text-[#1B223A]">
                             Powered by innovation
                             </h1>
 
@@ -56,7 +56,7 @@ function Hero(){
                         </div>
 
                         <div className="mt-[5px] flex items-end">
-                            <h1 className="whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-3px] text-[#1B223A]">
+                            <h1 className="whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-7px] text-[#1B223A]">
                             Driven by trust
                             </h1>
 
@@ -94,7 +94,7 @@ function Hero(){
                         </p>
                         <a
                             href="#"
-                            className="group mt-[34px] flex h-[58px] w-[168px] items-center justify-center gap-[12px] rounded-[7px] bg-[#1434CB] font-['Inter'] text-[18px] font-[400] text-white"
+                            className="group mt-[34px] flex h-[58px] w-[168px] items-center justify-center gap-[12px] rounded-[7px] bg-[#1434CB] font-['Inter'] text-[18px] font-[300] text-white"
                             >
                             <span>Contact Us</span>
 
@@ -117,8 +117,8 @@ function Hero(){
                 </div>
 
                 {/* Right column */}
-                <div className="relative z-0 justify-self-end pt-[65px] pl-[16px]">
-                   <div className="relative h-[553px] w-[665px] bg-white">
+                <div className="relative z-0 justify-self-end pt-[65px] pl-[1px]">
+                   <div className="relative h-[553px] w-[590px] bg-white">
 
                         {heroSlides.map((slide, index) => {
                         let slideVisibility =
@@ -143,12 +143,37 @@ function Hero(){
                                     className="h-full w-full object-contain"
                                 />
 
-                                <h2 className="absolute bottom-[28px] left-1/2 -translate-x-1/2 whitespace-nowrap font-['Inter'] text-[28px] font-[400] leading-[34px] text-white">
+                                <h2 className="absolute bottom-[48px] left-1/2 -translate-x-1/2 whitespace-nowrap font-['Inter'] text-[32px] font-[500] leading-[34px] text-white tracking-[-3px]">
                                     {slide.title}
                                 </h2>
                             </div>
                         )
                     })}
+                    </div>
+                    <div className="pt-1 flex items-center justify-center gap-[6px]">
+                        {heroSlides.map((slide, index) => {
+                            let dotStyle =
+                            "h-[7px] w-[7px] rounded-full bg-[#C9DDF4]"
+
+                            if (activeSlide === index) {
+                            dotStyle =
+                                "h-[7px] w-[20px] rounded-full bg-[#1434CB]"
+                            }
+
+                            return (
+                            <button
+                                key={slide.id}
+                                type="button"
+                                aria-label={`Show ${slide.title}`}
+                                onClick={() => setActiveSlide(index)}
+                                className={`
+                                ${dotStyle}
+                                border-0 p-0
+                                transition-all duration-300
+                                `}
+                            />
+                            )
+                        })}
                     </div>
                 </div>
 
