@@ -227,6 +227,32 @@ const navMenus = [
 function Nav(){
     const [openMenu, setOpenMenu] = useState(null)
     const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+  function handleScroll() {
+    if (window.scrollY > 20) {
+      setIsScrolled(true)
+    } else {
+      setIsScrolled(false)
+    }
+  }
+
+    handleScroll()
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+  let headerStyle =
+  "w-full rounded-none border border-transparent shadow-none"
+
+  if (isScrolled) {
+    headerStyle =
+      "w-[84%] max-w-[1430px] rounded-b-[28px] border-x border-b border-[#E8EDF5] shadow-4xl shadow-[0_10px_30px_rgba(27,34,58,0.10)]"
+  }
+
     function handleMenuClick(menuId) {
         if (openMenu === menuId) {
             setOpenMenu(null)
@@ -240,7 +266,12 @@ function Nav(){
 
         
     return(
-  <header className="relative z-50 w-full bg-white">
+  <header
+  className={`
+    sticky top-0 z-50 mx-auto bg-white
+    
+    ${headerStyle}
+  `}>
     <nav className="mx-auto grid h-[84px] w-[1230px] grid-cols-[1fr_auto] items-center gap-[70px]">
 
   {/* Left column */}
@@ -259,7 +290,7 @@ function Nav(){
           key={menu.id}
           type="button"
           onClick={() => handleMenuClick(menu.id)}
-          className="m-0 whitespace-nowrap border-0 bg-transparent p-0 font-['Inter'] text-[16px] font-[500] leading-[22px] text-[#1B223A]"
+          className="m-0 whitespace-nowrap border-0 bg-transparent p-0 font-['Inter'] text-[16px] font-[500] leading-[22px] text-[#1B223A] "
         >
           {menu.label}
         </button>
@@ -310,14 +341,14 @@ function Nav(){
     <div className="flex items-center gap-[10px]">
       <a
         href="#"
-        className="flex h-[36px] items-center justify-center whitespace-nowrap rounded-[7px] border border-[#1B223A] px-[16px] font-['Inter'] text-[14px] font-[300] leading-none text-[#1B223A]"
+        className="flex h-[36px] items-center justify-center whitespace-nowrap rounded-[7px] border border-[#1B223A] px-[16px] font-['Inter'] text-[14px] font-[400] leading-none text-[#1B223A]"
       >
         Client Login
       </a>
 
       <a
         href="#"
-        className="flex h-[36px] items-center justify-center gap-[6px] whitespace-nowrap rounded-[7px] bg-[#061447] px-[16px] font-['Inter'] text-[14px] font-[300] leading-none text-white"
+        className="flex h-[36px] items-center justify-center gap-[6px] whitespace-nowrap rounded-[7px] bg-[#061447] px-[16px] font-['Inter'] text-[14px] font-[400] leading-none text-white"
       >
         Contact Us
 

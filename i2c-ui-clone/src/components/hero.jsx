@@ -118,7 +118,7 @@ function Hero(){
 
                 {/* Right column */}
                 <div className="relative z-0 justify-self-end pt-[65px] pl-[1px]">
-                   <div className="relative h-[553px] w-[590px] bg-white">
+                   <div className="relative h-[520px] w-[590px] bg-white">
 
                         {heroSlides.map((slide, index) => {
                         let slideVisibility =
@@ -149,6 +149,7 @@ function Hero(){
                             </div>
                         )
                     })}
+                    
                     </div>
                     <div className="pt-1 flex items-center justify-center gap-[6px]">
                         {heroSlides.map((slide, index) => {
