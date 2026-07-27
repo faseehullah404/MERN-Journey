@@ -4,8 +4,7 @@ import { ArrowUpRight, Circle } from "lucide-react"
 import heroSlide1 from "../assets/Composable-Solutions.webp"
 import heroSlide2 from "../assets/All-in-One-Platform.webp"
 
-// Temporary duplicate hai.
-// Baad mein is path ko actual third hero image se replace karna.
+
 import heroSlide3 from "../assets/Trusted-Experience.webp"
 
 const heroSlides = [
@@ -17,12 +16,12 @@ const heroSlides = [
   {
     id: 2,
     image: heroSlide2,
-    title: "Trusted Experience",
+    title: "All-in-One Platform",
   },
   {
     id: 3,
     image: heroSlide3,
-    title: "All-in-One Platform",
+    title: "Trusted Experience",
   },
 ]
 function Hero(){
@@ -40,12 +39,12 @@ function Hero(){
     }, [])
     return (
         <section className="w-full overflow-hidden bg-white">
-                <div className="mx-auto grid min-h-[760px] w-[1230px] grid-cols-[642px_630px] gap-2">
+                <div className="mx-auto grid min-h-[760px] w-[1230px] grid-cols-[642px_665px] gap-[32px]">
 
                 {/* Left column */}
-                    <div className="pt-[150px]">
+                    <div className="pt-[150px] relative z-10">
                        <div className="flex items-end">
-                            <h1 className="tracking-tighter whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-3.2px] text-[#1B223A]">
+                            <h1 className="whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-3px] text-[#1B223A]">
                             Powered by innovation
                             </h1>
 
@@ -57,7 +56,7 @@ function Hero(){
                         </div>
 
                         <div className="mt-[5px] flex items-end">
-                            <h1 className="whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-3.2px] text-[#1B223A]">
+                            <h1 className="whitespace-nowrap font-['Inter'] text-[72px] font-[500] leading-[0.98] tracking-[-3px] text-[#1B223A]">
                             Driven by trust
                             </h1>
 
@@ -118,7 +117,7 @@ function Hero(){
                 </div>
 
                 {/* Right column */}
-                <div className="pt-[65px]">
+                <div className="relative z-0 justify-self-end pt-[65px] pl-[16px]">
                    <div className="relative h-[553px] w-[665px] overflow-hidden bg-white">
 
                         {heroSlides.map((slide, index) => {
