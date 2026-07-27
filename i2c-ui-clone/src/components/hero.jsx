@@ -118,7 +118,7 @@ function Hero(){
 
                 {/* Right column */}
                 <div className="relative z-0 justify-self-end pt-[65px] pl-[16px]">
-                   <div className="relative h-[553px] w-[665px] overflow-hidden bg-white">
+                   <div className="relative h-[553px] w-[665px] bg-white">
 
                         {heroSlides.map((slide, index) => {
                         let slideVisibility =
@@ -140,7 +140,7 @@ function Hero(){
                                 <img
                                     src={slide.image}
                                     alt={slide.title}
-                                    className="h-[490px] w-[596px] object-contain"
+                                    className="h-full w-full object-contain"
                                 />
 
                                 <h2 className="absolute bottom-[28px] left-1/2 -translate-x-1/2 whitespace-nowrap font-['Inter'] text-[28px] font-[400] leading-[34px] text-white">
