@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import { ArrowUpRight, Circle } from "lucide-react"
 
-import heroSlide1 from "../assets/configurable-building-blocks.webp"
-import heroSlide2 from "../assets/supercharge-banking-and-payments.png"
+import heroSlide1 from "../assets/Composable-Solutions.webp"
+import heroSlide2 from "../assets/All-in-One-Platform.webp"
 
 // Temporary duplicate hai.
 // Baad mein is path ko actual third hero image se replace karna.
-import heroSlide3 from "../assets/configurable-building-blocks.webp"
+import heroSlide3 from "../assets/Trusted-Experience.webp"
 
 const heroSlides = [
   {
@@ -40,7 +40,7 @@ function Hero(){
     }, [])
     return (
         <section className="w-full overflow-hidden bg-white">
-                <div className="mx-auto grid min-h-[760px] w-[1230px] grid-cols-[642px_630px]">
+                <div className="mx-auto grid min-h-[760px] w-[1230px] grid-cols-[642px_630px] gap-2">
 
                 {/* Left column */}
                     <div className="pt-[150px]">
@@ -141,7 +141,7 @@ function Hero(){
                                 <img
                                     src={slide.image}
                                     alt={slide.title}
-                                    className="h-full w-full object-contain"
+                                    className="h-[490px] w-[596px] object-contain"
                                 />
 
                                 <h2 className="absolute bottom-[28px] left-1/2 -translate-x-1/2 whitespace-nowrap font-['Inter'] text-[28px] font-[400] leading-[34px] text-white">
