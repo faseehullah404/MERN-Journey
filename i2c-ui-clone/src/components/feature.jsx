@@ -191,11 +191,11 @@ function Efficiency() {
                 aria-label="Efficiency section navigation"
                 className="
                 flex h-[56px] w-[479px]
-                items-center justify-between
+                items-center  gap-[28px] 
                 rounded-full
                 border-[3px] border-[#4A426D]
                 bg-[#202B59]
-                px-[34px]
+                px-[17px]
                 shadow-[0_10px_24px_rgba(27,34,58,0.25)]
                 "
             >
@@ -205,9 +205,9 @@ function Efficiency() {
                     key={item}
                     href="#"
                     className="
-                        font-['Inter'] 
+                        font-['Inter']
                         text-[20px] font-[300] leading-[22px]
-                        text-white 
+                        text-white tracking-[-1.5px]
                         transition-colors duration-200
                          rounded-full  hover:bg-[#041145] py-2 px-4 hover:font-400
                     "
