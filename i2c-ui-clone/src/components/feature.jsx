@@ -4,6 +4,13 @@ import img3 from "../assets/Integrated-Financial-Platform.webp"
 import img4 from "../assets/Reliable-Payment-Platform.webp"
 import { Circle } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+const efficiencyNavItems = [
+  "News",
+  "Events",
+  "Awards",
+  "Insights",
+]
+const [isBottomNavVisible, setIsBottomNavVisible] = useState(false)
 
 function Efficiency() {
 
@@ -52,6 +59,61 @@ function Efficiency() {
         }
 
         updateTextAnimation()
+
+        window.addEventListener("scroll", handleScroll, {
+            passive: true,
+        })
+
+        window.addEventListener("resize", handleScroll)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+            window.removeEventListener("resize", handleScroll)
+
+            if (animationFrameId !== null) {
+            cancelAnimationFrame(animationFrameId)
+            }
+        }
+        }, [])
+
+        useEffect(() => {
+        const cardElement = cardRef.current
+
+        if (!cardElement) {
+            return
+        }
+
+        let animationFrameId = null
+
+        function updateBottomNav() {
+            const cardPosition = cardElement.getBoundingClientRect()
+            const viewportHeight = window.innerHeight
+
+            const hasReachedTrigger =
+            cardPosition.top <= viewportHeight * 0.32
+
+            const hasNotCrossedCardEnd =
+            cardPosition.bottom >= viewportHeight * 0.18
+
+            const shouldShowNav =
+            hasReachedTrigger && hasNotCrossedCardEnd
+
+            setIsBottomNavVisible(shouldShowNav)
+
+            animationFrameId = null
+        }
+
+        function handleScroll() {
+            if (animationFrameId !== null) {
+            return
+            }
+
+            animationFrameId = requestAnimationFrame(
+            updateBottomNav
+            )
+        }
+
+        updateBottomNav()
 
         window.addEventListener("scroll", handleScroll, {
             passive: true,
