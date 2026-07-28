@@ -7,43 +7,67 @@ import { useEffect, useRef, useState } from "react"
 
 function Efficiency() {
 
-    const [isTextVisible, setIsTextVisible] = useState(false)
+    const [textProgress, setTextProgress] = useState(0)
     const cardRef = useRef(null)
     
 
     useEffect(() => {
-    const cardElement = cardRef.current
+        const cardElement = cardRef.current
 
-    if (!cardElement) {
-        return
-    }
-
-    if (!("IntersectionObserver" in window)) {
-        setIsTextVisible(true)
-        return
-    }
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-        const entry = entries[0]
-
-           if (entry.isIntersecting) {
-                setIsTextVisible(true)
-            } else {
-                setIsTextVisible(false)
-            }
-        },
-        {
-        threshold: 0.2,
+        if (!cardElement) {
+            return
         }
-    )
 
-     observer.observe(cardElement)
+        let animationFrameId = null
 
-  return () => {
-    observer.disconnect()
-  }
-    }, [])
+        function updateTextAnimation() {
+            const cardPosition = cardElement.getBoundingClientRect()
+            const viewportHeight = window.innerHeight
+
+            const animationStart = viewportHeight * 0.48
+            const animationEnd = viewportHeight * 0.08
+
+            let progress =
+            (animationStart - cardPosition.top) /
+            (animationStart - animationEnd)
+
+            progress = Math.min(Math.max(progress, 0), 1)
+
+            const easedProgress =
+            progress * progress * (3 - 2 * progress)
+
+            setTextProgress(easedProgress)
+
+            animationFrameId = null
+        }
+
+        function handleScroll() {
+            if (animationFrameId !== null) {
+            return
+            }
+
+            animationFrameId = requestAnimationFrame(
+            updateTextAnimation
+            )
+        }
+
+        updateTextAnimation()
+
+        window.addEventListener("scroll", handleScroll, {
+            passive: true,
+        })
+
+        window.addEventListener("resize", handleScroll)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+            window.removeEventListener("resize", handleScroll)
+
+            if (animationFrameId !== null) {
+            cancelAnimationFrame(animationFrameId)
+            }
+        }
+        }, [])
   return (
     <section className="w-full py-[80px]">
         <div  ref={cardRef}
@@ -54,15 +78,13 @@ function Efficiency() {
                 className="absolute inset-0 h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className={`
-                            text-center
-                            transition-all duration-1000 ease-out
-                            ${
-                            isTextVisible
-                                ? "translate-y-0 opacity-100"
-                                : "translate-y-[70px] opacity-0"
-                            }
-                          `}>
+                    <div   className="text-center will-change-transform"
+                            style={{
+                                opacity: textProgress,
+                                transform: `translateY(${
+                                (1 - textProgress) * 110
+                                }px)`,
+                            }}>
                         <div className="flex items-end justify-center ">
                             <h2 className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-9px] ">
                                 Engineered for efficiency
@@ -89,7 +111,9 @@ function Efficiency() {
                         </div>
                     </div>
                 </div>
+ 
         </div>
+
     </section>
   )
 }
