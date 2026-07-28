@@ -10,10 +10,10 @@ const efficiencyNavItems = [
   "Awards",
   "Insights",
 ]
-const [isBottomNavVisible, setIsBottomNavVisible] = useState(false)
+
 
 function Efficiency() {
-
+    const [isBottomNavVisible, setIsBottomNavVisible] = useState(false)
     const [textProgress, setTextProgress] = useState(0)
     const cardRef = useRef(null)
     
@@ -175,7 +175,50 @@ function Efficiency() {
                 </div>
  
         </div>
-
+            <div
+            className={`
+                fixed bottom-[18px] left-1/2 z-40
+                -translate-x-1/2
+                transition-all duration-500 ease-out
+                ${
+                isBottomNavVisible
+                    ? "translate-y-0 opacity-100"
+                    : "pointer-events-none translate-y-[110px] opacity-0"
+                }
+            `}
+            >
+            <nav
+                aria-label="Efficiency section navigation"
+                className="
+                flex h-[56px] w-[479px]
+                items-center justify-between
+                rounded-full
+                border-[3px] border-[#4A426D]
+                bg-[#202B59]
+                px-[34px]
+                shadow-[0_10px_24px_rgba(27,34,58,0.25)]
+                "
+            >
+                {efficiencyNavItems.map((item) => {
+                return (
+                    <a
+                    key={item}
+                    href="#"
+                    className="
+                        font-['Inter'] 
+                        text-[20px] font-[300] leading-[22px]
+                        text-white 
+                        transition-colors duration-200
+                         rounded-full  hover:bg-[#041145] py-2 px-4 hover:font-400
+                    "
+                    >
+                    {item}
+                    </a>
+                )
+                })}
+            </nav>
+        </div>
+        
     </section>
   )
 }
