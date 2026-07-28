@@ -27,21 +27,22 @@ function Efficiency() {
         (entries) => {
         const entry = entries[0]
 
-        if (entry.isIntersecting) {
-            setIsTextVisible(true)
-            observer.unobserve(cardElement)
-        }
+           if (entry.isIntersecting) {
+                setIsTextVisible(true)
+            } else {
+                setIsTextVisible(false)
+            }
         },
         {
         threshold: 0.2,
         }
     )
 
-    observer.observe(cardElement)
+     observer.observe(cardElement)
 
-    return () => {
-        observer.disconnect()
-    }
+  return () => {
+    observer.disconnect()
+  }
     }, [])
   return (
     <section className="w-full py-[80px]">
