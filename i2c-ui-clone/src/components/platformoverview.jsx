@@ -66,9 +66,52 @@ function PlatformOverview() {
         >
         {/* Left sticky column */}
         <aside className="sticky top-[115px] self-start">
-            Left slider
+            <div>
+            <div className="relative h-[372px] w-[390px]">
+
+                {platformSlides.map((slide, index) => {
+                let slideStyle =
+                    "pointer-events-none opacity-0"
+
+                if (activeSlide === index) {
+                    slideStyle =
+                    "pointer-events-auto opacity-100"
+                }
+
+                return (
+                    <div
+                    key={slide.id}
+                    className={`
+                        absolute inset-0
+                        transition-opacity duration-700 ease-in-out
+                        ${slideStyle}
+                    `}
+                    >
+                    <img
+                        src={slide.image}
+                        alt={slide.title}
+                        className="h-full w-full object-contain"
+                    />
+
+                    <h3
+                        className="
+                        absolute bottom-[26px] left-1/2
+                        -translate-x-1/2 whitespace-nowrap
+                        font-['Inter'] text-[28px]
+                        font-[400] leading-[34px]
+                        text-white
+                        "
+                    >
+                        {slide.title}
+                    </h3>
+                    </div>
+                )
+                })}
+
+            </div>
+        </div>
         </aside>
-        
+
         {/* Right scrolling column */}
         </div>
     </section>
