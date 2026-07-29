@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Circle } from "lucide-react"
+import { ArrowUpRight, Circle, Play  } from "lucide-react"
 
 import customerCentric from "../assets/Customer-Centric-Banking-Solutions.webp"
 import integratedPlatform from "../assets/Integrated-Financial-Platform.webp"
