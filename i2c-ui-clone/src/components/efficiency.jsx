@@ -195,7 +195,7 @@ function Efficiency() {
                 rounded-full
                 border-[3px] border-[#4A426D]
                 bg-[#202B59]
-                px-[17px]
+                px-[20px]
                 shadow-[0_10px_24px_rgba(27,34,58,0.25)]
                 "
             >
