@@ -7,9 +7,12 @@ import reliablePlatform from "../assets/Reliable-Payment-Platform.webp"
 import overview1 from "../assets/overview1.png"
 import overview2 from "../assets/overview2.png"
 import overview3 from "../assets/overview3.png"
+import testimonialImage from "../assets/Belize-bank-original-logo.png"
+import testimonialLogo from "../assets/payactiv-logo.png"
 const platformBenefits = [
   {
     id: 1,
+    icon: overview1,
     text: [
       "Expand to new",
       "markets &",
@@ -18,6 +21,7 @@ const platformBenefits = [
   },
   {
     id: 2,
+    icon: overview2,
     text: [
       "Drive smarter",
       "customer",
@@ -26,6 +30,7 @@ const platformBenefits = [
   },
   {
     id: 3,
+    icon: overview3,
     text: [
       "Enjoy less than 5",
       "minutes downtime",
@@ -33,7 +38,6 @@ const platformBenefits = [
     ],
   },
 ]
-
 const platformSlides = [
   {
     id: 1,
@@ -63,6 +67,30 @@ const platformSlides = [
       "Unified Global Platform",
       "and Technology Stack",
     ],
+  },
+]
+
+const storyCards = [
+  {
+    id: 1,
+    text: [
+      "Bridging the gap",
+      "between global",
+      "payments and",
+      "everyday banking.",
+    ],
+    background: "#E8E9FF",
+  },
+  {
+    id: 2,
+    text: [
+      "Rapid, nearly",
+      "frictionless",
+      "integration and",
+      "launch of credit",
+      "self-service...",
+    ],
+    background: "#D5ECFF",
   },
 ]
 
@@ -214,7 +242,7 @@ function PlatformOverview() {
         </aside>
 
         {/* Right scrolling column */}
-        <div className="min-h-[1450px]">
+        <div>
 
         <div className="flex items-end">
             <h2
@@ -246,32 +274,184 @@ function PlatformOverview() {
         </div>
 
         <div className="mt-[38px] grid grid-cols-3 gap-[18px]">
-        {platformBenefits.map((benefit) => {
-            return (
-            <div
-                key={benefit.id}
+            {platformBenefits.map((benefit) => {
+                return (
+                <div
+                    key={benefit.id}
+                    className="
+                    flex h-[205px] flex-col
+                    justify-between
+                    rounded-[18px]
+                    bg-[#F7FAFD]
+                    px-[24px] py-[24px]
+                    shadow-[0_4px_12px_rgba(27,34,58,0.08)]
+                    "
+                >
+                    <img
+                    src={benefit.icon}
+                    alt=""
+                    className="h-[45px] w-[45px] object-contain"
+                    />
+
+                    <p className="font-['Inter'] text-[18px] font-[300] leading-[23px] text-[#1B223A]">
+                    {benefit.text.map((line) => {
+                        return (
+                        <span key={line} className="block">
+                            {line}
+                        </span>
+                        )
+                    })}
+                    </p>
+                </div>
+                )
+            })}
+
+        </div>
+        <div className="mt-[34px]">
+            <h3 className="font-['Inter'] text-[22px] font-[500] leading-[28px] text-[#1B223A]">
+                One engine. All power.
+            </h3>
+
+            <p className="font-['Inter'] text-[18px] font-[300] leading-[24px] text-[#1B223A]">
+                Infinite journeys without legacy limits or public cloud instability.
+            </p>
+        </div>
+        <a
+            href="#"
+            className="
+                group mt-[32px]
+                flex h-[58px] w-[195px]
+                items-center justify-center gap-[12px]
+                rounded-[7px]
+                border-2 border-[#1434CB]
+                font-['Inter'] text-[17px] font-[400]
+                text-[#1434CB]
+            "
+            >
+            <span>Start Exploring</span>
+
+            <span className="relative h-[19px] w-[19px] overflow-hidden">
+                <ArrowUpRight
                 className="
-                flex h-[205px] flex-col
-                justify-end
-                rounded-[18px]
-                bg-[#F7FAFD]
-                px-[24px] pb-[25px]
-                shadow-[0_4px_12px_rgba(27,34,58,0.08)]
+                    absolute left-0 top-0
+                    h-[19px] w-[19px]
+                    transition-transform duration-300
+                    group-hover:-translate-y-full
+                "
+                strokeWidth={1.5}
+                />
+
+                <ArrowUpRight
+                className="
+                    absolute left-0 top-full
+                    h-[19px] w-[19px]
+                    transition-transform duration-300
+                    group-hover:-translate-y-full
+                "
+                strokeWidth={1.5}
+                />
+            </span>
+        </a>
+        <div className="mt-[58px]">
+            <h3
+                className="
+                font-['Inter']
+                text-[32px] font-[400]
+                leading-[39px]
+                tracking-[-1px]
+                text-[#1B223A]
                 "
             >
-                <p className="font-['Inter'] text-[18px] font-[300] leading-[23px] text-[#1B223A]">
-                {benefit.text.map((line) => {
+                Shift the power differential.
+            </h3>
+
+            <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[17px] font-[300] leading-[23px] text-[#1B223A]">
+                Watch how i2c helps these visionaries outperform outdated banking and
+                payments platforms to scale fast and modernize to last.
+            </p>
+            <div className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
+
+                {storyCards.map((card) => {
                     return (
-                    <span key={line} className="block">
-                        {line}
-                    </span>
+                    <div
+                        key={card.id}
+                        className="
+                        flex h-[277px] flex-col
+                        justify-between
+                        rounded-[18px]
+                        px-[24px] py-[25px]
+                        "
+                        style={{
+                        backgroundColor: card.background,
+                        }}
+                    >
+                        <p className="font-['Inter'] text-[18px] font-[300] leading-[24px] text-[#1B223A]">
+                        {card.text.map((line) => {
+                            return (
+                            <span key={line} className="block">
+                                {line}
+                            </span>
+                            )
+                        })}
+                        </p>
+
+                        <div className="h-[44px] w-[85px] rounded-[8px] bg-white" />
+                    </div>
                     )
                 })}
-                </p>
+
+                {/* Third image card */}
+                <div className="relative h-[277px] overflow-hidden rounded-[18px] bg-[#1B223A]">
+                    <img
+                        src={testimonialImage}
+                        alt="Customer testimonial"
+                        className="absolute inset-0 h-full w-full object-cover"
+                        />
+
+                        <div className="absolute inset-x-0 bottom-0 h-[46%] bg-gradient-to-t from-black via-black/70 to-transparent" />
+
+                    <img
+                        src={testimonialLogo}
+                        alt=""
+                        className="
+                            absolute left-[16px] top-[16px]
+                            h-[42px] w-[78px]
+                            rounded-[7px]
+                            bg-white object-contain p-[7px]
+                        "
+                        />
+
+                        <div
+                        aria-hidden="true"
+                        className="
+                            absolute bottom-[86px] left-[16px]
+                            flex h-[40px] w-[40px]
+                            items-center justify-center
+                            rounded-full bg-[#FF7900]
+                            text-white
+                        "
+                        >
+                        <Play
+                            className="ml-[2px] h-[16px] w-[16px]"
+                            fill="currentColor"
+                            strokeWidth={0}
+                        />
+                        </div>
+
+                        <div className="absolute bottom-[16px] left-[16px] text-white">
+                        <p className="font-['Inter'] text-[17px] font-[400]">
+                            Safwan Shah
+                        </p>
+
+                        <p className="mt-[2px] font-['Inter'] text-[14px] font-[300]">
+                            CEO &amp; Founder | Payactiv
+                        </p>
+                        </div>
                 </div>
-            )
-        })}
+
+            </div>
         </div>
+
     </div>
     </div>
     </section>
