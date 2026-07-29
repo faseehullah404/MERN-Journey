@@ -61,7 +61,7 @@ const platformSlides = [
   {
     id: 3,
     image: integratedPlatform,
-    title: "Unified",
+    title: "integrated",
     metric: "1",
     description: [
       "Unified Global Platform",
@@ -113,7 +113,7 @@ function PlatformOverview() {
   return (
     
     
-    <section className="w-full bg-white pb-[120px] pt-[135px]">
+    <section className="w-full bg-white pb-[120px] mt-11">
         <div
         className="
             mx-auto grid w-[1230px]
@@ -152,10 +152,10 @@ function PlatformOverview() {
 
                     <h3
                         className="
-                        absolute bottom-[26px] left-1/2
+                        absolute bottom-[44px] left-1/2
                         -translate-x-1/2 whitespace-nowrap
-                        font-['Inter'] text-[28px]
-                        font-[400] leading-[34px]
+                        font-['Inter'] text-[32px]
+                        font-[500] leading-[34px]
                         text-white
                         "
                     >
@@ -167,19 +167,20 @@ function PlatformOverview() {
 
             </div>
         </div>
-        <div className="relative mt-[38px] pl-[38px]">
+        <div className="relative mt-[1px] pl-[28px] translate-x-25 ">
 
         {/* Ek hi dot hai jo selected item tak move karega */}
         <span
             aria-hidden="true"
             className="
-            absolute left-0 top-[19px]
+            absolute left-0 
             h-[9px] w-[9px]
             rounded-full bg-[#1434CB]
             transition-transform duration-500 ease-out
+            translate-y-10
             "
             style={{
-            transform: `translateY(${activeSlide * 120}px)`,
+            transform: `translateY(${activeSlide * 113}px)`,
             }}
         />
 
@@ -198,14 +199,14 @@ function PlatformOverview() {
                 "
             >
                 <span
-                className={`
+                className={` tracking-[-5px]
                     block font-['Inter']
-                    text-[38px] font-[300]
+                    text-[38px] font-[400]
                     leading-[44px]
                     transition-colors duration-300
                     ${
                     isActive
-                        ? "text-[#1434CB]"
+                        ? "text-[#0F299D]"
                         : "text-[#111111]"
                     }
                 `}
@@ -214,11 +215,12 @@ function PlatformOverview() {
                 </span>
 
                 <span
-                className={`
+                className={` tracking-[-1px]
                     mt-[5px] block font-['Inter']
-                    text-[18px] font-[300]
+                    text-[20px] font-[300]
                     leading-[23px]
                     transition-colors duration-300
+                    
                     ${
                     isActive
                         ? "text-[#1434CB]"
