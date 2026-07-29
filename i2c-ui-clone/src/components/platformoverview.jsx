@@ -244,15 +244,15 @@ function PlatformOverview() {
         </aside>
 
         {/* Right scrolling column */}
-        <div>
+        <div className="translate-x-6">
 
         <div className="flex items-end">
             <h2
             className="
                 font-['Inter']
-                text-[48px] font-[300]
+                text-[48px] font-[400]
                 leading-[1.15]
-                tracking-[-2.4px]
+                tracking-[-3px]
                 text-[#1B223A]
             "
             >
@@ -266,8 +266,8 @@ function PlatformOverview() {
             <Circle
             aria-hidden="true"
             className="
-                mb-[9px] ml-[7px]
-                h-[9px] w-[9px]
+                mb-[9px] ml-[5px]
+                h-[7px] w-[7px]
                 shrink-0 fill-[#FF7200]
                 text-[#FF7200]
             "
@@ -275,7 +275,7 @@ function PlatformOverview() {
             />
         </div>
 
-        <div className="mt-[38px] grid grid-cols-3 gap-[18px]">
+        <div className="mt-[35px] grid grid-cols-3 gap-[18px]">
             {platformBenefits.map((benefit) => {
                 return (
                 <div
@@ -285,7 +285,7 @@ function PlatformOverview() {
                     justify-between
                     rounded-[18px]
                     bg-[#F7FAFD]
-                    px-[24px] py-[24px]
+                    px-[24px] py-[14px]
                     shadow-[0_4px_12px_rgba(27,34,58,0.08)]
                     "
                 >
@@ -295,10 +295,10 @@ function PlatformOverview() {
                     className="h-[45px] w-[45px] object-contain"
                     />
 
-                    <p className="font-['Inter'] text-[18px] font-[300] leading-[23px] text-[#1B223A]">
+                    <p className="font-['Inter'] text-[20px] font-[400] leading-[23px] text-[#1B223A] -translate-y-4">
                     {benefit.text.map((line) => {
                         return (
-                        <span key={line} className="block">
+                        <span key={line} className="block ">
                             {line}
                         </span>
                         )
@@ -310,11 +310,11 @@ function PlatformOverview() {
 
         </div>
         <div className="mt-[34px]">
-            <h3 className="font-['Inter'] text-[22px] font-[500] leading-[28px] text-[#1B223A]">
+            <h3 className="font-['Inter'] text-[24px] font-[500] leading-[28px] text-[#1B223A]">
                 One engine. All power.
             </h3>
 
-            <p className="font-['Inter'] text-[18px] font-[300] leading-[24px] text-[#1B223A]">
+            <p className="font-['Inter'] text-[24px] font-[300] leading-[24px] text-[#1B223A] tracking-[-1px]">
                 Infinite journeys without legacy limits or public cloud instability.
             </p>
         </div>
@@ -328,6 +328,7 @@ function PlatformOverview() {
                 border-2 border-[#1434CB]
                 font-['Inter'] text-[17px] font-[400]
                 text-[#1434CB]
+                hover:bg-[#1434CB] hover:text-white
             "
             >
             <span>Start Exploring</span>
@@ -354,7 +355,7 @@ function PlatformOverview() {
                 />
             </span>
         </a>
-        <div className="mt-[58px]">
+        <div className="mt-[63px]">
             <h3
                 className="
                 font-['Inter']
@@ -367,7 +368,7 @@ function PlatformOverview() {
                 Shift the power differential.
             </h3>
 
-            <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[17px] font-[300] leading-[23px] text-[#1B223A]">
+            <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[20px] font-[300] leading-[23px] text-[#1B223A]">
                 Watch how i2c helps these visionaries outperform outdated banking and
                 payments platforms to scale fast and modernize to last.
             </p>
