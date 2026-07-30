@@ -372,7 +372,8 @@ function PlatformOverview() {
                 Watch how i2c helps these visionaries outperform outdated banking and
                 payments platforms to scale fast and modernize to last.
             </p>
-            <div className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
+            <div id="platform-nav-end"
+            className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
 
                 {storyCards.map((card) => {
                     return (

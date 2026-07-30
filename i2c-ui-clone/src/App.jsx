@@ -7,6 +7,8 @@ import Nav from "./components/nav"
 import Video from "./components/videosection.jsx"
 import Efficiency from "./components/efficiency.jsx"
 import Platform from "./components/platformoverview.jsx"
+import Differentiation from "./components/differentiation.jsx"
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +20,7 @@ function App() {
     <Video/>
     <Efficiency/>
     <Platform/>
+    <Differentiation/>
     </>
   )
 }
