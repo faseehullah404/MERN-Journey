@@ -8,6 +8,7 @@ import Video from "./components/videosection.jsx"
 import Efficiency from "./components/efficiency.jsx"
 import Platform from "./components/platformoverview.jsx"
 import Differentiation from "./components/differentiation.jsx"
+import Comprehensive from './components/Comprehensive.jsx'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Efficiency/>
     <Platform/>
     <Differentiation/>
+    <Comprehensive/>
     </>
   )
 }
