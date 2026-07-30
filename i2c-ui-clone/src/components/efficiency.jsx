@@ -107,7 +107,7 @@ function Efficiency() {
                 startPosition.top <= viewportHeight * 0.32
 
             const hasNotReachedDifferentiation =
-                endPosition.top > viewportHeight * 0.27
+                endPosition.top > viewportHeight
 
             const shouldShowNav =
                 hasReachedStart && hasNotReachedDifferentiation

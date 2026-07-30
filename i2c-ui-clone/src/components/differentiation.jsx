@@ -1,4 +1,4 @@
-import img1 from "../assets/i2c-Digital-Banking-and-Payments-Platform.webp"
+import img1 from "../assets/Payments-platform-designed-for-differentiation-and-control.webp"
 import img2 from "../assets/Customer-Centric-Banking-Solutions.webp"
 import img3 from "../assets/Integrated-Financial-Platform.webp"
 import img4 from "../assets/Reliable-Payment-Platform.webp"
@@ -150,12 +150,12 @@ function Differentiation() {
                             }}>
                         <div className="flex items-end justify-center ">
                             <h2 className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-9px] ">
-                                Engineered for efficiency
+                                Designed for differentiation
                             </h2>
 
                             <Circle
                                 aria-hidden="true"
-                                className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-2"
+                                className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-1 -translate-y-1"
                                 strokeWidth={0}
                             />
                             
@@ -163,12 +163,12 @@ function Differentiation() {
                         <div className="mt-[10px] flex items-end justify-center">
                                 <h2
                                     className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-6px]">
-                                    Streamlined for scalability
+                                    Configured for control
                                 </h2>
 
                                 <Circle
                                     aria-hidden="true"
-                                    className="mb-[7px] ml-[7px] h-[11px] w-[11px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-2"
+                                    className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-1 -translate-y-1"
                                     strokeWidth={0}
                                 />
                         </div>
