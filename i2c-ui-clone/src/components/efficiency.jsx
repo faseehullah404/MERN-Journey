@@ -86,23 +86,36 @@ function Efficiency() {
         let animationFrameId = null
 
         function updateBottomNav() {
-            const cardPosition = cardElement.getBoundingClientRect()
+            const startPosition =
+                cardElement.getBoundingClientRect()
+
+            const endElement =
+                document.getElementById("differentiation-nav-start")
+
+            if (!endElement) {
+                animationFrameId = null
+                return
+            }
+
+            const endPosition =
+                endElement.getBoundingClientRect()
+
             const viewportHeight = window.innerHeight
 
-            const hasReachedTrigger =
-            cardPosition.top <= viewportHeight * 0.32
+            // Efficiency card required position tak aaye
+            const hasReachedStart =
+                startPosition.top <= viewportHeight * 0.32
 
-            const hasNotCrossedCardEnd =
-            cardPosition.bottom >= viewportHeight * 0.18
+            const hasNotReachedDifferentiation =
+                endPosition.top > viewportHeight * 0.27
 
             const shouldShowNav =
-            hasReachedTrigger && hasNotCrossedCardEnd
+                hasReachedStart && hasNotReachedDifferentiation
 
             setIsBottomNavVisible(shouldShowNav)
 
             animationFrameId = null
-        }
-
+            }
         function handleScroll() {
             if (animationFrameId !== null) {
             return

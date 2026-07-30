@@ -132,7 +132,8 @@ function Differentiation() {
         }, [])
   return (
     <section className="w-full py-[80px]">
-        <div  ref={cardRef}
+        <div id="differentiation-nav-start"  
+            ref={cardRef}
             className="relative mx-auto h-[565px] w-[1230px] overflow-hidden rounded-[26px]">
             <img
                 src={img1}
