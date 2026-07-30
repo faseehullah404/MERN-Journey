@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { ArrowUpRight, Circle, Play  } from "lucide-react"
 
-import customerCentric from "../assets/Customer-Centric-Banking-Solutions.webp"
+import customerCentric from "../assets/Configurable-Payments-Platform.webp"
 import integratedPlatform from "../assets/Integrated-Financial-Platform.webp"
-import reliablePlatform from "../assets/Reliable-Payment-Platform.webp"
+import reliablePlatform from "../assets/Innovative-Financial-Platform.webp"
 import overview1 from "../assets/overview4.png"
 import overview2 from "../assets/overview5.png"
 import overview3 from "../assets/overview6.png"
@@ -118,131 +118,12 @@ function Comprehensive() {
         <div
         className="
             mx-auto grid w-[1230px]
-            grid-cols-[430px_1fr]
+            grid-cols-[1fr_430px]
             items-start gap-[70px]
         "
         >
-        {/* Left sticky column */}
-        <aside className="sticky top-[115px] self-start">
-            <div>
-            <div className="relative h-[372px] w-[390px]">
-
-                {platformSlides.map((slide, index) => {
-                let slideStyle =
-                    "pointer-events-none opacity-0"
-
-                if (activeSlide === index) {
-                    slideStyle =
-                    "pointer-events-auto opacity-100"
-                }
-
-                return (
-                    <div
-                    key={slide.id}
-                    className={`
-                        absolute inset-0
-                        transition-opacity duration-700 ease-in-out
-                        ${slideStyle}
-                    `}
-                    >
-                    <img
-                        src={slide.image}
-                        alt={slide.title}
-                        className="h-full w-full object-contain"
-                    />
-
-                    <h3
-                        className="
-                        absolute bottom-[44px] left-1/2
-                        -translate-x-1/2 whitespace-nowrap
-                        font-['Inter'] text-[32px]
-                        font-[500] leading-[34px]
-                        text-white
-                        "
-                    >
-                        {slide.title}
-                    </h3>
-                    </div>
-                )
-                })}
-
-            </div>
-        </div>
-        <div className="relative mt-[1px] pl-[28px] translate-x-25 ">
-
-        {/* Ek hi dot hai jo selected item tak move karega */}
-        <span
-            aria-hidden="true"
-            className="
-            absolute left-0 
-            h-[9px] w-[9px]
-            rounded-full bg-[#1434CB]
-            transition-transform duration-500 ease-out
-            translate-y-10
-            "
-            style={{
-            transform: `translateY(${activeSlide * 113}px)`,
-            }}
-        />
-
-        {platformSlides.map((slide, index) => {
-            const isActive = activeSlide === index
-
-            return (
-            <button
-                key={slide.id}
-                type="button"
-                onClick={() => setActiveSlide(index)}
-                className="
-                block h-[120px] w-full
-                border-0 bg-transparent p-0
-                text-left
-                "
-            >
-                <span
-                className={` tracking-[-5px]
-                    block font-['Inter']
-                    text-[38px] font-[400]
-                    leading-[44px]
-                    transition-colors duration-300
-                    ${
-                    isActive
-                        ? "text-[#0F299D]"
-                        : "text-[#111111]"
-                    }
-                `}
-                >
-                {slide.metric}
-                </span>
-
-                <span
-                className={` tracking-[-1px]
-                    mt-[5px] block font-['Inter']
-                    text-[20px] font-[300]
-                    leading-[23px]
-                    transition-colors duration-300
-                    
-                    ${
-                    isActive
-                        ? "text-[#1434CB]"
-                        : "text-[#111111]"
-                    }
-                `}
-                >
-                {slide.description.map((line) => {
-                    return (
-                    <span key={line} className="block">
-                        {line}
-                    </span>
-                    )
-                })}
-                </span>
-            </button>
-            )
-        })}
-
-        </div>
-        </aside>
+        
+    
 
         {/* Right scrolling column */}
         <div className="translate-x-6">
@@ -257,20 +138,21 @@ function Comprehensive() {
                 text-[#1B223A]
             "
             >
-            Unified platform built upon
+            Comprehensive, composable
             <br />
-            a customer-centric frame
+            solutions that quickly respond to the
             <br />
-            to uncover growth and innovation
+            unexpected
             </h2>
 
             <Circle
             aria-hidden="true"
             className="
-                mb-[9px] ml-[5px]
+                absolute mb-[9px] 
                 h-[7px] w-[7px]
                 shrink-0 fill-[#FF7200]
                 text-[#FF7200]
+                translate-x-60
             "
             strokeWidth={0}
             />
@@ -312,27 +194,27 @@ function Comprehensive() {
         </div>
         <div className="mt-[34px]">
             <h3 className="font-['Inter'] text-[24px] font-[500] leading-[28px] text-[#1B223A]">
-                One engine. All power.
+                All speed. No limits.
             </h3>
 
             <p className="font-['Inter'] text-[24px] font-[300] leading-[24px] text-[#1B223A] tracking-[-1px]">
-                Infinite journeys without legacy limits or public cloud instability.
+                Fuel faster outcomes with the platform built for nonstop innovation and guaranteed reliability.
             </p>
         </div>
         <a
             href="#"
             className="
                 group mt-[32px]
-                flex h-[58px] w-[195px]
+                flex h-[58px] w-[210px]
                 items-center justify-center gap-[12px]
-                rounded-[7px]
+                rounded-[7px] px-2
                 border-2 border-[#1434CB]
-                font-['Inter'] text-[17px] font-[400]
-                text-[#1434CB]
+                font-['Inter'] text-[18px] font-[500]
+                text-[#1434CB] tracking-[-1px]
                 hover:bg-[#1434CB] hover:text-white
             "
             >
-            <span>Start Exploring</span>
+            <span>See how it works</span>
 
             <span className="relative h-[19px] w-[19px] overflow-hidden">
                 <ArrowUpRight
@@ -366,12 +248,11 @@ function Comprehensive() {
                 text-[#1B223A]
                 "
             >
-                Shift the power differential.
+                Shift gears, not momentum.
             </h3>
 
             <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[20px] font-[300] leading-[23px] text-[#1B223A]">
-                Watch how i2c helps these visionaries outperform outdated banking and
-                payments platforms to scale fast and modernize to last.
+                Watch how i2c helps these visionaries outpace the ever-evolving banking and payments market, regulatory and customer demand drivers, backed by active/active resiliency that keeps innovation—and business—moving.
             </p>
             <div 
             className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
@@ -458,6 +339,126 @@ function Comprehensive() {
         </div>
 
     </div>
+            <aside className="sticky top-[80px] self-start mt-10">
+            <div className="translate-x-25">
+            <div className="relative h-[372px] w-[390px] ">
+
+                {platformSlides.map((slide, index) => {
+                let slideStyle =
+                    "pointer-events-none opacity-0"
+
+                if (activeSlide === index) {
+                    slideStyle =
+                    "pointer-events-auto opacity-100"
+                }
+
+                return (
+                    <div
+                    key={slide.id}
+                    className={`
+                        absolute inset-0
+                        transition-opacity duration-700 ease-in-out
+                        ${slideStyle}
+                    `}
+                    >
+                    <img
+                        src={slide.image}
+                        alt={slide.title}
+                        className="h-[318px] w-[383px] object-contain"
+                    />
+
+                    <h3
+                        className="
+                        absolute bottom-[73px] left-1/2
+                        -translate-x-1/2 whitespace-nowrap
+                        font-['Inter'] text-[32px]
+                        font-[500] leading-[34px]
+                        text-white
+                        "
+                    >
+                        {slide.title}
+                    </h3>
+                    </div>
+                )
+                })}
+
+            </div>
+        </div>
+        <div className="relative -translate-y-3 pl-[28px] translate-x-45 ">
+
+        {/* Ek hi dot hai jo selected item tak move karega */}
+        <span
+            aria-hidden="true"
+            className="
+            absolute left-0 
+            h-[9px] w-[9px]
+            rounded-full bg-[#1434CB]
+            transition-transform duration-500 ease-out
+            translate-y-10
+            "
+            style={{
+            transform: `translateY(${activeSlide * 113}px)`,
+            }}
+        />
+
+        {platformSlides.map((slide, index) => {
+            const isActive = activeSlide === index
+
+            return (
+            <button
+                key={slide.id}
+                type="button"
+                onClick={() => setActiveSlide(index)}
+                className="
+                block h-[120px] w-full
+                border-0 bg-transparent p-0
+                text-left
+                "
+            >
+                <span
+                className={` tracking-[-5px]
+                    block font-['Inter']
+                    text-[38px] font-[400]
+                    leading-[44px]
+                    transition-colors duration-300
+                    ${
+                    isActive
+                        ? "text-[#0F299D]"
+                        : "text-[#111111]"
+                    }
+                `}
+                >
+                {slide.metric}
+                </span>
+
+                <span
+                className={` tracking-[-1px]
+                    mt-[5px] block font-['Inter']
+                    text-[20px] font-[300]
+                    leading-[23px]
+                    transition-colors duration-300
+                    
+                    ${
+                    isActive
+                        ? "text-[#1434CB]"
+                        : "text-[#111111]"
+                    }
+                `}
+                >
+                {slide.description.map((line) => {
+                    return (
+                    <span key={line} className="block">
+                        {line}
+                    </span>
+                    )
+                })}
+                </span>
+            </button>
+            )
+        })}
+
+        </div>
+        </aside>
     </div>
     </section>
     )
