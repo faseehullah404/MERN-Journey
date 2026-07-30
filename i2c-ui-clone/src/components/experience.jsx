@@ -45,28 +45,29 @@ const platformSlides = [
     title: "Comprehensive",
     metric: "1600+",
     description: [
-      "Integrated Banking and",
-      "Payments APIs"
+      "Global Expert Supporting",
+      "Client Worldwide"
     ],
   },
   {
     id: 2,
     image: integratedPlatform,
     title: "Configration",
-    metric: "100k",
+    metric: "2x",
     description: [
-      "Pre-coded Composible",
-      "Building Block Solutions",
+      "Monthly Software",
+      "Release for Rapid Market",
+      "Delivery"
     ],
   },
   {
     id: 3,
     image: reliablePlatform,
     title: "Innovative",
-    metric: "1.5 Million",
+    metric: "25+",
     description: [
-      "Research Hours/Year",
-      "30% Dedicated to R&D",
+      "Years of Operation in",
+      "Banking and Payments",
     ],
   },
 ]
@@ -114,7 +115,7 @@ function Experience() {
   return (
     
     
-    <section className="w-full bg-white pb-[120px] mt-11">
+    <section className="w-full bg-white  mt-11">
         <div
         className="
             mx-auto grid w-[1230px]
@@ -258,11 +259,10 @@ function Experience() {
                 text-[#1B223A]
             "
             >
-            Comprehensive, composable
+            Decades of experience drive
             <br />
-            solutions that quickly respond to the
-            <br />
-            unexpected
+            innovation and speed to market
+            
             </h2>
 
             <Circle
@@ -314,18 +314,18 @@ function Experience() {
         </div>
         <div className="mt-[34px]">
             <h3 className="font-['Inter'] text-[24px] font-[500] leading-[28px] text-[#1B223A]">
-                All speed. No limits.
+                Responsive handling. Guided navigation.
             </h3>
 
             <p className="font-['Inter'] text-[24px] font-[300] leading-[24px] text-[#1B223A] tracking-[-1px]">
-                Fuel faster outcomes with the platform built for nonstop innovation and guaranteed reliability.
+                Built on a foundation of stability and for what's next.
             </p>
         </div>
         <a
             href="#"
             className="
                 group mt-[32px]
-                flex h-[58px] w-[210px]
+                flex h-[58px] w-[170px]
                 items-center justify-center gap-[12px]
                 rounded-[7px] px-2
                 border-2 border-[#1434CB]
@@ -334,7 +334,7 @@ function Experience() {
                 hover:bg-[#1434CB] hover:text-white
             "
             >
-            <span>See how it works</span>
+            <span>Learn More</span>
 
             <span className="relative h-[19px] w-[19px] overflow-hidden">
                 <ArrowUpRight
@@ -368,11 +368,11 @@ function Experience() {
                 text-[#1B223A]
                 "
             >
-                Shift gears, not momentum.
+                Shift to the front of the pack.
             </h3>
 
             <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[20px] font-[300] leading-[23px] text-[#1B223A]">
-                Watch how i2c helps these visionaries outpace the ever-evolving banking and payments market, regulatory and customer demand drivers, backed by active/active resiliency that keeps innovation—and business—moving.
+                Watch how i2c helps these visionaries outmaneuver competitors in an increasingly crowded banking and payments race.​
             </p>
             <div 
             className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
