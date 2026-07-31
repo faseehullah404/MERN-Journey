@@ -1,3 +1,6 @@
+
+import insideTrackLogo from "../assets/inside-track-logo-1.png"
+import i2cLogo from "../assets/Powered-by-innovation-driven-by-trust.svg"
 import { ArrowUpRight } from "lucide-react";
 function Footer() {
   return (
@@ -354,6 +357,75 @@ function Footer() {
                         </div>
                     </div>
                 </div>
+                {/* Newsletter card */}
+                <div
+                className="
+                    mx-auto grid h-[142px] w-[1230px]
+                    grid-cols-[290px_1fr_330px]
+                    items-center gap-[28px]
+                    rounded-[20px]
+                    bg-white
+                    px-[38px]
+                "
+                >
+                {/* Inside Track logo */}
+                <img
+                    src={insideTrackLogo}
+                    alt="The Inside Track"
+                    className="h-auto w-[255px] object-contain"
+                />
+
+                {/* Newsletter description */}
+                <p
+                    className="
+                    font-['Inter']
+                    text-[19px] font-[300]
+                    leading-[26px]
+                    tracking-[-0.7px]
+                    text-[#1B223A]
+                    "
+                >
+                    Your fast lane to banking and payments intelligence.
+                </p>
+
+                {/* Subscribe button */}
+                <a
+                    href="#"
+                    className="
+                    group flex h-[62px] w-full
+                    items-center justify-center gap-[18px]
+                    rounded-[8px]
+                    bg-[#1434CB]
+                    font-['Inter']
+                    text-[18px] font-[300]
+                    text-white
+                    "
+                >
+                    <span>Subscribe to Our Newsletter</span>
+
+                    <span className="relative h-[19px] w-[19px] overflow-hidden">
+                    <ArrowUpRight
+                        className="
+                        absolute left-0 top-0
+                        h-[19px] w-[19px]
+                        transition-transform duration-300
+                        group-hover:-translate-y-full
+                        "
+                        strokeWidth={1.5}
+                    />
+
+                    <ArrowUpRight
+                        className="
+                        absolute left-0 top-full
+                        h-[19px] w-[19px]
+                        transition-transform duration-300
+                        group-hover:-translate-y-full
+                        "
+                        strokeWidth={1.5}
+                    />
+                    </span>
+                </a>
+            </div>
         </div>
     </section>
   )
