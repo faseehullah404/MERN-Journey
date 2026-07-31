@@ -106,9 +106,9 @@ function InnovationCTA(){
                     mt-[55px]
                     max-w-[790px]
                     font-['Inter']
-                    text-[25px] font-[300]
+                    text-[28px] font-[400]
                     leading-[31px]
-                    tracking-[-1.4px]
+                    tracking-[-2.0px]
                     text-[#1B223A]
                     "
                 >
@@ -121,15 +121,16 @@ function InnovationCTA(){
                 <a
                     href="#"
                     className="
-                    group mt-[75px]
-                    flex h-[76px] w-[220px]
+                    group mt-[65px]
+                    flex h-[60px] w-[177px]
                     items-center justify-center
                     gap-[14px]
                     rounded-[8px]
                     bg-[#1434CB]
                     font-['Inter']
-                    text-[20px] font-[400]
+                    text-[18px] font-[500]
                     text-white
+                    tracking-[-1px]
                     "
                 >
                     <span>Get Started</span>
