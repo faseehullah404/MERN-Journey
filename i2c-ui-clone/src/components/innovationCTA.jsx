@@ -69,7 +69,7 @@ function InnovationCTA(){
                         </span>
                     </a>
                 </div>
-                <div className="flex min-h-[520px] flex-col items-center pt-[105px] text-center">
+                <div className="flex min-h-[520px] flex-col items-center pt-[135px] text-center">
 
                 {/* Main heading */}
                 <div className="flex items-end justify-center">
@@ -77,9 +77,9 @@ function InnovationCTA(){
                     className="
                         whitespace-nowrap
                         font-['Inter']
-                        text-[64px] font-[500]
+                        text-[68px] font-[500]
                         leading-[1]
-                        tracking-[-4.5px]
+                        tracking-[-5.5px]
                         text-[#1B223A]
                     "
                     >
@@ -89,11 +89,12 @@ function InnovationCTA(){
                     <Circle
                     aria-hidden="true"
                     className="
-                        mb-[8px] ml-[7px]
-                        h-[10px] w-[10px]
+                        mb-[8px] 
+                        h-[12px] w-[12px]
                         shrink-0
                         fill-[#FF7200]
                         text-[#FF7200]
+                        left-0
                     "
                     strokeWidth={0}
                     />
