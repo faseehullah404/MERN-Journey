@@ -1,7 +1,7 @@
+//import insideTrackLogo from "../assets/inside-track-logo-1.png"
+//import i2cLogo from "../assets/Powered-by-innovation-driven-by-trust.svg"
+import { ArrowUpRight, Instagram } from "lucide-react"
 
-import insideTrackLogo from "../assets/inside-track-logo-1.png"
-import i2cLogo from "../assets/Powered-by-innovation-driven-by-trust.svg"
-import { ArrowUpRight } from "lucide-react";
 function Footer() {
   return (
     <section className="w-full bg-[#F4FAFF]">
@@ -357,6 +357,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
+                </div>
                 {/* Newsletter card */}
                 <div
                 className="
@@ -426,6 +427,131 @@ function Footer() {
                     </span>
                 </a>
             </div>
+            
+            {/* Footer bottom */}
+            <div
+            className="
+                mx-auto mt-[62px] grid w-[1230px]
+                grid-cols-[1fr_1fr]
+                pb-[72px]
+            "
+            >
+            {/* Left side */}
+            <div>
+                <div className="flex items-center gap-[14px]">
+                <img
+                    src={i2cLogo}
+                    alt="i2c"
+                    className="h-[62px] w-[88px] object-contain"
+                />
+
+                <div
+                    className="
+                    font-['Inter']
+                    text-[16px] font-[600]
+                    leading-[18px]
+                    tracking-[-0.7px]
+                    text-[#1B223A]
+                    "
+                >
+                    <p>
+                    Powered by innovation
+                    <span className="text-[#FF7200]">.</span>
+                    </p>
+
+                    <p>
+                    Driven by trust
+                    <span className="text-[#FF7200]">.</span>
+                    </p>
+                </div>
+                </div>
+
+                <p
+                className="
+                    mt-[30px]
+                    font-['Inter']
+                    text-[16px] font-[300]
+                    tracking-[-0.5px]
+                    text-[#667080]
+                "
+                >
+                Copyright © 2026 i2c Inc. All Rights Reserved.
+                </p>
+            </div>
+
+            {/* Right side */}
+            <div className="flex flex-col items-end">
+                {/* Social links */}
+                <div className="flex items-center gap-[25px]">
+                <span
+                    className="
+                    font-['Inter']
+                    text-[17px] font-[500]
+                    text-[#10162B]
+                    "
+                >
+                    Follow Us
+                </span>
+
+                <a
+                    href="#"
+                    aria-label="LinkedIn"
+                    className="
+                    font-['Inter']
+                    text-[27px] font-[700]
+                    leading-none
+                    text-[#061447]
+                    transition-colors duration-200
+                    hover:text-[#1434CB]
+                    "
+                >
+                    in
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                    className="
+                    text-[#061447]
+                    transition-colors duration-200
+                    hover:text-[#1434CB]
+                    "
+                >
+                    <Instagram
+                    className="h-[25px] w-[25px]"
+                    strokeWidth={2.6}
+                    />
+                </a>
+                </div>
+
+                {/* Policies */}
+                <div
+                className="
+                    mt-[42px] flex items-center gap-[24px]
+                    font-['Inter']
+                    text-[16px] font-[300]
+                    tracking-[-0.5px]
+                    text-[#667080]
+                "
+                >
+                <a
+                    href="#"
+                    className="transition-colors duration-200 hover:text-[#1434CB]"
+                >
+                    Privacy Policy
+                </a>
+
+                <span>·</span>
+
+                <a
+                    href="#"
+                    className="transition-colors duration-200 hover:text-[#1434CB]"
+                >
+                    Contact Us
+                </a>
+                </div>
+            </div>
+            
         </div>
     </section>
   )
