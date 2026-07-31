@@ -131,6 +131,7 @@ function InnovationCTA(){
                     text-[18px] font-[500]
                     text-white
                     tracking-[-1px]
+                    hover:bg-[#0D227F]
                     "
                 >
                     <span>Get Started</span>
@@ -140,21 +141,13 @@ function InnovationCTA(){
                         className="
                         absolute left-0 top-0
                         h-[20px] w-[20px]
-                        transition-transform duration-300 ease-out
-                        group-hover:-translate-y-full
+                    
+                    
                         "
                         strokeWidth={1.5}
                     />
 
-                    <ArrowUpRight
-                        className="
-                        absolute left-0 top-full
-                        h-[20px] w-[20px]
-                        transition-transform duration-300 ease-out
-                        group-hover:-translate-y-full
-                        "
-                        strokeWidth={1.5}
-                    />
+                    
                     </span>
                 </a>
 
