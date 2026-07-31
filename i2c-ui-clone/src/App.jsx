@@ -29,7 +29,7 @@ function App() {
     <Established/>
     <Experience/>
     <Innovation/>
-    <footer/>
+    <Footer/>
     </>
   )
 }
