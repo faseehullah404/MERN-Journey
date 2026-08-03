@@ -144,15 +144,34 @@ function Efficiency() {
         }
         }, [])
   return (
-    <section className="w-full py-[80px]">
-        <div  ref={cardRef}
-            className="relative mx-auto h-[565px] w-[1230px] overflow-hidden rounded-[26px]">
+    <section className="w-full py-[14px] md:py-[80px]">
+        <div
+        ref={cardRef}
+        className="
+            relative mx-[23px]
+            h-[505px] w-auto
+            overflow-hidden rounded-[16px]
+
+            md:mx-auto
+            md:h-[565px] md:w-[1230px]
+            md:rounded-[26px]
+        "
+        >
             <img
                 src={img1}
                 alt="Customer holding a payment card"
                 className="absolute inset-0 h-full w-full object-cover object-center"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div
+                className="
+                    absolute inset-0
+                    flex items-end justify-center
+                    pb-[72px]
+
+                    md:items-center
+                    md:pb-0
+                "
+                >
                     <div   className="text-center will-change-transform"
                             style={{
                                 opacity: textProgress,
@@ -161,26 +180,77 @@ function Efficiency() {
                                 }px)`,
                             }}>
                         <div className="flex items-end justify-center ">
-                            <h2 className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-9px] ">
+                            <h2
+                            className="
+                                max-w-[280px]
+                                whitespace-normal
+                                text-center
+                                font-['Inter']
+                                text-[40px] font-[200]
+                                leading-[1.05]
+                                tracking-[-2.4px]
+                                text-white
+
+                                md:max-w-none
+                                md:whitespace-nowrap
+                                md:text-[90px]
+                                md:leading-[0.98]
+                                md:tracking-[-9px]
+                            "
+                            >
                                 Engineered for efficiency
                             </h2>
 
                             <Circle
                                 aria-hidden="true"
-                                className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-2"
+                                className="
+                                mb-[4px] ml-[3px]
+                                h-[7px] w-[7px]
+                                shrink-0
+                                fill-[#FF7200] text-[#FF7200]
+
+                                md:mb-[7px] md:ml-[7px]
+                                md:h-[13px] md:w-[13px]
+                                md:-translate-x-2
+                                "
                                 strokeWidth={0}
                             />
                             
                         </div>
-                        <div className="mt-[10px] flex items-end justify-center">
+                        <div className="mt-[6px] flex items-end justify-center md:mt-[10px]">
                                 <h2
-                                    className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-6px]">
+                                className="
+                                    max-w-[290px]
+                                    whitespace-normal
+                                    text-center
+                                    font-['Inter']
+                                    text-[40px] font-[200]
+                                    leading-[1.05]
+                                    tracking-[-2.4px]
+                                    text-white
+
+                                    md:max-w-none
+                                    md:whitespace-nowrap
+                                    md:text-[90px]
+                                    md:leading-[0.98]
+                                    md:tracking-[-6px]
+                                "
+                                >
                                     Streamlined for scalability
                                 </h2>
 
                                 <Circle
                                     aria-hidden="true"
-                                    className="mb-[7px] ml-[7px] h-[11px] w-[11px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-2"
+                                    className="
+                                    mb-[4px] ml-[3px]
+                                    h-[7px] w-[7px]
+                                    shrink-0
+                                    fill-[#FF7200] text-[#FF7200]
+
+                                    md:mb-[7px] md:ml-[7px]
+                                    md:h-[11px] md:w-[11px]
+                                    md:-translate-x-2
+                                    "
                                     strokeWidth={0}
                                 />
                         </div>
@@ -190,7 +260,8 @@ function Efficiency() {
         </div>
             <div
             className={`
-                fixed bottom-[18px] left-1/2 z-40
+                fixed bottom-[15px] left-1/2 z-40
+                md:bottom-[18px]
                 -translate-x-1/2
                 transition-all duration-500 ease-out
                 ${
@@ -203,13 +274,21 @@ function Efficiency() {
             <nav
                 aria-label="Efficiency section navigation"
                 className="
-                flex h-[56px] w-[479px]
-                items-center  gap-[28px] 
+                flex h-[52px]
+                w-[calc(100vw-32px)]
+                items-center justify-between
+                gap-0
                 rounded-full
-                border-[3px] border-[#4A426D]
+                border-[2px] border-[#4A426D]
                 bg-[#202B59]
-                px-[20px]
+                px-[7px]
                 shadow-[0_10px_24px_rgba(27,34,58,0.25)]
+
+                md:h-[56px] md:w-[479px]
+                md:justify-start
+                md:gap-[28px]
+                md:border-[3px]
+                md:px-[20px]
                 "
             >
                 {efficiencyNavItems.map((item) => {
