@@ -442,35 +442,17 @@ function Footer() {
                 <img
                     src={i2cLogo}
                     alt="i2c"
-                    className="h-[62px] w-[88px] object-contain"
+                    className="h-[65px] w-[272px] object-contain"
                 />
 
-                <div
-                    className="
-                    font-['Inter']
-                    text-[16px] font-[600]
-                    leading-[18px]
-                    tracking-[-0.7px]
-                    text-[#1B223A]
-                    "
-                >
-                    <p>
-                    Powered by innovation
-                    <span className="text-[#FF7200]">.</span>
-                    </p>
-
-                    <p>
-                    Driven by trust
-                    <span className="text-[#FF7200]">.</span>
-                    </p>
-                </div>
+                
                 </div>
 
                 <p
                 className="
                     mt-[30px]
                     font-['Inter']
-                    text-[16px] font-[300]
+                    text-[16px] font-[400]
                     tracking-[-0.5px]
                     text-[#667080]
                 "
@@ -480,13 +462,13 @@ function Footer() {
             </div>
 
             {/* Right side */}
-            <div className="flex flex-col items-end">
+            <div className="flex flex-col items-end translate-y-3">
                 {/* Social links */}
                 <div className="flex items-center gap-[25px]">
                 <span
                     className="
                     font-['Inter']
-                    text-[17px] font-[500]
+                    text-[18px] font-[800]
                     text-[#10162B]
                     "
                 >
@@ -509,36 +491,36 @@ function Footer() {
                 </a>
 
                 <a
-  href="#"
-  aria-label="Instagram"
-  className="
-    text-[#061447]
-    transition-colors duration-200
-    hover:text-[#1434CB]
-  "
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="h-[25px] w-[25px]"
-    aria-hidden="true"
-  >
-    <rect x="2" y="2" width="20" height="20" rx="5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle
-      cx="17.5"
-      cy="6.5"
-      r="1"
-      fill="currentColor"
-      stroke="none"
-    />
-  </svg>
-</a>
+                    href="#"
+                    aria-label="Instagram"
+                    className="
+                        text-[#061447]
+                        transition-colors duration-200
+                        hover:text-[#1434CB]
+                    "
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-[25px] w-[25px]"
+                        aria-hidden="true"
+                    >
+                        <rect x="2" y="2" width="20" height="20" rx="5" />
+                        <circle cx="12" cy="12" r="4" />
+                        <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1"
+                        fill="currentColor"
+                        stroke="none"
+                        />
+                    </svg>
+                </a>
                 </div>
 
                 {/* Policies */}
@@ -546,7 +528,7 @@ function Footer() {
                 className="
                     mt-[42px] flex items-center gap-[24px]
                     font-['Inter']
-                    text-[16px] font-[300]
+                    text-[16px] font-[400]
                     tracking-[-0.5px]
                     text-[#667080]
                 "
