@@ -1,6 +1,6 @@
 import insideTrackLogo from "../assets/inside-track-logo-1.png"
 import i2cLogo from "../assets/Powered-by-innovation-driven-by-trust.svg"
-import { ArrowUpRight, Instagram } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 function Footer() {
   return (
@@ -509,19 +509,36 @@ function Footer() {
                 </a>
 
                 <a
-                    href="#"
-                    aria-label="Instagram"
-                    className="
-                    text-[#061447]
-                    transition-colors duration-200
-                    hover:text-[#1434CB]
-                    "
-                >
-                    <Instagram
-                    className="h-[25px] w-[25px]"
-                    strokeWidth={2.6}
-                    />
-                </a>
+  href="#"
+  aria-label="Instagram"
+  className="
+    text-[#061447]
+    transition-colors duration-200
+    hover:text-[#1434CB]
+  "
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-[25px] w-[25px]"
+    aria-hidden="true"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle
+      cx="17.5"
+      cy="6.5"
+      r="1"
+      fill="currentColor"
+      stroke="none"
+    />
+  </svg>
+</a>
                 </div>
 
                 {/* Policies */}
