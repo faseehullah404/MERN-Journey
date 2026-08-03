@@ -113,18 +113,45 @@ function PlatformOverview() {
   return (
     
     
-    <section className="w-full bg-white pb-[120px] mt-11">
+    <section   className="
+            mt-[38px] w-full
+            overflow-x-hidden
+            bg-white pb-[90px]
+
+            md:mt-11
+            md:pb-[120px]"
+    >
         <div
         className="
-            mx-auto grid w-[1230px]
-            grid-cols-[430px_1fr]
-            items-start gap-[70px]
+            mx-auto grid w-full
+            grid-cols-1
+            items-start gap-[58px]
+            px-[22px]
+
+            md:w-[1230px]
+            md:grid-cols-[430px_1fr]
+            md:gap-[70px]
+            md:px-0
         "
         >
         {/* Left sticky column */}
-        <aside className="sticky top-[115px] self-start">
-            <div>
-            <div className="relative h-[372px] w-[390px]">
+        <aside
+        className="
+            order-2 static w-full self-start
+
+            md:order-1
+            md:sticky md:top-[115px]
+        "
+        >
+            <div className="mx-auto w-full max-w-[330px] md:max-w-none">
+            <div
+            className="
+                relative h-[315px] w-full
+
+                md:h-[372px]
+                md:w-[390px]
+            "
+            >
 
                 {platformSlides.map((slide, index) => {
                 let slideStyle =
@@ -152,11 +179,17 @@ function PlatformOverview() {
 
                     <h3
                         className="
-                        absolute bottom-[44px] left-1/2
-                        -translate-x-1/2 whitespace-nowrap
-                        font-['Inter'] text-[32px]
-                        font-[500] leading-[34px]
+                        absolute bottom-[36px] left-1/2
+                        -translate-x-1/2
+                        whitespace-nowrap
+                        font-['Inter']
+                        text-[25px] font-[500]
+                        leading-[28px]
                         text-white
+
+                        md:bottom-[44px]
+                        md:text-[32px]
+                        md:leading-[34px]
                         "
                     >
                         {slide.title}
@@ -167,7 +200,17 @@ function PlatformOverview() {
 
             </div>
         </div>
-        <div className="relative mt-[1px] pl-[28px] translate-x-25 ">
+        <div
+        className="
+            relative mx-auto mt-[18px]
+            w-[285px] pl-[28px]
+            translate-x-0
+
+            md:mx-0 md:mt-[1px]
+            md:w-auto
+            md:translate-x-25
+        "
+        >
 
         {/* Ek hi dot hai jo selected item tak move karega */}
         <span
@@ -244,16 +287,28 @@ function PlatformOverview() {
         </aside>
 
         {/* Right scrolling column */}
-        <div className="translate-x-6">
+        <div
+        className="
+            order-1 min-w-0 translate-x-0
+
+            md:order-2
+            md:translate-x-6
+        "
+        >
 
         <div className="flex items-end">
             <h2
             className="
-                font-['Inter']
-                text-[48px] font-[400]
-                leading-[1.15]
-                tracking-[-3px]
-                text-[#1B223A]
+            min-w-0 flex-1
+            font-['Inter']
+            text-[31px] font-[400]
+            leading-[1.01]
+            tracking-[-2px]
+            text-[#1B223A]
+
+            md:text-[48px]
+            md:leading-[1.15]
+            md:tracking-[-3px]
             "
             >
             Unified platform built upon
@@ -266,36 +321,75 @@ function PlatformOverview() {
             <Circle
             aria-hidden="true"
             className="
-                mb-[9px] ml-[5px]
-                h-[7px] w-[7px]
-                shrink-0 fill-[#FF7200]
-                text-[#FF7200]
+            mb-[3px] ml-[3px]
+            h-[5px] w-[5px]
+            shrink-0
+            fill-[#FF7200]
+            text-[#FF7200]
+
+            md:mb-[9px] md:ml-[5px]
+            md:h-[7px] md:w-[7px]
             "
             strokeWidth={0}
             />
         </div>
 
-        <div className="mt-[35px] grid grid-cols-3 gap-[18px]">
+        <div
+        className="
+            mt-[28px]
+            flex gap-[12px]
+            overflow-x-auto pb-[8px]
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+
+            md:mt-[35px]
+            md:grid md:grid-cols-3
+            md:gap-[18px]
+            md:overflow-visible
+            md:pb-0
+        "
+        >
             {platformBenefits.map((benefit) => {
                 return (
                 <div
                     key={benefit.id}
                     className="
-                    flex h-[205px] flex-col
-                    justify-between
-                    rounded-[18px]
+                    flex h-[155px]
+                    min-w-[185px]
+                    flex-col justify-between
+                    rounded-[10px]
                     bg-[#F7FAFD]
-                    px-[24px] py-[14px]
+                    px-[22px] py-[17px]
                     shadow-[0_4px_12px_rgba(27,34,58,0.08)]
+
+                    md:h-[205px]
+                    md:min-w-0
+                    md:rounded-[18px]
+                    md:px-[24px]
+                    md:py-[14px]
                     "
                 >
                     <img
                     src={benefit.icon}
                     alt=""
-                    className="h-[45px] w-[45px] object-contain"
+                    className="
+                    h-[36px] w-[36px] object-contain
+                    md:h-[45px] md:w-[45px]
+                    "
                     />
 
-                    <p className="font-['Inter'] text-[20px] font-[400] leading-[23px] text-[#1B223A] -translate-y-4">
+                    <p
+                    className="
+                        font-['Inter']
+                        text-[15px] font-[400]
+                        leading-[17px]
+                        text-[#1B223A]
+
+                        md:-translate-y-4
+                        md:text-[20px]
+                        md:leading-[23px]
+                    "
+                    >
                     {benefit.text.map((line) => {
                         return (
                         <span key={line} className="block ">
@@ -309,26 +403,57 @@ function PlatformOverview() {
             })}
 
         </div>
-        <div className="mt-[34px]">
-            <h3 className="font-['Inter'] text-[24px] font-[500] leading-[28px] text-[#1B223A]">
+        <div className="mt-[27px] md:mt-[34px]">
+            <h3
+            className="
+                font-['Inter']
+                text-[18px] font-[500]
+                leading-[21px]
+                text-[#1B223A]
+
+                md:text-[24px]
+                md:leading-[28px]
+            "
+            >
                 One engine. All power.
             </h3>
 
-            <p className="font-['Inter'] text-[24px] font-[300] leading-[24px] text-[#1B223A] tracking-[-1px]">
+            <p
+            className="
+                mt-[2px]
+                font-['Inter']
+                text-[16px] font-[300]
+                leading-[18px]
+                tracking-[-0.5px]
+                text-[#1B223A]
+
+                md:mt-0
+                md:text-[24px]
+                md:leading-[24px]
+                md:tracking-[-1px]
+            "
+            >
                 Infinite journeys without legacy limits or public cloud instability.
             </p>
         </div>
         <a
             href="#"
             className="
-                group mt-[32px]
-                flex h-[58px] w-[195px]
-                items-center justify-center gap-[12px]
-                rounded-[7px]
-                border-2 border-[#1434CB]
-                font-['Inter'] text-[17px] font-[400]
-                text-[#1434CB]
-                hover:bg-[#1434CB] hover:text-white
+            group mt-[30px]
+            flex h-[47px] w-[153px]
+            items-center justify-center gap-[9px]
+            rounded-[7px]
+            border-2 border-[#1434CB]
+            font-['Inter']
+            text-[14px] font-[400]
+            text-[#1434CB]
+            hover:bg-[#1434CB]
+            hover:text-white
+
+            md:mt-[32px]
+            md:h-[58px] md:w-[195px]
+            md:gap-[12px]
+            md:text-[17px]
             "
             >
             <span>Start Exploring</span>
@@ -355,12 +480,14 @@ function PlatformOverview() {
                 />
             </span>
         </a>
-        <div className="mt-[63px]">
+        <div className="mt-[55px] md:mt-[63px]">
             <h3
                 className="
                 font-['Inter']
-                text-[32px] font-[400]
-                leading-[39px]
+                md:text-[32px] font-[400]
+                md:leading-[39px]
+                text-[27px]
+                leading-[31px]
                 tracking-[-1px]
                 text-[#1B223A]
                 "
@@ -368,12 +495,39 @@ function PlatformOverview() {
                 Shift the power differential.
             </h3>
 
-            <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[20px] font-[300] leading-[23px] text-[#1B223A]">
+            <p
+            className="
+                mt-[10px]
+                max-w-[700px]
+                font-['Inter']
+                text-[16px] font-[300]
+                leading-[19px]
+                text-[#1B223A]
+
+                md:mt-[12px]
+                md:text-[20px]
+                md:leading-[23px]
+            "
+            >
                 Watch how i2c helps these visionaries outperform outdated banking and
                 payments platforms to scale fast and modernize to last.
             </p>
-            <div 
-            className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
+            <div
+            className="
+            mt-[28px]
+            flex gap-[12px]
+            overflow-x-auto pb-[8px]
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+
+            md:mt-[34px]
+            md:grid
+            md:grid-cols-[1fr_1fr_1fr]
+            md:gap-[18px]
+            md:overflow-visible
+            md:pb-0
+            "
+            >
 
                 {storyCards.map((card) => {
                     return (
