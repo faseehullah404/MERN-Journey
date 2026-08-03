@@ -5,7 +5,8 @@ import awardImage from "../assets/award-leading-vendor-1920.webp"
 
 function InnovationCTA(){
     return(
-        <section className="w-full bg-white pb-[100px] pt-[130px]">
+        <section id="innovation-banner-start"
+            className="w-full bg-white pb-[100px] pt-[130px]">
             <div className="mx-auto w-[1230px]">
 
                 <div className="relative h-[150px] w-full">

@@ -77,58 +77,76 @@ function Differentiation() {
         }, [])
 
         useEffect(() => {
-        const cardElement = cardRef.current
+            const cardElement = cardRef.current
 
-        if (!cardElement) {
-            return
-        }
-
-        let animationFrameId = null
-
-        function updateBottomNav() {
-            const cardPosition = cardElement.getBoundingClientRect()
-            const viewportHeight = window.innerHeight
-
-            const hasReachedTrigger =
-            cardPosition.top <= viewportHeight * 0.27
-
-            const hasNotCrossedCardEnd =
-            cardPosition.bottom >= viewportHeight * 0.12
-
-            const shouldShowNav =
-            hasReachedTrigger && hasNotCrossedCardEnd
-
-            setIsBottomNavVisible(shouldShowNav)
-
-            animationFrameId = null
-        }
-
-        function handleScroll() {
-            if (animationFrameId !== null) {
-            return
-            }
-
-            animationFrameId = requestAnimationFrame(
-            updateBottomNav
+            const endElement = document.getElementById(
+                "established-nav-start"
             )
-        }
 
-        updateBottomNav()
-
-        window.addEventListener("scroll", handleScroll, {
-            passive: true,
-        })
-
-        window.addEventListener("resize", handleScroll)
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-            window.removeEventListener("resize", handleScroll)
-
-            if (animationFrameId !== null) {
-            cancelAnimationFrame(animationFrameId)
+            if (!cardElement || !endElement) {
+                return
             }
-        }
+
+            let animationFrameId = null
+
+            function updateBottomNav() {
+                const cardPosition =
+                cardElement.getBoundingClientRect()
+
+                const endPosition =
+                endElement.getBoundingClientRect()
+
+                const viewportHeight = window.innerHeight
+
+                // Differentiation banner required position par pohanch gaya
+                const hasReachedTrigger =
+                cardPosition.top <= viewportHeight * 0.27
+
+                // Established banner abhi viewport mein enter nahi hua
+                const hasNotReachedEstablished =
+                endPosition.top > viewportHeight
+
+                const shouldShowNav =
+                hasReachedTrigger &&
+                hasNotReachedEstablished
+
+                setIsBottomNavVisible(shouldShowNav)
+
+                animationFrameId = null
+            }
+
+            function handleScroll() {
+                if (animationFrameId !== null) {
+                return
+                }
+
+                animationFrameId =
+                requestAnimationFrame(updateBottomNav)
+            }
+
+            updateBottomNav()
+
+            window.addEventListener("scroll", handleScroll, {
+                passive: true,
+            })
+
+            window.addEventListener("resize", handleScroll)
+
+            return () => {
+                window.removeEventListener(
+                "scroll",
+                handleScroll
+                )
+
+                window.removeEventListener(
+                "resize",
+                handleScroll
+                )
+
+                if (animationFrameId !== null) {
+                cancelAnimationFrame(animationFrameId)
+                }
+            }
         }, [])
   return (
     <section className="w-full py-[80px]">

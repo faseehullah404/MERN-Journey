@@ -398,8 +398,8 @@ function Footer() {
                     rounded-[8px]
                     bg-[#1434CB]
                     font-['Inter']
-                    text-[18px] font-[300]
-                    text-white
+                    text-[18px] font-[400]
+                    text-white tracking-[-1px]
                     "
                 >
                     <span>Subscribe to Our Newsletter</span>
