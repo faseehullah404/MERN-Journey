@@ -6,7 +6,7 @@ import megamenu5 from "../assets/image-8.png"
 import i2c_logo from "../assets/i2c-logo.svg"
 import { useEffect, useState } from "react"
 import MegaMenu from "./Megamenu.jsx"
-import { VolumeX, Menu, Search, ArrowRight } from "lucide-react"
+import { VolumeX, Menu, Search, ArrowRight, X } from "lucide-react"
 const navMenus = [
   {
     id: "who-we-serve",
@@ -227,6 +227,8 @@ const navMenus = [
 function Nav(){
     const [openMenu, setOpenMenu] = useState(null)
     const [isScrolled, setIsScrolled] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] =
+    useState(false)
 
     useEffect(() => {
   function handleScroll() {
@@ -245,13 +247,49 @@ function Nav(){
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-  let headerStyle =
-  "w-full rounded-none border border-transparent shadow-none"
+    useEffect(() => {
+      if (!isMobileMenuOpen) {
+        return
+      }
 
-  if (isScrolled) {
-    headerStyle =
-      "w-[84%] max-w-[1430px] rounded-b-[28px] border-x border-b border-[#E8EDF5] shadow-4xl shadow-[0_10px_30px_rgba(27,34,58,0.10)]"
-  }
+      const previousOverflow =
+        document.body.style.overflow
+
+      document.body.style.overflow = "hidden"
+
+      function handleEscape(event) {
+        if (event.key === "Escape") {
+          setIsMobileMenuOpen(false)
+        }
+      }
+
+      window.addEventListener("keydown", handleEscape)
+
+      return () => {
+        document.body.style.overflow =
+          previousOverflow
+
+        window.removeEventListener(
+          "keydown",
+          handleEscape
+        )
+      }
+    }, [isMobileMenuOpen])
+    let headerStyle =
+    "w-full border border-transparent shadow-none"
+
+    if (isScrolled) {
+      headerStyle = `
+        w-full
+        md:w-[84%]
+        md:max-w-[1430px]
+        md:rounded-b-[28px]
+        md:border-x
+        md:border-b
+        md:border-[#E8EDF5]
+        md:shadow-[0_10px_30px_rgba(27,34,58,0.10)]
+      `
+    }
 
     function handleMenuClick(menuId) {
         if (openMenu === menuId) {
@@ -263,7 +301,10 @@ function Nav(){
     const selectedMenu = navMenus.find((menu) => {
         return menu.id === openMenu
     })
-
+    function handleMobileMenuOpen() {
+      setOpenMenu(null)
+      setIsMobileMenuOpen(true)
+    }
         
     return(
   <header
@@ -272,7 +313,16 @@ function Nav(){
     
     ${headerStyle}
   `}>
-    <nav className="mx-auto grid h-[84px] w-[1230px] grid-cols-[1fr_auto] items-center gap-[70px]">
+    <nav className="
+        mx-auto flex h-[64px] w-full
+        items-center justify-between
+        px-[22px]
+
+        md:grid md:h-[84px] md:w-[1230px]
+        md:grid-cols-[1fr_auto]
+        md:gap-[70px] md:px-0
+      "
+    >
 
   {/* Left column */}
   <div className="flex min-w-0 items-center gap-[28px]">
@@ -281,7 +331,7 @@ function Nav(){
       alt="i2c logo"
       className="h-[52px] w-[52px] shrink-0 object-contain"
     />
-
+    <div className="hidden items-center gap-[28px] md:flex">
     {navMenus.map((menu) => {
       
 
@@ -296,72 +346,254 @@ function Nav(){
         </button>
       )
     })}
+    </div>
   </div>
 
   {/* Right column */}
-  <div className="flex items-center justify-end gap-[28px]">
+  {/* Right column */}
+  <div className="flex items-center justify-end">
 
-    {/* Icons */}
-    <div className="flex items-center gap-[22px]">
+    {/* Desktop controls */}
+    <div className="hidden items-center gap-[28px] md:flex">
+
+      {/* Desktop icons */}
+      <div className="flex items-center gap-[22px]">
+        <button
+          type="button"
+          aria-label="Mute sound"
+          className="
+            m-0 border-0 bg-transparent p-0
+            text-[#1B223A]
+          "
+        >
+          <VolumeX
+            className="h-[18px] w-[18px]"
+            strokeWidth={1.7}
+          />
+        </button>
+
+        <button
+          type="button"
+          aria-label="Open desktop menu"
+          className="
+            m-0 border-0 bg-transparent p-0
+            text-[#1B223A]
+          "
+        >
+          <Menu
+            className="h-[27px] w-[27px]"
+            strokeWidth={1.4}
+          />
+        </button>
+
+        <button
+          type="button"
+          aria-label="Search"
+          className="
+            m-0 border-0 bg-transparent p-0
+            text-[#1B223A]
+          "
+        >
+          <Search
+            className="h-[23px] w-[23px]"
+            strokeWidth={1.5}
+          />
+        </button>
+      </div>
+
+      {/* Desktop buttons */}
+      <div className="flex items-center gap-[10px]">
+        <a
+          href="#"
+          className="
+            flex h-[36px] items-center
+            justify-center whitespace-nowrap
+            rounded-[7px]
+            border border-[#1B223A]
+            px-[16px]
+            font-['Inter']
+            text-[14px] font-[400]
+            leading-none text-[#1B223A]
+          "
+        >
+          Client Login
+        </a>
+
+        <a
+          href="#"
+          className="
+            flex h-[36px] items-center
+            justify-center gap-[6px]
+            whitespace-nowrap rounded-[7px]
+            bg-[#061447] px-[16px]
+            font-['Inter']
+            text-[14px] font-[400]
+            leading-none text-white
+          "
+        >
+          Contact Us
+
+          <ArrowRight
+            className="h-[15px] w-[15px]"
+            strokeWidth={1.8}
+          />
+        </a>
+      </div>
+    </div>
+
+    {/* Mobile controls */}
+    <div className="flex items-center gap-[21px] md:hidden">
       <button
         type="button"
         aria-label="Mute sound"
-        className="m-0 border-0 bg-transparent p-0 text-[#1B223A]"
+        className="
+          border-0 bg-transparent p-0
+          text-[#1B223A]
+        "
       >
         <VolumeX
           className="h-[18px] w-[18px]"
-          strokeWidth={1.7}
-        />
-      </button>
-
-      <button
-        type="button"
-        aria-label="Open menu"
-        className="m-0 border-0 bg-transparent p-0 text-[#1B223A]"
-      >
-        <Menu
-          className="h-[27px] w-[27px]"
-          strokeWidth={1.4}
+          strokeWidth={1.8}
         />
       </button>
 
       <button
         type="button"
         aria-label="Search"
-        className="m-0 border-0 bg-transparent p-0 text-[#1B223A]"
+        className="
+          border-0 bg-transparent p-0
+          text-[#1B223A]
+        "
       >
         <Search
-          className="h-[23px] w-[23px]"
+          className="h-[22px] w-[22px]"
+          strokeWidth={1.6}
+        />
+      </button>
+
+      <button
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded={isMobileMenuOpen}
+        onClick={handleMobileMenuOpen}
+        className="
+          border-0 bg-transparent p-0
+          text-[#1B223A]
+        "
+      >
+        <Menu
+          className="h-[27px] w-[27px]"
+          strokeWidth={1.4}
+        />
+      </button>
+    </div>
+
+  </div>
+</nav>
+{isMobileMenuOpen && (
+  <div
+    className="
+      fixed inset-0 z-[100]
+      flex h-[100dvh] flex-col
+      bg-white
+      md:hidden
+    "
+  >
+    {/* Mobile menu top */}
+    <div
+      className="
+        flex h-[64px] shrink-0
+        items-center justify-between
+        px-[22px]
+      "
+    >
+      <img
+        src={i2c_logo}
+        alt="i2c logo"
+        className="h-[46px] w-[46px] object-contain"
+      />
+
+      <button
+        type="button"
+        aria-label="Close navigation menu"
+        onClick={() => setIsMobileMenuOpen(false)}
+        className="
+          border-0 bg-transparent p-0
+          text-[#1B223A]
+        "
+      >
+        <X
+          className="h-[25px] w-[25px]"
           strokeWidth={1.5}
         />
       </button>
     </div>
 
-    {/* Login and contact buttons */}
-    <div className="flex items-center gap-[10px]">
-      <a
-        href="#"
-        className="flex h-[36px] items-center justify-center whitespace-nowrap rounded-[7px] border border-[#1B223A] px-[16px] font-['Inter'] text-[14px] font-[400] leading-none text-[#1B223A]"
-      >
-        Client Login
-      </a>
+    {/* Mobile navigation links */}
+    <div
+      className="
+        flex flex-col items-start
+        gap-[21px]
+        px-[27px] pt-[12px]
+      "
+    >
+      {navMenus.map((menu) => {
+        return (
+          <button
+            key={menu.id}
+            type="button"
+            onClick={() => {
+              setIsMobileMenuOpen(false)
+            }}
+            className="
+              border-0 bg-transparent p-0
+              text-left
+              font-['Inter']
+              text-[23px] font-[400]
+              leading-[25px]
+              tracking-[-0.8px]
+              text-[#1B223A]
+            "
+          >
+            {menu.label}
+          </button>
+        )
+      })}
+    </div>
 
+    {/* Mobile bottom contact area */}
+    <div
+      className="
+        mt-auto shrink-0
+        border-t border-[#E7ECF3]
+        bg-white
+        px-[22px] pb-[18px] pt-[14px]
+      "
+    >
       <a
         href="#"
-        className="flex h-[36px] items-center justify-center gap-[6px] whitespace-nowrap rounded-[7px] bg-[#061447] px-[16px] font-['Inter'] text-[14px] font-[400] leading-none text-white"
+        onClick={() => setIsMobileMenuOpen(false)}
+        className="
+          flex h-[45px] w-full
+          items-center justify-center
+          gap-[5px]
+          rounded-[7px]
+          bg-[#1434CB]
+          font-['Inter']
+          text-[14px] font-[400]
+          text-white
+        "
       >
         Contact Us
 
         <ArrowRight
-          className="h-[15px] w-[15px]"
-          strokeWidth={1.8}
+          className="h-[14px] w-[14px]"
+          strokeWidth={1.7}
         />
       </a>
     </div>
-
   </div>
-</nav>
-    
+)}    
 
     {selectedMenu && (
   <>
