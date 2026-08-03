@@ -12,7 +12,7 @@ import Comprehensive from './components/Comprehensive.jsx'
 import Established from './components/established.jsx'
 import Experience from './components/experience.jsx'
 import Innovation from "./components/innovationCTA.jsx"
-import Footer from "./components/footer.jsx"
+import Footer from "./components/Footer.jsx"
 
 function App() {
   const [count, setCount] = useState(0)

@@ -1,5 +1,5 @@
-//import insideTrackLogo from "../assets/inside-track-logo-1.png"
-//import i2cLogo from "../assets/Powered-by-innovation-driven-by-trust.svg"
+import insideTrackLogo from "../assets/inside-track-logo-1.png"
+import i2cLogo from "../assets/Powered-by-innovation-driven-by-trust.svg"
 import { ArrowUpRight, Instagram } from "lucide-react"
 
 function Footer() {
