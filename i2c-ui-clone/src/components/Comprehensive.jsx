@@ -373,129 +373,401 @@ function Comprehensive() {
         </span>
       </a>
     </div>
+  {/* ================================================= */}
+    {/* TRIANGLE SLIDER                                  */}
+    {/* Mobile: top content ke baad                      */}
+    {/* Desktop: sticky right column                     */}
+    {/* ================================================= */}
 
-            <aside className="sticky top-[80px] self-start mt-10">
-            <div className="translate-x-25">
-            <div className="relative h-[372px] w-[390px] ">
+    <aside
+      className="
+        order-2
+        static mt-[15px]
+        w-full self-start
 
-                {platformSlides.map((slide, index) => {
-                let slideStyle =
-                    "pointer-events-none opacity-0"
+        md:col-start-2
+        md:row-start-1
+        md:row-span-2
+        md:sticky
+        md:top-[80px]
+        md:mt-10
+      "
+    >
+      {/* Triangle images */}
+      <div
+        className="
+          mx-auto w-full
+          max-w-[330px]
+          translate-x-0
 
-                if (activeSlide === index) {
-                    slideStyle =
-                    "pointer-events-auto opacity-100"
-                }
+          md:mx-0
+          md:max-w-none
+          md:translate-x-[100px]
+        "
+      >
+        <div
+          className="
+            relative h-[315px]
+            w-full
 
-                return (
-                    <div
-                    key={slide.id}
-                    className={`
-                        absolute inset-0
-                        transition-opacity duration-700 ease-in-out
-                        ${slideStyle}
-                    `}
-                    >
-                    <img
-                        src={slide.image}
-                        alt={slide.title}
-                        className="h-[318px] w-[383px] object-contain"
-                    />
+            md:h-[372px]
+            md:w-[390px]
+          "
+        >
+          {platformSlides.map((slide, index) => {
+            let slideStyle =
+              "pointer-events-none opacity-0"
 
-                    <h3
-                        className="
-                        absolute bottom-[73px] left-1/2
-                        -translate-x-1/2 whitespace-nowrap
-                        font-['Inter'] text-[32px]
-                        font-[500] leading-[34px]
-                        text-white
-                        "
-                    >
-                        {slide.title}
-                    </h3>
-                    </div>
-                )
-                })}
+            if (activeSlide === index) {
+              slideStyle =
+                "pointer-events-auto opacity-100"
+            }
 
-            </div>
+            return (
+              <div
+                key={slide.id}
+                className={`
+                  absolute inset-0
+                  transition-opacity
+                  duration-700 ease-in-out
+                  ${slideStyle}
+                `}
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="
+                    h-[285px] w-full
+                    object-contain
+
+                    md:h-[318px]
+                    md:w-[383px]
+                  "
+                />
+
+                <h3
+                  className="
+                    absolute bottom-[57px]
+                    left-1/2
+                    -translate-x-1/2
+                    whitespace-nowrap
+
+                    font-['Inter']
+                    text-[25px] font-[500]
+                    leading-[28px]
+                    text-white
+
+                    md:bottom-[73px]
+                    md:text-[32px]
+                    md:leading-[34px]
+                  "
+                >
+                  {slide.title}
+                </h3>
+              </div>
+            )
+          })}
         </div>
-        <div className="relative -translate-y-3 pl-[28px] translate-x-45 ">
+      </div>
 
-        {/* Ek hi dot hai jo selected item tak move karega */}
+      {/* Slider metrics */}
+      <div
+        className="
+          relative mx-auto
+          mt-[5px] w-[285px]
+          translate-x-0
+          pl-[28px]
+
+          md:mx-0
+          md:-translate-y-3
+          md:w-auto
+          md:translate-x-[180px]
+        "
+      >
+        {/* Moving active dot */}
         <span
-            aria-hidden="true"
-            className="
-            absolute left-0 
+          aria-hidden="true"
+          className="
+            absolute left-0
             h-[9px] w-[9px]
-            rounded-full bg-[#1434CB]
-            transition-transform duration-500 ease-out
             translate-y-10
-            "
-            style={{
+            rounded-full
+            bg-[#1434CB]
+            transition-transform
+            duration-500 ease-out
+          "
+          style={{
             transform: `translateY(${activeSlide * 113}px)`,
-            }}
+          }}
         />
 
         {platformSlides.map((slide, index) => {
-            const isActive = activeSlide === index
+          const isActive = activeSlide === index
 
-            return (
+          return (
             <button
-                key={slide.id}
-                type="button"
-                onClick={() => setActiveSlide(index)}
-                className="
+              key={slide.id}
+              type="button"
+              onClick={() => setActiveSlide(index)}
+              className="
                 block h-[120px] w-full
-                border-0 bg-transparent p-0
-                text-left
-                "
+                border-0 bg-transparent
+                p-0 text-left
+              "
             >
-                <span
-                className={` tracking-[-5px]
-                    block font-['Inter']
-                    text-[38px] font-[400]
-                    leading-[44px]
-                    transition-colors duration-300
-                    ${
-                    isActive
-                        ? "text-[#0F299D]"
-                        : "text-[#111111]"
-                    }
-                `}
-                >
-                {slide.metric}
-                </span>
+              <span
+                className={`
+                  block font-['Inter']
+                  text-[34px] font-[400]
+                  leading-[40px]
+                  tracking-[-4px]
+                  transition-colors duration-300
 
-                <span
-                className={` tracking-[-1px]
-                    mt-[5px] block font-['Inter']
-                    text-[20px] font-[300]
-                    leading-[23px]
-                    transition-colors duration-300
-                    
-                    ${
+                  md:text-[38px]
+                  md:leading-[44px]
+                  md:tracking-[-5px]
+
+                  ${
                     isActive
-                        ? "text-[#1434CB]"
-                        : "text-[#111111]"
-                    }
+                      ? "text-[#0F299D]"
+                      : "text-[#111111]"
+                  }
                 `}
-                >
+              >
+                {slide.metric}
+              </span>
+
+              <span
+                className={`
+                  mt-[5px] block
+                  font-['Inter']
+                  text-[17px] font-[300]
+                  leading-[20px]
+                  tracking-[-0.7px]
+                  transition-colors duration-300
+
+                  md:text-[20px]
+                  md:leading-[23px]
+                  md:tracking-[-1px]
+
+                  ${
+                    isActive
+                      ? "text-[#1434CB]"
+                      : "text-[#111111]"
+                  }
+                `}
+              >
                 {slide.description.map((line) => {
-                    return (
+                  return (
                     <span key={line} className="block">
-                        {line}
+                      {line}
                     </span>
-                    )
+                  )
                 })}
-                </span>
+              </span>
             </button>
-            )
+          )
+        })}
+      </div>
+    </aside>
+
+    {/* ================================================= */}
+    {/* LOWER STORY CONTENT                              */}
+    {/* Mobile: triangle ke baad                         */}
+    {/* Desktop: left column mein button ke neeche       */}
+    {/* ================================================= */}
+
+    <div
+      className="
+        order-3 min-w-0
+
+        md:col-start-1
+        md:row-start-2
+        md:mt-[63px]
+        md:translate-x-[24px]
+      "
+    >
+      <h3
+        className="
+          font-['Inter']
+          text-[27px] font-[400]
+          leading-[31px]
+          tracking-[-1px]
+          text-[#1B223A]
+
+          md:text-[32px]
+          md:leading-[39px]
+        "
+      >
+        Shift gears, not momentum.
+      </h3>
+
+      <p
+        className="
+          mt-[10px]
+          max-w-[700px]
+          font-['Inter']
+          text-[15px] font-[300]
+          leading-[19px]
+          text-[#1B223A]
+
+          md:mt-[12px]
+          md:text-[20px]
+          md:leading-[23px]
+        "
+      >
+        Watch how i2c helps these visionaries outpace the ever-evolving banking
+        and payments market, regulatory and customer demand drivers, backed by
+        active/active resiliency that keeps innovation—and business—moving.
+      </p>
+
+      {/* Story cards */}
+      <div
+        className="
+          -mr-[29px] mt-[28px]
+          flex gap-[13px]
+          overflow-x-auto
+          pb-[8px] pr-[29px]
+          [scrollbar-width:none]
+          [&::-webkit-scrollbar]:hidden
+
+          md:mr-0
+          md:mt-[34px]
+          md:grid
+          md:grid-cols-[1fr_1fr_1fr]
+          md:gap-[18px]
+          md:overflow-visible
+          md:pb-0
+          md:pr-0
+        "
+      >
+        {storyCards.map((card) => {
+          return (
+            <div
+              key={card.id}
+              className="
+                flex h-[250px]
+                min-w-[250px]
+                flex-col justify-between
+                rounded-[18px]
+                px-[24px] py-[25px]
+
+                md:h-[277px]
+                md:min-w-0
+              "
+              style={{
+                backgroundColor: card.background,
+              }}
+            >
+              <p
+                className="
+                  font-['Inter']
+                  text-[18px] font-[300]
+                  leading-[24px]
+                  text-[#1B223A]
+                "
+              >
+                {card.text.map((line) => {
+                  return (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  )
+                })}
+              </p>
+
+              <div className="h-[44px] w-[85px] rounded-[8px] bg-white" />
+            </div>
+          )
         })}
 
+        {/* Third image card */}
+        <div
+          className="
+            relative h-[250px]
+            min-w-[250px]
+            overflow-hidden
+            rounded-[18px]
+            bg-[#1B223A]
+
+            md:h-[277px]
+            md:min-w-0
+          "
+        >
+          <img
+            src={testimonialImage}
+            alt="Customer testimonial"
+            className="
+              absolute inset-0
+              h-full w-full
+              object-cover
+            "
+          />
+
+          <div
+            className="
+              absolute inset-x-0
+              bottom-0 h-[46%]
+              bg-gradient-to-t
+              from-black
+              via-black/70
+              to-transparent
+            "
+          />
+
+          <img
+            src={testimonialLogo}
+            alt=""
+            className="
+              absolute left-[16px] top-[16px]
+              h-[42px] w-[78px]
+              rounded-[7px]
+              bg-white
+              object-contain p-[7px]
+            "
+          />
+
+          <div
+            aria-hidden="true"
+            className="
+              absolute bottom-[86px] left-[16px]
+              flex h-[40px] w-[40px]
+              items-center justify-center
+              rounded-full
+              bg-[#FF7900]
+              text-white
+            "
+          >
+            <Play
+              className="
+                ml-[2px]
+                h-[16px] w-[16px]
+              "
+              fill="currentColor"
+              strokeWidth={0}
+            />
+          </div>
+
+          <div
+            className="
+              absolute bottom-[16px]
+              left-[16px]
+              text-white
+            "
+          >
+            <p className="font-['Inter'] text-[17px] font-[400]">
+              Safwan Shah
+            </p>
+
+            <p className="mt-[2px] font-['Inter'] text-[14px] font-[300]">
+              CEO &amp; Founder | Payactiv
+            </p>
+          </div>
         </div>
-        </aside>
+      </div>
     </div>
-    </section>
+  </div>
+</section>
     )
     
   
