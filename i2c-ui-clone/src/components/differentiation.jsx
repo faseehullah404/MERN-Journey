@@ -149,17 +149,36 @@ function Differentiation() {
             }
         }, [])
   return (
-    <section className="w-full py-[80px]">
-        <div id="differentiation-nav-start"  
+    <section className="w-full py-[14px] md:py-[80px]">
+        <div
+            id="differentiation-nav-start"
             ref={cardRef}
-            className="relative mx-auto h-[565px] w-[1230px] overflow-hidden rounded-[26px]">
+            className="
+                relative mx-[24px]
+                h-[505px] w-auto
+                overflow-hidden rounded-[15px]
+
+                md:mx-auto
+                md:h-[565px] md:w-[1230px]
+                md:rounded-[26px]
+            "
+        >
             <img
                 src={img1}
                 alt="Customer holding a payment card"
                 className="absolute inset-0 h-full w-full object-cover object-center"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div   className="text-center will-change-transform"
+                <div
+                    className="
+                        absolute inset-0
+                        flex items-end justify-center
+                        pb-[73px]
+
+                        md:items-center
+                        md:pb-0
+                    "
+                >
+                    <div   className=" w-full text-center will-change-transform"
                             style={{
                                 opacity: textProgress,
                                 transform: `translateY(${
@@ -167,26 +186,80 @@ function Differentiation() {
                                 }px)`,
                             }}>
                         <div className="flex items-end justify-center ">
-                            <h2 className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-9px] ">
+                            <h2
+                                className="
+                                    max-w-[285px]
+                                    whitespace-normal
+                                    text-center
+                                    font-['Inter']
+                                    text-[40px] font-[200]
+                                    leading-[0.98]
+                                    tracking-[-2.7px]
+                                    text-white
+
+                                    md:max-w-none
+                                    md:whitespace-nowrap
+                                    md:text-[90px]
+                                    md:leading-[0.98]
+                                    md:tracking-[-9px]
+                                "
+                            >
                                 Designed for differentiation
                             </h2>
 
                             <Circle
                                 aria-hidden="true"
-                                className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-1 -translate-y-1"
+                                className="
+                                    mb-[4px] ml-[2px]
+                                    h-[7px] w-[7px]
+                                    shrink-0
+                                    fill-[#FF7200] text-[#FF7200]
+                                    -translate-x-9
+
+                                    md:mb-[7px] md:ml-[7px]
+                                    md:h-[13px] md:w-[13px]
+                                    md:-translate-x-1
+                                    md:-translate-y-1
+                                "
                                 strokeWidth={0}
                             />
                             
                         </div>
-                        <div className="mt-[10px] flex items-end justify-center">
+                        <div className="mt-[5px] flex items-end justify-center md:mt-[10px]">
                                 <h2
-                                    className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-6px]">
+                                    className="
+                                        max-w-[270px]
+                                        whitespace-normal
+                                        text-center
+                                        font-['Inter']
+                                        text-[40px] font-[200]
+                                        leading-[0.98]
+                                        tracking-[-2.7px]
+                                        text-white
+
+                                        md:max-w-none
+                                        md:whitespace-nowrap
+                                        md:text-[90px]
+                                        md:leading-[0.98]
+                                        md:tracking-[-6px]
+                                    "
+                                >
                                     Configured for control
                                 </h2>
-
                                 <Circle
                                     aria-hidden="true"
-                                    className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-1 -translate-y-1"
+                                    className="
+                                        mb-[4px] ml-[2px]
+                                        h-[7px] w-[7px]
+                                        shrink-0
+                                        fill-[#FF7200] text-[#FF7200]
+                                        -translate-x-20
+
+                                        md:mb-[7px] md:ml-[7px]
+                                        md:h-[13px] md:w-[13px]
+                                        md:-translate-x-1
+                                        md:-translate-y-1
+                                    "
                                     strokeWidth={0}
                                 />
                         </div>
