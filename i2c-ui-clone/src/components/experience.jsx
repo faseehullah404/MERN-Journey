@@ -500,282 +500,269 @@ function Experience() {
             transform: `translateY(${activeSlide * 113}px)`,
           }}
         />
-                {platformSlides.map((slide, index) => {
-                    const isActive = activeSlide === index
+        {platformSlides.map((slide, index) => {
+          const isActive = activeSlide === index
 
-                    return (
-                    <button
-                        key={slide.id}
-                        type="button"
-                        onClick={() => setActiveSlide(index)}
-                        className="
-                        block h-[120px] w-full
-                        border-0 bg-transparent p-0
-                        text-left
-                        "
-                    >
-                        <span
-                        className={` tracking-[-5px]
-                            block font-['Inter']
-                            text-[38px] font-[400]
-                            leading-[44px]
-                            transition-colors duration-300
-                            ${
-                            isActive
-                                ? "text-[#0F299D]"
-                                : "text-[#111111]"
-                            }
-                        `}
-                        >
-                        {slide.metric}
-                        </span>
-
-                        <span
-                        className={` tracking-[-1px]
-                            mt-[5px] block font-['Inter']
-                            text-[20px] font-[300]
-                            leading-[23px]
-                            transition-colors duration-300
-                            
-                            ${
-                            isActive
-                                ? "text-[#1434CB]"
-                                : "text-[#111111]"
-                            }
-                        `}
-                        >
-                        {slide.description.map((line) => {
-                            return (
-                            <span key={line} className="block">
-                                {line}
-                            </span>
-                            )
-                        })}
-                        </span>
-                    </button>
-                    )
-                })}
-
-                </div>
-        </aside>
-    
-
-        {/* Right scrolling column */}
-        <div className="translate-x-6">
-
-        <div className="flex items-end">
-            <h2
-            className="
-                font-['Inter']
-                text-[48px] font-[400]
-                leading-[1.15]
-                tracking-[-3px]
-                text-[#1B223A]
-            "
+          return (
+            <button
+              key={slide.id}
+              type="button"
+              onClick={() => setActiveSlide(index)}
+              className="
+                block h-[120px] w-full
+                border-0 bg-transparent
+                p-0 text-left
+              "
             >
-            Decades of experience drive
-            <br />
-            innovation and speed to market
-            
-            </h2>
+              <span
+                className={`
+                  block font-['Inter']
+                  text-[34px] font-[400]
+                  leading-[40px]
+                  tracking-[-4px]
+                  transition-colors duration-300
 
-            <Circle
+                  md:text-[38px]
+                  md:leading-[44px]
+                  md:tracking-[-5px]
+
+                  ${
+                    isActive
+                      ? "text-[#0F299D]"
+                      : "text-[#111111]"
+                  }
+                `}
+              >
+                {slide.metric}
+              </span>
+
+              <span
+                className={`
+                  mt-[5px] block
+                  font-['Inter']
+                  text-[17px] font-[300]
+                  leading-[20px]
+                  tracking-[-0.7px]
+                  transition-colors duration-300
+
+                  md:text-[20px]
+                  md:leading-[23px]
+                  md:tracking-[-1px]
+
+                  ${
+                    isActive
+                      ? "text-[#1434CB]"
+                      : "text-[#111111]"
+                  }
+                `}
+              >
+                {slide.description.map((line) => {
+                  return (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  )
+                })}
+              </span>
+            </button>
+          )
+        })}
+      </div>
+    </aside>
+
+    {/* ================================================= */}
+    {/* LOWER STORY CONTENT                              */}
+    {/* Mobile: triangle ke baad                         */}
+    {/* Desktop: right column mein                      */}
+    {/* ================================================= */}
+
+    <div
+      className="
+        order-3 min-w-0
+
+        md:col-start-2
+        md:row-start-2
+        md:mt-[63px]
+        md:translate-x-6
+      "
+    >
+      <h3
+        className="
+          font-['Inter']
+          text-[27px] font-[400]
+          leading-[31px]
+          tracking-[-1px]
+          text-[#1B223A]
+
+          md:text-[32px]
+          md:leading-[39px]
+        "
+      >
+        Shift to the front of the pack.
+      </h3>
+
+      <p
+        className="
+          mt-[10px]
+          max-w-[700px]
+          font-['Inter']
+          text-[15px] font-[300]
+          leading-[19px]
+          text-[#1B223A]
+
+          md:mt-[12px]
+          md:text-[20px]
+          md:leading-[23px]
+        "
+      >
+        Watch how i2c helps these visionaries outmaneuver competitors in an
+        increasingly crowded banking and payments race.
+      </p>
+
+      {/* Story cards */}
+      <div
+        className="
+          -mr-[22px] mt-[28px]
+          flex gap-[13px]
+          overflow-x-auto
+          pb-[8px] pr-[22px]
+          [scrollbar-width:none]
+          [&::-webkit-scrollbar]:hidden
+
+          md:mr-0
+          md:mt-[34px]
+          md:grid
+          md:grid-cols-[1fr_1fr_1fr]
+          md:gap-[18px]
+          md:overflow-visible
+          md:pb-0
+          md:pr-0
+        "
+      >
+        {storyCards.map((card) => {
+          return (
+            <div
+              key={card.id}
+              className="
+                flex h-[250px]
+                min-w-[250px]
+                flex-col justify-between
+                rounded-[18px]
+                px-[24px] py-[25px]
+
+                md:h-[277px]
+                md:min-w-0
+              "
+              style={{
+                backgroundColor: card.background,
+              }}
+            >
+              <p
+                className="
+                  font-['Inter']
+                  text-[18px] font-[300]
+                  leading-[24px]
+                  text-[#1B223A]
+                "
+              >
+                {card.text.map((line) => {
+                  return (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  )
+                })}
+              </p>
+
+              <div className="h-[44px] w-[85px] rounded-[8px] bg-white" />
+            </div>
+          )
+        })}
+
+        {/* Third image card */}
+        <div
+          className="
+            relative h-[250px]
+            min-w-[250px]
+            overflow-hidden
+            rounded-[18px]
+            bg-[#1B223A]
+
+            md:h-[277px]
+            md:min-w-0
+          "
+        >
+          <img
+            src={testimonialImage}
+            alt="Customer testimonial"
+            className="
+              absolute inset-0
+              h-full w-full
+              object-cover
+            "
+          />
+
+          <div
+            className="
+              absolute inset-x-0
+              bottom-0 h-[46%]
+              bg-gradient-to-t
+              from-black
+              via-black/70
+              to-transparent
+            "
+          />
+
+          <img
+            src={testimonialLogo}
+            alt=""
+            className="
+              absolute left-[16px] top-[16px]
+              h-[42px] w-[78px]
+              rounded-[7px]
+              bg-white
+              object-contain p-[7px]
+            "
+          />
+
+          <div
             aria-hidden="true"
             className="
-                absolute mb-[9px] 
-                h-[7px] w-[7px]
-                shrink-0 fill-[#FF7200]
-                text-[#FF7200]
-                translate-x-60
+              absolute bottom-[86px] left-[16px]
+              flex h-[40px] w-[40px]
+              items-center justify-center
+              rounded-full
+              bg-[#FF7900]
+              text-white
             "
-            strokeWidth={0}
+          >
+            <Play
+              className="ml-[2px] h-[16px] w-[16px]"
+              fill="currentColor"
+              strokeWidth={0}
             />
-        </div>
+          </div>
 
-        <div className="mt-[35px] grid grid-cols-3 gap-[18px]">
-            {platformBenefits.map((benefit) => {
-                return (
-                <div
-                    key={benefit.id}
-                    className="
-                    flex h-[205px] flex-col
-                    justify-between
-                    rounded-[18px]
-                    bg-[#F7FAFD]
-                    px-[24px] py-[14px]
-                    shadow-[0_4px_12px_rgba(27,34,58,0.08)]
-                    "
-                >
-                    <img
-                    src={benefit.icon}
-                    alt=""
-                    className="h-[45px] w-[45px] object-contain"
-                    />
-
-                    <p className="font-['Inter'] text-[20px] font-[400] leading-[23px] text-[#1B223A] -translate-y-4">
-                    {benefit.text.map((line) => {
-                        return (
-                        <span key={line} className="block ">
-                            {line}
-                        </span>
-                        )
-                    })}
-                    </p>
-                </div>
-                )
-            })}
-
-        </div>
-        <div className="mt-[34px]">
-            <h3 className="font-['Inter'] text-[24px] font-[500] leading-[28px] text-[#1B223A]">
-                Responsive handling. Guided navigation.
-            </h3>
-
-            <p className="font-['Inter'] text-[24px] font-[300] leading-[24px] text-[#1B223A] tracking-[-1px]">
-                Built on a foundation of stability and for what's next.
-            </p>
-        </div>
-        <a
-            href="#"
+          <div
             className="
-                group mt-[32px]
-                flex h-[58px] w-[170px]
-                items-center justify-center gap-[12px]
-                rounded-[7px] px-2
-                border-2 border-[#1434CB]
-                font-['Inter'] text-[18px] font-[500]
-                text-[#1434CB] tracking-[-1px]
-                hover:bg-[#1434CB] hover:text-white
+              absolute bottom-[16px]
+              left-[16px]
+              text-white
             "
-            >
-            <span>Learn More</span>
-
-            <span className="relative h-[19px] w-[19px] overflow-hidden">
-                <ArrowUpRight
-                className="
-                    absolute left-0 top-0
-                    h-[19px] w-[19px]
-                    transition-transform duration-300
-                    group-hover:-translate-y-full
-                "
-                strokeWidth={1.5}
-                />
-
-                <ArrowUpRight
-                className="
-                    absolute left-0 top-full
-                    h-[19px] w-[19px]
-                    transition-transform duration-300
-                    group-hover:-translate-y-full
-                "
-                strokeWidth={1.5}
-                />
-            </span>
-        </a>
-        <div className="mt-[63px]">
-            <h3
-                className="
-                font-['Inter']
-                text-[32px] font-[400]
-                leading-[39px]
-                tracking-[-1px]
-                text-[#1B223A]
-                "
-            >
-                Shift to the front of the pack.
-            </h3>
-
-            <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[20px] font-[300] leading-[23px] text-[#1B223A]">
-                Watch how i2c helps these visionaries outmaneuver competitors in an increasingly crowded banking and payments race.​
+          >
+            <p className="font-['Inter'] text-[17px] font-[400]">
+              Safwan Shah
             </p>
-            <div 
-            className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
 
-                {storyCards.map((card) => {
-                    return (
-                    <div
-                        key={card.id}
-                        className="
-                        flex h-[277px] flex-col
-                        justify-between
-                        rounded-[18px]
-                        px-[24px] py-[25px]
-                        "
-                        style={{
-                        backgroundColor: card.background,
-                        }}
-                    >
-                        <p className="font-['Inter'] text-[18px] font-[300] leading-[24px] text-[#1B223A]">
-                        {card.text.map((line) => {
-                            return (
-                            <span key={line} className="block">
-                                {line}
-                            </span>
-                            )
-                        })}
-                        </p>
-
-                        <div className="h-[44px] w-[85px] rounded-[8px] bg-white" />
-                    </div>
-                    )
-                })}
-
-                {/* Third image card */}
-                <div className="relative h-[277px] overflow-hidden rounded-[18px] bg-[#1B223A]">
-                    <img
-                        src={testimonialImage}
-                        alt="Customer testimonial"
-                        className="absolute inset-0 h-full w-full object-cover"
-                        />
-
-                        <div className="absolute inset-x-0 bottom-0 h-[46%] bg-gradient-to-t from-black via-black/70 to-transparent" />
-
-                    <img
-                        src={testimonialLogo}
-                        alt=""
-                        className="
-                            absolute left-[16px] top-[16px]
-                            h-[42px] w-[78px]
-                            rounded-[7px]
-                            bg-white object-contain p-[7px]
-                        "
-                        />
-
-                        <div
-                        aria-hidden="true"
-                        className="
-                            absolute bottom-[86px] left-[16px]
-                            flex h-[40px] w-[40px]
-                            items-center justify-center
-                            rounded-full bg-[#FF7900]
-                            text-white
-                        "
-                        >
-                        <Play
-                            className="ml-[2px] h-[16px] w-[16px]"
-                            fill="currentColor"
-                            strokeWidth={0}
-                        />
-                        </div>
-
-                        <div className="absolute bottom-[16px] left-[16px] text-white">
-                        <p className="font-['Inter'] text-[17px] font-[400]">
-                            Safwan Shah
-                        </p>
-
-                        <p className="mt-[2px] font-['Inter'] text-[14px] font-[300]">
-                            CEO &amp; Founder | Payactiv
-                        </p>
-                        </div>
-                </div>
-
-            </div>
+            <p className="mt-[2px] font-['Inter'] text-[14px] font-[300]">
+              CEO &amp; Founder | Payactiv
+            </p>
+          </div>
         </div>
-
+      </div>
     </div>
-           
-    </div>
-    </section>
+  </div>
+</section>
     )
     
   
