@@ -269,7 +269,8 @@ function Differentiation() {
         </div>
             <div
             className={`
-                fixed bottom-[18px] left-1/2 z-40
+                fixed bottom-[15px] left-1/2 z-40
+                md:bottom-[18px]
                 -translate-x-1/2
                 transition-all duration-500 ease-out
                 ${
@@ -280,15 +281,23 @@ function Differentiation() {
             `}
             >
             <nav
-                aria-label="Efficiency section navigation"
+                aria-label="Differentiation section navigation"
                 className="
-                flex h-[56px] w-[479px]
-                items-center  gap-[28px] 
-                rounded-full
-                border-[3px] border-[#4A426D]
-                bg-[#202B59]
-                px-[20px]
-                shadow-[0_10px_24px_rgba(27,34,58,0.25)]
+                    flex h-[52px]
+                    w-[calc(100vw-34px)]
+                    items-center justify-between
+                    gap-0
+                    rounded-full
+                    border-[2px] border-[#4A426D]
+                    bg-[#202B59]
+                    px-[7px]
+                    shadow-[0_10px_24px_rgba(27,34,58,0.25)]
+
+                    md:h-[56px] md:w-[479px]
+                    md:justify-start
+                    md:gap-[28px]
+                    md:border-[3px]
+                    md:px-[20px]
                 "
             >
                 {efficiencyNavItems.map((item) => {
@@ -297,11 +306,26 @@ function Differentiation() {
                     key={item}
                     href="#"
                     className="
+                        flex flex-1
+                        items-center justify-center
+                        rounded-full
+                        px-[3px] py-[7px]
+
                         font-['Inter']
-                        text-[20px] font-[300] leading-[22px]
-                        text-white tracking-[-1.5px]
+                        text-[14px] font-[300]
+                        leading-[18px]
+                        tracking-[-0.6px]
+                        text-white
+
                         transition-colors duration-200
-                         rounded-full  hover:bg-[#041145] py-2 px-4 hover:font-400
+                        hover:bg-[#041145]
+                        hover:font-[400]
+
+                        md:flex-none
+                        md:px-4 md:py-2
+                        md:text-[20px]
+                        md:leading-[22px]
+                        md:tracking-[-1.5px]
                     "
                     >
                     {item}
