@@ -114,231 +114,266 @@ function Comprehensive() {
   return (
     
     
-    <section className="w-full bg-white pb-[120px] mt-11">
-        <div
-        className="
-            mx-auto grid w-[1230px]
-            grid-cols-[1fr_430px]
-            items-start gap-[70px]
-        "
+    <section
+  className="
+    mt-[22px] w-full
+    overflow-x-hidden
+    bg-white pb-[100px]
+
+    md:mt-11
+    md:pb-[120px]
+  "
+>
+  <div
+    className="
+      mx-auto grid w-full
+      grid-cols-1
+      items-start gap-y-[55px]
+      px-[29px]
+
+      md:w-[1230px]
+      md:grid-cols-[1fr_430px]
+      md:gap-x-[70px]
+      md:gap-y-0
+      md:px-0
+    "
+  >
+    {/* ================================================= */}
+    {/* TOP CONTENT                                      */}
+    {/* Mobile: first section                            */}
+    {/* Desktop: left column                             */}
+    {/* ================================================= */}
+
+    <div
+      className="
+        order-1 min-w-0
+        translate-x-0
+
+        md:col-start-1
+        md:row-start-1
+        md:translate-x-[24px]
+      "
+    >
+      {/* Main heading */}
+      <div className="min-w-0">
+        <h2
+          className="
+            font-['Inter']
+            text-[31px] font-[400]
+            leading-[1.01]
+            tracking-[-2px]
+            text-[#1B223A]
+
+            md:text-[48px]
+            md:leading-[1.15]
+            md:tracking-[-3px]
+          "
         >
-        
-    
-
-        {/* Right scrolling column */}
-        <div className="translate-x-6">
-
-        <div className="flex items-end">
-            <h2
-            className="
-                font-['Inter']
-                text-[48px] font-[400]
-                leading-[1.15]
-                tracking-[-3px]
-                text-[#1B223A]
-            "
-            >
-            Comprehensive, composable
-            <br />
-            solutions that quickly respond to the
-            <br />
-            unexpected
-            </h2>
-
-            <Circle
+          Comprehensive, composable
+          <br className="hidden md:block" />{" "}
+          solutions that quickly respond to the
+          <br className="hidden md:block" />{" "}
+          unexpected
+          <Circle
             aria-hidden="true"
             className="
-                absolute mb-[9px] 
-                h-[7px] w-[7px]
-                shrink-0 fill-[#FF7200]
-                text-[#FF7200]
-                translate-x-60
+              mb-[3px] ml-[2px]
+              inline-block
+              h-[5px] w-[5px]
+              fill-[#FF7200]
+              text-[#FF7200]
+
+              md:mb-[5px]
+              md:ml-[5px]
+              md:h-[7px]
+              md:w-[7px]
             "
             strokeWidth={0}
-            />
-        </div>
+          />
+        </h2>
+      </div>
 
-        <div className="mt-[35px] grid grid-cols-3 gap-[18px]">
-            {platformBenefits.map((benefit) => {
-                return (
-                <div
-                    key={benefit.id}
-                    className="
-                    flex h-[205px] flex-col
-                    justify-between
-                    rounded-[18px]
-                    bg-[#F7FAFD]
-                    px-[24px] py-[14px]
-                    shadow-[0_4px_12px_rgba(27,34,58,0.08)]
-                    "
-                >
-                    <img
-                    src={benefit.icon}
-                    alt=""
-                    className="h-[45px] w-[45px] object-contain"
-                    />
+      {/* Benefit cards */}
+      <div
+        className="
+          -mr-[29px] mt-[29px]
+          flex gap-[13px]
+          overflow-x-auto
+          pb-[8px] pr-[29px]
+          [scrollbar-width:none]
+          [&::-webkit-scrollbar]:hidden
 
-                    <p className="font-['Inter'] text-[20px] font-[400] leading-[23px] text-[#1B223A] -translate-y-4">
-                    {benefit.text.map((line) => {
-                        return (
-                        <span key={line} className="block ">
-                            {line}
-                        </span>
-                        )
-                    })}
-                    </p>
-                </div>
-                )
-            })}
+          md:mr-0
+          md:mt-[35px]
+          md:grid
+          md:grid-cols-3
+          md:gap-[18px]
+          md:overflow-visible
+          md:pb-0
+          md:pr-0
+        "
+      >
+        {platformBenefits.map((benefit) => {
+          return (
+            <div
+              key={benefit.id}
+              className="
+                flex h-[155px]
+                min-w-[185px]
+                flex-col justify-between
+                rounded-[8px]
+                bg-[#F7FAFD]
+                px-[22px] py-[19px]
+                shadow-[0_4px_12px_rgba(27,34,58,0.08)]
 
-        </div>
-        <div className="mt-[34px]">
-            <h3 className="font-['Inter'] text-[24px] font-[500] leading-[28px] text-[#1B223A]">
-                All speed. No limits.
-            </h3>
-
-            <p className="font-['Inter'] text-[24px] font-[300] leading-[24px] text-[#1B223A] tracking-[-1px]">
-                Fuel faster outcomes with the platform built for nonstop innovation and guaranteed reliability.
-            </p>
-        </div>
-        <a
-            href="#"
-            className="
-                group mt-[32px]
-                flex h-[58px] w-[210px]
-                items-center justify-center gap-[12px]
-                rounded-[7px] px-2
-                border-2 border-[#1434CB]
-                font-['Inter'] text-[18px] font-[500]
-                text-[#1434CB] tracking-[-1px]
-                hover:bg-[#1434CB] hover:text-white
-            "
+                md:h-[205px]
+                md:min-w-0
+                md:rounded-[18px]
+                md:px-[24px]
+                md:py-[14px]
+              "
             >
-            <span>See how it works</span>
-
-            <span className="relative h-[19px] w-[19px] overflow-hidden">
-                <ArrowUpRight
+              <img
+                src={benefit.icon}
+                alt=""
                 className="
-                    absolute left-0 top-0
-                    h-[19px] w-[19px]
-                    transition-transform duration-300
-                    group-hover:-translate-y-full
-                "
-                strokeWidth={1.5}
-                />
+                  h-[35px] w-[35px]
+                  object-contain
 
-                <ArrowUpRight
+                  md:h-[45px]
+                  md:w-[45px]
+                "
+              />
+
+              <p
                 className="
-                    absolute left-0 top-full
-                    h-[19px] w-[19px]
-                    transition-transform duration-300
-                    group-hover:-translate-y-full
+                  font-['Inter']
+                  text-[14px] font-[400]
+                  leading-[17px]
+                  text-[#1B223A]
+
+                  md:-translate-y-4
+                  md:text-[20px]
+                  md:leading-[23px]
                 "
-                strokeWidth={1.5}
-                />
-            </span>
-        </a>
-        <div className="mt-[63px]">
-            <h3
-                className="
-                font-['Inter']
-                text-[32px] font-[400]
-                leading-[39px]
-                tracking-[-1px]
-                text-[#1B223A]
-                "
-            >
-                Shift gears, not momentum.
-            </h3>
-
-            <p className="mt-[12px] max-w-[700px] font-['Inter'] text-[20px] font-[300] leading-[23px] text-[#1B223A]">
-                Watch how i2c helps these visionaries outpace the ever-evolving banking and payments market, regulatory and customer demand drivers, backed by active/active resiliency that keeps innovation—and business—moving.
-            </p>
-            <div 
-            className="mt-[34px] grid grid-cols-[1fr_1fr_1fr] gap-[18px]">
-
-                {storyCards.map((card) => {
-                    return (
-                    <div
-                        key={card.id}
-                        className="
-                        flex h-[277px] flex-col
-                        justify-between
-                        rounded-[18px]
-                        px-[24px] py-[25px]
-                        "
-                        style={{
-                        backgroundColor: card.background,
-                        }}
-                    >
-                        <p className="font-['Inter'] text-[18px] font-[300] leading-[24px] text-[#1B223A]">
-                        {card.text.map((line) => {
-                            return (
-                            <span key={line} className="block">
-                                {line}
-                            </span>
-                            )
-                        })}
-                        </p>
-
-                        <div className="h-[44px] w-[85px] rounded-[8px] bg-white" />
-                    </div>
-                    )
+              >
+                {benefit.text.map((line) => {
+                  return (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  )
                 })}
-
-                {/* Third image card */}
-                <div className="relative h-[277px] overflow-hidden rounded-[18px] bg-[#1B223A]">
-                    <img
-                        src={testimonialImage}
-                        alt="Customer testimonial"
-                        className="absolute inset-0 h-full w-full object-cover"
-                        />
-
-                        <div className="absolute inset-x-0 bottom-0 h-[46%] bg-gradient-to-t from-black via-black/70 to-transparent" />
-
-                    <img
-                        src={testimonialLogo}
-                        alt=""
-                        className="
-                            absolute left-[16px] top-[16px]
-                            h-[42px] w-[78px]
-                            rounded-[7px]
-                            bg-white object-contain p-[7px]
-                        "
-                        />
-
-                        <div
-                        aria-hidden="true"
-                        className="
-                            absolute bottom-[86px] left-[16px]
-                            flex h-[40px] w-[40px]
-                            items-center justify-center
-                            rounded-full bg-[#FF7900]
-                            text-white
-                        "
-                        >
-                        <Play
-                            className="ml-[2px] h-[16px] w-[16px]"
-                            fill="currentColor"
-                            strokeWidth={0}
-                        />
-                        </div>
-
-                        <div className="absolute bottom-[16px] left-[16px] text-white">
-                        <p className="font-['Inter'] text-[17px] font-[400]">
-                            Safwan Shah
-                        </p>
-
-                        <p className="mt-[2px] font-['Inter'] text-[14px] font-[300]">
-                            CEO &amp; Founder | Payactiv
-                        </p>
-                        </div>
-                </div>
-
+              </p>
             </div>
-        </div>
+          )
+        })}
+      </div>
 
+      {/* All speed text */}
+      <div className="mt-[27px] md:mt-[34px]">
+        <h3
+          className="
+            font-['Inter']
+            text-[17px] font-[500]
+            leading-[21px]
+            text-[#1B223A]
+
+            md:text-[24px]
+            md:leading-[28px]
+          "
+        >
+          All speed. No limits.
+        </h3>
+
+        <p
+          className="
+            mt-[1px]
+            font-['Inter']
+            text-[15px] font-[300]
+            leading-[18px]
+            tracking-[-0.4px]
+            text-[#1B223A]
+
+            md:mt-0
+            md:text-[24px]
+            md:leading-[24px]
+            md:tracking-[-1px]
+          "
+        >
+          Fuel faster outcomes with the platform built for nonstop innovation
+          and guaranteed reliability.
+        </p>
+      </div>
+
+      {/* See How It Works button */}
+      <a
+        href="#"
+        className="
+          group mt-[31px]
+          flex h-[47px] w-[171px]
+          items-center justify-center
+          gap-[10px]
+          rounded-[7px]
+          border-2 border-[#1434CB]
+          px-2
+
+          font-['Inter']
+          text-[13px] font-[500]
+          tracking-[-0.5px]
+          text-[#1434CB]
+
+          hover:bg-[#1434CB]
+          hover:text-white
+
+          md:mt-[32px]
+          md:h-[58px]
+          md:w-[210px]
+          md:gap-[12px]
+          md:text-[18px]
+          md:tracking-[-1px]
+        "
+      >
+        <span>See How It Works</span>
+
+        <span
+          className="
+            relative h-[16px] w-[16px]
+            overflow-hidden
+
+            md:h-[19px]
+            md:w-[19px]
+          "
+        >
+          <ArrowUpRight
+            className="
+              absolute left-0 top-0
+              h-[16px] w-[16px]
+              transition-transform duration-300
+              group-hover:-translate-y-full
+
+              md:h-[19px]
+              md:w-[19px]
+            "
+            strokeWidth={1.5}
+          />
+
+          <ArrowUpRight
+            className="
+              absolute left-0 top-full
+              h-[16px] w-[16px]
+              transition-transform duration-300
+              group-hover:-translate-y-full
+
+              md:h-[19px]
+              md:w-[19px]
+            "
+            strokeWidth={1.5}
+          />
+        </span>
+      </a>
     </div>
+
             <aside className="sticky top-[80px] self-start mt-10">
             <div className="translate-x-25">
             <div className="relative h-[372px] w-[390px] ">
