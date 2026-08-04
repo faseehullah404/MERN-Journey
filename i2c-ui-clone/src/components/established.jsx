@@ -152,96 +152,209 @@ function Established() {
             }
         }, [])
   return (
-    <section className="w-full py-[80px]">
-        <div id="established-nav-start"  
-            ref={cardRef}
-            className="relative mx-auto h-[565px] w-[1230px] overflow-hidden rounded-[26px]">
-            <img
-                src={img1}
-                alt="Customer holding a payment card"
-                className="absolute inset-0 h-full w-full object-cover object-center"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div   className="text-center will-change-transform"
-                            style={{
-                                opacity: textProgress,
-                                transform: `translateY(${
-                                (1 - textProgress) * 110
-                                }px)`,
-                            }}>
-                        <div className="flex items-end justify-center ">
-                            <h2 className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-9px] ">
-                                Established for excellence
-                            </h2>
+<section className="w-full py-[14px] md:py-[80px]">
 
-                            <Circle
-                                aria-hidden="true"
-                                className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-1 -translate-y-1"
-                                strokeWidth={0}
-                            />
-                            
-                        </div>
-                        <div className="mt-[10px] flex items-end justify-center">
-                                <h2
-                                    className="whitespace-nowrap font-['Inter'] text-[90px] font-[200] leading-[0.98] text-white tracking-[-6px]">
-                                    Adapted for agility
-                                </h2>
+  {/* Main established banner */}
+  <div
+    id="established-nav-start"
+    ref={cardRef}
+    className="
+      relative mx-[24px]
+      h-[505px] w-auto
+      overflow-hidden rounded-[15px]
 
-                                <Circle
-                                    aria-hidden="true"
-                                    className="mb-[7px] ml-[7px] h-[13px] w-[13px] shrink-0 fill-[#FF7200] text-[#FF7200] -translate-x-1 -translate-y-1"
-                                    strokeWidth={0}
-                                />
-                        </div>
-                    </div>
-                </div>
- 
-        </div>
-            <div
-            className={`
-                fixed bottom-[18px] left-1/2 z-40
-                -translate-x-1/2
-                transition-all duration-500 ease-out
-                ${
-                isBottomNavVisible
-                    ? "translate-y-0 opacity-100"
-                    : "pointer-events-none translate-y-[110px] opacity-0"
-                }
-            `}
-            >
-            <nav
-                aria-label="Efficiency section navigation"
-                className="
-                flex h-[56px] w-[479px]
-                items-center  gap-[28px] 
-                rounded-full
-                border-[3px] border-[#4A426D]
-                bg-[#202B59]
-                px-[20px]
-                shadow-[0_10px_24px_rgba(27,34,58,0.25)]
-                "
-            >
-                {efficiencyNavItems.map((item) => {
-                return (
-                    <a
-                    key={item}
-                    href="#"
-                    className="
-                        font-['Inter']
-                        text-[20px] font-[300] leading-[22px]
-                        text-white tracking-[-1.5px]
-                        transition-colors duration-200
-                         rounded-full  hover:bg-[#041145] py-2 px-4 hover:font-400
-                    "
-                    >
-                    {item}
-                    </a>
-                )
-                })}
-            </nav>
-        </div>
-        
-    </section>
+      md:mx-auto
+      md:h-[565px] md:w-[1230px]
+      md:rounded-[26px]
+    "
+  >
+    <img
+      src={img1}
+      alt="Digital banking platform excellence and agility"
+      className="
+        absolute inset-0
+        h-full w-full
+        object-cover object-center
+      "
+    />
+
+    {/* Animated text overlay */}
+    <div
+      className="
+        absolute inset-0
+        flex items-end justify-center
+        pb-[68px]
+
+        md:items-center
+        md:pb-0
+      "
+    >
+      <div
+        className="
+          w-full px-[14px]
+          text-center
+          will-change-transform
+
+          md:px-0
+        "
+        style={{
+          opacity: textProgress,
+          transform: `translateY(${(1 - textProgress) * 110}px)`,
+        }}
+      >
+        {/* First heading */}
+        <h2
+          className="
+            mx-auto max-w-[290px]
+            whitespace-normal
+            text-center
+            font-['Inter']
+            text-[40px] font-[200]
+            leading-[1.03]
+            tracking-[-2.7px]
+            text-white
+
+            md:max-w-none
+            md:whitespace-nowrap
+            md:text-[90px]
+            md:leading-[0.98]
+            md:tracking-[-9px]
+          "
+        >
+          Established for excellence
+          <Circle
+            aria-hidden="true"
+            className="
+              mb-[3px] ml-[2px]
+              inline-block
+              h-[7px] w-[7px]
+              fill-[#FF7200]
+              text-[#FF7200]
+
+              md:mb-[8px]
+              md:ml-[6px]
+              md:h-[13px]
+              md:w-[13px]
+            "
+            strokeWidth={0}
+          />
+        </h2>
+
+        {/* Second heading */}
+        <h2
+          className="
+            mx-auto mt-[7px]
+            max-w-[270px]
+            whitespace-normal
+            text-center
+            font-['Inter']
+            text-[40px] font-[200]
+            leading-[1.03]
+            tracking-[-2.7px]
+            text-white
+
+            md:mt-[10px]
+            md:max-w-none
+            md:whitespace-nowrap
+            md:text-[90px]
+            md:leading-[0.98]
+            md:tracking-[-6px]
+          "
+        >
+          Adapted for agility
+          <Circle
+            aria-hidden="true"
+            className="
+              mb-[3px] ml-[2px]
+              inline-block
+              h-[7px] w-[7px]
+              fill-[#FF7200]
+              text-[#FF7200]
+
+              md:mb-[8px]
+              md:ml-[6px]
+              md:h-[13px]
+              md:w-[13px]
+            "
+            strokeWidth={0}
+          />
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  {/* Fixed bottom navigation */}
+  <div
+    className={`
+      fixed bottom-[15px] left-1/2 z-40
+      -translate-x-1/2
+      transition-all duration-500 ease-out
+
+      md:bottom-[18px]
+
+      ${
+        isBottomNavVisible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-[110px] opacity-0"
+      }
+    `}
+  >
+    <nav
+      aria-label="Established section navigation"
+      className="
+        flex h-[52px]
+        w-[calc(100vw-34px)]
+        items-center justify-between
+        gap-0
+        rounded-full
+        border-[2px] border-[#4A426D]
+        bg-[#202B59]
+        px-[7px]
+        shadow-[0_10px_24px_rgba(27,34,58,0.25)]
+
+        md:h-[56px]
+        md:w-[479px]
+        md:justify-start
+        md:gap-[28px]
+        md:border-[3px]
+        md:px-[20px]
+      "
+    >
+      {efficiencyNavItems.map((item) => {
+        return (
+          <a
+            key={item}
+            href="#"
+            className="
+              flex flex-1
+              items-center justify-center
+              rounded-full
+              px-[3px] py-[7px]
+
+              font-['Inter']
+              text-[14px] font-[300]
+              leading-[18px]
+              tracking-[-0.6px]
+              text-white
+
+              transition-colors duration-200
+              hover:bg-[#041145]
+              hover:font-[400]
+
+              md:flex-none
+              md:px-4 md:py-2
+              md:text-[20px]
+              md:leading-[22px]
+              md:tracking-[-1.5px]
+            "
+          >
+            {item}
+          </a>
+        )
+      })}
+    </nav>
+  </div>
+</section>
   )
 }
 
