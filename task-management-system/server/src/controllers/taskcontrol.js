@@ -21,4 +21,12 @@ async function updateTask(req,res){
     res.status(200).json(Task)
 }
 
-export {getalltasks, createTask, getTask, updateTask}
+async function deleteTask(req,res){
+    const Task=await task.findByIdAndDelete(req.params.id)
+    res.status(200).json( {
+        id: req.params.id,
+        message:" :Task Deleted Successfully"
+    
+        })
+}
+export {getalltasks, createTask, getTask, updateTask,deleteTask}
