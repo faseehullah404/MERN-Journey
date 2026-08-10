@@ -7,8 +7,8 @@ async function getalltasks(req,res){
 }
 
 async function createTask(req, res) {
-    const task = await Task.create(req.body)
-    res.status(201).json(task)
+    const Task = await task.create(req.body)
+    res.status(201).json(Task)
 }
 
 export {getalltasks, createTask}
