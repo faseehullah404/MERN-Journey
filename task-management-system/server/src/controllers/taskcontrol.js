@@ -12,8 +12,13 @@ async function createTask(req, res) {
 }
 
 async function getTask(req,res){
-    const Task=await task.findbyid(req.params.id)
+    const Task=await task.findById(req.params.id)
     res.status(200).json(Task)
 }
 
-export {getalltasks, createTask, getTask}
+async function updateTask(req,res){
+    const Task=await task.findByIdAndUpdate(req.params.id,req.body,{new:true})
+    res.status(200).json(Task)
+}
+
+export {getalltasks, createTask, getTask, updateTask}
