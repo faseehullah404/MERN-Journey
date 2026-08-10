@@ -11,4 +11,9 @@ async function createTask(req, res) {
     res.status(201).json(Task)
 }
 
-export {getalltasks, createTask}
+async function getTask(req,res){
+    const Task=await task.findbyid(req.params.id)
+    res.status(200).json(Task)
+}
+
+export {getalltasks, createTask, getTask}
