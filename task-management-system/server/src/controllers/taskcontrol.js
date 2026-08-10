@@ -5,4 +5,9 @@ async function getalltasks(req,res){
     res.status(200).json(tasks)
 
 }
-export {getalltasks}
+
+async function createTask(req, res) {
+    console.log(req.body)
+}
+
+export {getalltasks, createTask}
