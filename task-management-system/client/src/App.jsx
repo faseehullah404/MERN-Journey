@@ -11,14 +11,22 @@ function App() {
       const response= await fetch("http://localhost:5000/api/tasks")
       const data= await response.json()
       console.log(data)
+      setTask(data)
     }
     getTask()
   }, [])
   return (
     
-    <>
-      
-    </>
+    <div>
+      <h1>Task Management System</h1>
+      {task.map(function(task){
+        return(
+          <p key={task._id}>
+            {task.title}
+          </p>
+        )
+      })}
+    </div>
   )
 }
 
