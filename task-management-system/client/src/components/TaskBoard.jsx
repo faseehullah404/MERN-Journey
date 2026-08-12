@@ -1,15 +1,13 @@
 import TaskCol from "./TaskCol.jsx"
 function TaskBoard(){
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 gap-4">
 
-            <TaskColumn title="Task Ready" />
+            <TaskCol title="Task Ready" />
 
-            <TaskColumn title="In Progress" />
+            <TaskCol title="In Progress" />
 
-            <TaskColumn title="Needs Review" />
-
-            <TaskColumn title="Done" />
+            <TaskCol title="Done" />
 
         </div>
     )
