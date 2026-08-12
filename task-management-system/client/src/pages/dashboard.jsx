@@ -34,7 +34,7 @@ function Dashboard() {
         <div className="flex">
                 <main className="flex-1 p-6">
                     <BoardHeader />
-                    <TaskBoard />
+                    <TaskBoard tasks={tasks}/>
                 </main>
 
                 <aside className="w-80 border-l border-zinc-800 bg-zinc-900 p-6">
