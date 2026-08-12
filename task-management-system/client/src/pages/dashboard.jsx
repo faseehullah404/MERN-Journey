@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import Topbar from "../components/topbar.jsx"
 function Dashboard() {
 
     const [tasks, setTasks] = useState([])
@@ -22,9 +22,15 @@ function Dashboard() {
     }, [])
 
     return (
-        <div>
-            <h1>Dashboard</h1>
-        </div>
+        <div className="min-h-screen bg-zinc-950 text-zinc-100">
+
+        <Topbar />
+
+        <main>
+            {/* Board later */}
+        </main>
+
+    </div>
     )
 }
 
