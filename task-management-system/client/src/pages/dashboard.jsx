@@ -4,10 +4,13 @@ import BoardHeader from "../components/BoardHeader.jsx"
 import TaskBoard from "../components/TaskBoard.jsx"
 import TaskProgress from "../components/TaskProgress.jsx"
 import TaskActivity from "../components/TaskActivity.jsx" 
+import AddTaskModal from "../components/AddTaskModal.jsx"
 
 function Dashboard() {
 
     const [tasks, setTasks] = useState([])
+    const [isAddTaskOpen, setIsAddTaskOpen] = useState(false)
+
 
     useEffect(function () {
 
@@ -29,21 +32,28 @@ function Dashboard() {
     return (
         <div className="min-h-screen bg-zinc-950 text-zinc-100">
 
-        <Topbar />
+            <Topbar />
 
-        <div className="flex">
-                <main className="flex-1 p-6">
-                    <BoardHeader />
-                    <TaskBoard tasks={tasks}/>
-                </main>
+            <div className="flex">
+                    <main className="flex-1 p-6">
+                        <BoardHeader  onAddTask={function () {setIsAddTaskOpen(true)}}/>
+                        <TaskBoard tasks={tasks}/>
+                    </main>
 
-                <aside className="w-80 border-l border-zinc-800 bg-zinc-900 p-6">
-                    <TaskProgress />
-                    <TaskActivity />
-                </aside>
+                    <aside className="w-80 border-l border-zinc-800 bg-zinc-900 p-6">
+                        <TaskProgress />
+                        <TaskActivity />
+                    </aside>
+            </div>
+            {isAddTaskOpen && (
+                <AddTaskModal
+                    onClose={function () {
+                        setIsAddTaskOpen(false)
+                    }}
+                />
+            )}
         </div>
-
-    </div>
+        
     )
 }
 
