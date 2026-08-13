@@ -1,8 +1,13 @@
 import TaskCard from "./TaskCard.jsx"
+
 function TaskCol({ title, tasks }) {
     return (
         <section>
-            <h2>{title}</h2>
+            <h2 >{title}
+            <span className="ml-2 text-sm text-zinc-500">
+                {tasks.length}
+            </span>
+            </h2>
             <div className="space-y-3">
                 {tasks.map(function (task) {
                     return (
