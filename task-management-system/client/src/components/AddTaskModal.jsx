@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 
-function AddTaskModal({ onClose }) {
+function AddTaskModal({ onClose,  onTaskCreated }) {
     const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -11,10 +11,33 @@ function AddTaskModal({ onClose }) {
     dueDate: ""
     })
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
             event.preventDefault()
+              console.log("FORM SUBMITTED")
+    console.log(formData)
 
-            console.log(formData)
+            const response = await fetch(
+                "http://localhost:5000/api/tasks",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify(formData)
+                }
+            )
+                const newTask = await response.json()
+
+                console.log("Response status:", response.status)
+                console.log("Backend returned:", newTask)
+            if (!response.ok) {
+                console.error(newTask.message)
+                return
+            }
+            onTaskCreated(newTask)
+            onClose()
     }
     return (
         <>
@@ -43,6 +66,7 @@ function AddTaskModal({ onClose }) {
 
                             <input
                                 type="text"
+                                required
                                 value={formData.title}
                                 onChange={function (event) {
                                     setFormData({

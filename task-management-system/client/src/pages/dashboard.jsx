@@ -50,6 +50,11 @@ function Dashboard() {
                     onClose={function () {
                         setIsAddTaskOpen(false)
                     }}
+                    onTaskCreated={function (newTask) {
+                        setTasks(function (currentTasks) {
+                            return [...currentTasks, newTask]
+                        })
+                    }}
                 />
             )}
         </div>
